@@ -6,3 +6,20 @@ background-repeat: no-repeat;
 background-position: 0px 0px;
 background-color: #f1ece6
 }
+
+footer{
+	background-color: #fbb12f;
+	color: #fff;
+}
+
+/**** FOOTER ****/
+.btn-transp-white{
+	background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 6px;
+}
+
+.logo-btn-fb{
+    width: 35px;
+    height: 30px;
+}
