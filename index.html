@@ -1,50 +1,30 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
- <style type="text/css">
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>  
+  </body>
+  <script>
+  function bg(elem,sens,vitesse){
+    elem=="body" ? this.elem=document.body : this.elem=document.getElementById(elem)
+    this.sens=sens;
+    this.vitesse=vitesse;
+    var that=this;
+    document.documentElement.addEventListener("mousemove",function(event){that.mv(event)},false);
+  }
+  bg.prototype.mv = function(s){
+    var dde=(navigator.vendor) ? document.body : document.documentElement;
 
-body{
-background-color: blue;
-background:url("Fond.png");
-background-repeat: no-repeat;
-background-position: center;
-}
+    var setY = this.sens=="gauche" ? -(s.clientY + dde.scrollTop) : s.clientY + dde.scrollTop;
 
- </style>
-
-<script>
-
-function bg(elem,sens,vitesse){
-
-	elem=="body" ? this.elem=document.body : this.elem=document.getElementById(elem)
-
-	this.sens=sens;
-
-	this.vitesse=vitesse;
-
-	var that=this;
-
-	document.documentElement.addEventListener("mousemove",function(event){that.mv(event)},false);
-}
-
-bg.prototype.mv = function(s){
-
-	var dde=(navigator.vendor) ? document.body : document.documentElement;
-
-	var setY = this.sens=="gauche" ? -(s.clientY + dde.scrollTop) : s.clientY + dde.scrollTop;
-
-	this.elem.style.backgroundPosition='0px '+(setY/this.vitesse)+'px';
-}
-
-function init(){
-
-	new bg("body","gauche",10);
-
-}
-
-window.addEventListener("load",init,false);
-
-</script>
-</head>
-<body>
-</body>
+    this.elem.style.backgroundPosition='0px '+(setY/this.vitesse)+'px';
+  }
+  function init(){
+    new bg("body","gauche",10);
+  }
+  window.addEventListener("load",init,false);
+  </script>
+</html>
