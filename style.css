@@ -1,15 +1,108 @@
-body{
-background-color: blue;
-background:url("Fondbeige.png");
-background-size: 100%;
-background-repeat: no-repeat;
-background-position: 0px 0px;
-background-color: #f1ece6
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+html, body {
+    height: 100%;
+}
+body {
+	background-color: blue;
+	background:url("images/bg_mainpage.png");
+	background-size: 100%;
+	min-height: 100%;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	background-color: #f1ece6;
+}
+
+.main_teaser {
+	top: 20%;
+}
+#main_title{
+	color: dimgrey; 
+	font-weight: bold; 
+	margin:auto; 
+	text-align: center;
+	font-family: 'Ubuntu';
+	text-shadow: #f1ece6 3px 3px, #f1ece6 -3px 3px, #f1ece6 -3px -3px, #f1ece6 3px -3px;
+	font-size: 6rem;
+}
+
+/* ---- PLACEHOLDER ---- */
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #c3c0b8;
+  padding : 8px;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #c3c0b8;
+  padding : 8px;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #c3c0b8;
+  padding : 8px;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #c3c0b8;
+  padding : 8px;
+}
+
+.form_teaser {
+	top: 20%;
+}
+.danger-email {
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+	padding: 5px;
+	margin-bottom: 15px;
+}
+.form_teaser p {
+	font-family: 'Source Sans Pro';
+	color: #474b44;
+	font-size: 1.8rem;
+}
+.email_teaser {
+	background-color: white;
+	color: #c3c0b8;
+	border-radius: 12px;
+	border: 1px solid #cdd2d4;
+	padding: 5px;
+	width: 37%;
+	height: 37px;
+	position: relative;
+
+}
+
+.submit_teaser {
+	background-color: #89ae03;
+	color: #556506;
+	font-weight: bold;
+	border: 1px solid transparent;
+	padding: 5px 20px;
+	border-radius: 7px;
+
+	box-shadow: 0 2px 0 #3f6f21;
+}
+
+#top-form_teaser p { 
+	color: #474b44; 
+	font-weight: bold; 
+	margin:auto; 
+	text-align: center;
+	font-family: 'Source Sans Pro Light';
+
+	font-size: 2rem;
+}
+
+form {
+	text-align: center;	
 }
 
 footer{
 	background-color: #fbb12f;
 	color: #fff;
+	bottom: 0;
+	position: absolute;
+	width: 100%;
 }
 
 /**** FOOTER ****/
@@ -17,6 +110,10 @@ footer{
 	background-color: transparent;
     border: 1px solid #fff;
     border-radius: 6px;
+    padding: 8px;
+}
+.container-footer {
+	padding: 25px;
 }
 
 .logo-btn-fb{
