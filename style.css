@@ -1,22 +1,30 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
-html, body {
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+html {
     height: 100%;
 }
 body {
-	background-color: blue;
 	background:url("images/bg_mainpage.png");
 	background-size: 100%;
 	min-height: 100%;
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 	background-color: #f1ece6;
-	display: table;
-	width: 100%
+	position: relative;
+	padding-bottom: 150px;
+	display:table;
+	width:100%;
 }
 
 .main_teaser {
-	top: 20%;
+	margin-top: 10%;
+	display: none;
+}
+#logo {
+	display: block;
+	margin: 0 auto;
+	width: 150px;
 }
 #main_title{
 	color: dimgrey; 
@@ -25,7 +33,7 @@ body {
 	text-align: center;
 	font-family: 'Ubuntu';
 	text-shadow: #f1ece6 3px 3px, #f1ece6 -3px 3px, #f1ece6 -3px -3px, #f1ece6 3px -3px;
-	font-size: 6rem;
+	font-size: 5em;
 }
 
 /* ---- PLACEHOLDER ---- */
@@ -58,9 +66,10 @@ body {
 	margin-bottom: 15px;
 }
 .form_teaser p {
-	font-family: 'Source Sans Pro';
+	font-family: 'Source Sans Pro Light', Roboto;
 	color: #474b44;
-	font-size: 1.8rem;
+	font-weight: bold;
+	font-size: 2rem;
 }
 .email_teaser {
 	background-color: white;
@@ -68,10 +77,10 @@ body {
 	border-radius: 12px;
 	border: 1px solid #cdd2d4;
 	padding: 5px;
-	width: 37%;
-	height: 37px;
+	width: 45%;
+	height: 45px;
 	position: relative;
-
+	font-size: 1.7em;
 }
 
 .submit_teaser {
@@ -80,8 +89,29 @@ body {
 	font-weight: bold;
 	border: 1px solid transparent;
 	padding: 5px 20px;
-	border-radius: 7px;
+	border-radius: 12px;
+	height: 45px;
+    	font-size: 1.5em;
+	box-shadow: 0 2px 0 #3f6f21;
+}
 
+.email_teaser_pop {
+	background-color: white;
+	color: #c3c0b8;
+	border-radius: 12px;
+	border: 1px solid #cdd2d4;
+	padding: 5px;
+	width: 45%;
+	position: relative;
+}
+
+.submit_teaser_pop {
+	background-color: #89ae03;
+	color: #556506;
+	font-weight: bold;
+	border: 1px solid transparent;
+	padding: 5px 20px;
+	border-radius: 12px;
 	box-shadow: 0 2px 0 #3f6f21;
 }
 
@@ -90,27 +120,13 @@ body {
 	font-weight: bold; 
 	margin:auto; 
 	text-align: center;
-	font-family: 'Source Sans Pro Light';
+	font-family: 'Source Sans Pro Light', Roboto;
+
 	font-size: 2rem;
 }
 
-.btn-fb{
-   text-align: right;
-}
-
-.social-networks{
-	margin-top: 5%;
-}
-
-form {
+.form_teaser {
 	text-align: center;	
-}
-
-footer{
-	background-color: #fbb12f;
-	color: #fff;
-	display: table-row;
-	height: 30px;
 }
 
 /**** FOOTER ****/
@@ -122,4 +138,29 @@ footer{
 }
 .container-footer {
 	padding: 25px;
+	background-color: #fbb12f;
+	position: absolute;
+	color: #fff;
+	bottom: 0;
+    left: 0;
+    right: 0;
+	width: 100%;
+
+}
+
+.btn-fb-twit{
+ 	text-align: center;  
+}
+
+.btn-fb{
+	margin-left: 5px;
+}
+
+.social-networks{
+	margin-top: 5%;
+}
+
+footer{
+	display:table-row;
+	height:30px;
 }
