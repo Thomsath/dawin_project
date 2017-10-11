@@ -17,9 +17,6 @@ if(isset($_POST['sinscrire'])) {
 
 }
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -36,27 +33,43 @@ if(isset($_POST['sinscrire'])) {
 </head>
 
 <body>
-	<div class="col-md-offset-3 col-md-6 main_teaser">
+	<div id="fb-root"></div>
+	<div class="row">
+		<div class="col-md-offset-3 col-md-6 main_teaser">
 
-	<div id="top-form_teaser">
+			<div id="top-form_teaser">
 
-		<h1 id="main_title">It's raining bags!</h1>
-		<br>
-		<p>SmartCart est le site internet qui va révolutionner vos achats sur Internet, en vous proposant des packs d'articles pre-faits.
-			<br> Arrivée imminente...</p>
-		<br>
-		
+				<h1 id="main_title">It's raining bags!</h1>
+				<br>
+				<p>SmartCart est le site internet qui va révolutionner vos achats sur Internet, en vous proposant des packs d'articles pré-faits.
+					<br> Arrivée imminente...</p>
+				<br>
+				
+			</div>
+			<form class="form_teaser" method="POST" action="index.html" onsubmit="return verifForm(this)">
+				<p>Restons en contact, vous ne serez pas spammé mais privilégié !</p>
+				
+				<div id="error"></div>
+				
+				<input class="email_teaser" type="mail" name="email" placeholder="Votre adresse E-mail" onblur="verifMail(this)" />
+				<input class="submit_teaser" name="sinscrire" type="submit" value="S'inscrire" />
+			</form>
+		</div>
 	</div>
-	<form class="form_teaser" method="POST" action="index.html" onsubmit="return verifForm(this)">
-		<p>Restons en contact, vous ne serez pas spammé !</p>
-		
-		<div id="error"></div>
-		
-		<input class="email_teaser" type="mail" name="email" placeholder="Votre adresse E-mail" onblur="verifMail(this)" />
-		<input class="submit_teaser" name="sinscrire" type="submit" value="S'inscrire" />
-	</form>
-</div>
+	<div class="row social-networks">
+		<div class="col-md-offset-4 col-md-2 btn-fb">
+			<div class="fb-like" data-href="https://www.facebook.com/SmartCart_off-757030314487848/" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="false"></div>
+		</div>
+		<div class="col-md-2">
+			<a href="https://twitter.com/SmartCart_fr?ref_src=twsrc%5Etfw" class="twitter-follow-button" 
+				data-size="large" 
+				data-lang="fr" 
+				data-show-count="false"
+				data-show-screen-name="false"></a>
+		</div>
+	</div>
 </body>
+
 <footer>
 	<div class="container container-footer">
 		<div class="row">
@@ -106,7 +119,3 @@ if(isset($_POST['sinscrire'])) {
 	<script src="js/main_verif_mail.js"></script>
 	<script src="js/fb.js"></script>
 </html>
-
-
-
-
