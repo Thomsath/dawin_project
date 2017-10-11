@@ -11,6 +11,8 @@ body {
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
 	background-color: #f1ece6;
+	display: table;
+	width: 100%
 }
 
 .main_teaser {
@@ -107,9 +109,8 @@ form {
 footer{
 	background-color: #fbb12f;
 	color: #fff;
-	bottom: 0;
-	position: absolute;
-	width: 100%;
+	display: table-row;
+	height: 30px;
 }
 
 /**** FOOTER ****/

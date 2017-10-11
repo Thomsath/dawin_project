@@ -65,7 +65,8 @@ if(isset($_POST['sinscrire'])) {
 				data-size="large" 
 				data-lang="fr" 
 				data-show-count="false"
-				data-show-screen-name="false"></a>
+				data-show-screen-name="false">
+			</a>
 		</div>
 	</div>
 </body>
