@@ -1,4 +1,4 @@
-#SMART CART
+# SMART CART
 
 SmartCart is website that will revolutionize your purchase on Internet, by offering packs of products already prepared !
 
@@ -9,7 +9,7 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
 **Twitter:** [Voir](https://twitter.com/SmartCart_fr)
 
 
-##TEAM
+## TEAM
 
 - Dorian
   - Project leader
@@ -25,14 +25,14 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
   - Back-end developer
 
 
-##REQUIREMENTS
+## REQUIREMENTS
 
 - MySQL
 - PHP v5.6
 - Apache2
 
 
-##INSTALLATION
+## INSTALLATION
 
 1. Clone the repository :
 
@@ -47,9 +47,9 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
 ```php bin/console doctrine:database:create```
 
 
-##FEATURES
+## FEATURES
 
-####Front
+#### Front
 
 - Account management
 - Buy a cart of products
@@ -60,7 +60,7 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
 - Orders system
 
 
-####Back
+#### Back
 
 - Users management
 - Carts management
