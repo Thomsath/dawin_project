@@ -121,4 +121,5 @@ if(isset($_POST['sinscrire'])) {
 	<script src="js/carts_effect_main.js"></script>
 	<script src="js/main_verif_mail.js"></script>
 	<script src="js/fb.js"></script>
+	<script src="js/app.js"></script>
 </html>
