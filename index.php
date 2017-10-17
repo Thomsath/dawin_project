@@ -1,21 +1,30 @@
 <?php
-/*$bdd = new PDO('mysql:host=localhost;dbname=pt_smartcart','pt_smartcart', 'U3VJd4Q5');
+//$bdd = new PDO('mysql:host=localhost;dbname=pt_smartcart','pt_smartcart', 'U3VJd4Q5');
 
-$bdd = new PDO('mysql:host=localhost;dbname=cdiscount','root','');
+//$bdd = new PDO('mysql:host=localhost;dbname=cdiscount','root','');
 
 if(isset($_POST['sinscrire'])) {
-	if(!empty($_POST['email'])) {
+	if(!empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			if(isset($error)) {
+					unset($error);
+			}
+
 	$email=$_POST['email'];
 
-	$requete=$bdd->query("INSERT INTO abonne (mail) values ('$email')");
+	//$requete=$bdd->query("INSERT INTO abonne (mail) values ('$email')");
 
-	$requete->closeCursor();	
+	//$requete->closeCursor();
+
+	$done = "Merci, nous vous tiendrons informé!";
 	}
 	else {
-		$error = "Je suis une erreur";
+		if(isset($done)) {
+				unset($done);
+		}
+		$error = "Veuillez saisir une adresse mail valide";
 	}
 
-}*/
+}
 
 
 ?>
@@ -37,21 +46,23 @@ if(isset($_POST['sinscrire'])) {
 	<div class="container">
 		<div id="fb-root"></div>
 		<div class="row">
-			<div class="col-md-offset-3 col-md-6 main_teaser">
+			<div class="col-md-offset-2 col-md-8 main_teaser">
 
 				<div id="top-form_teaser">
 					<img src="images/logo.png" id="logo" alt="Logo SmartCart">
 					<h1 id="main_title">It's raining bags!</h1>
 					<br>
-					<p>SmartCart est le site Internet qui va révolutionner vos achats sur Internet, en vous proposant des packs d'articles pre-faits. Arrivée imminente...</p>
+					<p>SmartCart est le site Internet qui va révolutionner vos achats sur Internet, en vous proposant des kits de produits faits pour vous. Arrivée imminente...</p>
 					<br>
-					
+
 				</div>
-				<form class="form_teaser" method="POST" action="index.html" onsubmit="return verifForm(this)">
+				<form class="form_teaser" method="POST" action="index.php" onsubmit="return verifForm(this)">
 					<p>Restons en contact, vous ne serez pas spammé mais privilégié !</p>
-					
-					<div id="error"></div>
-					
+
+					<?php if (isset($error)) { ?> <div class="alert alert-danger"> <p id="error"><?php echo $error; ?></p></div> <?php }
+					else if (isset($done)) { ?><div class="alert alert-success"> <p id="error"> <?php echo $done; ?></p></div> <?php } ?>
+
+
 					<input class="email_teaser" type="mail" name="email" placeholder="Votre adresse E-mail" onblur="verifMail(this)" />
 					<input class="submit_teaser" name="sinscrire" type="submit" value="S'inscrire" />
 				</form>
@@ -59,17 +70,17 @@ if(isset($_POST['sinscrire'])) {
 		</div>
 		<div class="row social-networks">
 			<div class="col-md-offset-4 col-md-4 btn-fb-twit">
-				<a href="https://twitter.com/SmartCart_fr?ref_src=twsrc%5Etfw" class="twitter-follow-button" 
-					data-size="large" 
-					data-lang="fr" 
+				<a href="https://twitter.com/SmartCart_fr?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+					data-size="large"
+					data-lang="fr"
 					data-show-count="false"
 					data-show-screen-name="false" ></a>
-				<div class="fb-like btn-fb" 
-					data-href="https://www.facebook.com/SmartCart_off-757030314487848/" 
-					data-layout="button_count" 
-					data-action="like" 
-					data-size="large" 
-					data-show-faces="false" 
+				<div class="fb-like btn-fb"
+					data-href="https://www.facebook.com/SmartCart_off-757030314487848/"
+					data-layout="button_count"
+					data-action="like"
+					data-size="large"
+					data-show-faces="false"
 					data-share="false"></div>
 			</div>
 		</div>
@@ -92,7 +103,7 @@ if(isset($_POST['sinscrire'])) {
 	<!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
@@ -108,12 +119,12 @@ if(isset($_POST['sinscrire'])) {
 	</form>
         </div>
       </div>
-      
+
     </div>
   </div>
-  
+
 </div>
-</footer> 
+</footer>
 </body>
 	<!-- SCRIPTS -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

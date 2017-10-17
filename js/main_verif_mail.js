@@ -1,9 +1,9 @@
 function surligne(champ, erreur) {
 		if (erreur) champ.style.backgroundColor = "#fba";
-		else champ.style.backgroundColor = "";
+		else champ.style.backgroundColor = "#FFFFF";
 	}
 
-	function verifMail(champ) {
+	/*function verifMail(champ) {
 		var regex = /^[a-zA-Z0-9._-]+@[a-z0-9._-]{2,}\.[a-z]{2,4}$/;
 		if (!regex.test(champ.value)) {
 			surligne(champ, true);
@@ -13,7 +13,7 @@ function surligne(champ, erreur) {
 			surligne(champ, false);
 			return true;
 		}
-	}
+	}*/
 
 	function verifForm(f) {
 		var mailOk = verifMail(f.email);
@@ -27,5 +27,5 @@ function surligne(champ, erreur) {
 			test.innerHTML = "<div class=\"alert alert-danger danger-email\"> <p id=\"error\">Veuillez saisir une adresse mail valide</p> </div>";
 			return false;
 		}
-		
+
 	}

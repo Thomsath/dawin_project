@@ -24,16 +24,16 @@ body {
 #logo {
 	display: block;
 	margin: 0 auto;
-	width: 150px;
+	width: 200px;
 }
 #main_title{
-	color: dimgrey; 
-	font-weight: bold; 
-	margin:auto; 
+	color: dimgrey;
+	font-weight: bold;
+	margin:auto;
 	text-align: center;
 	font-family: 'Ubuntu';
 	text-shadow: #f1ece6 3px 3px, #f1ece6 -3px 3px, #f1ece6 -3px -3px, #f1ece6 3px -3px;
-	font-size: 5em;
+	font-size: 5.5em;
 }
 
 /* ---- PLACEHOLDER ---- */
@@ -92,7 +92,7 @@ body {
 	border-radius: 12px;
 	height: 45px;
     	font-size: 1.5em;
-	box-shadow: 0 2px 0 #3f6f21;
+	/*box-shadow: 0 2px 0 #3f6f21; */
 }
 
 .email_teaser_pop {
@@ -115,10 +115,10 @@ body {
 	box-shadow: 0 2px 0 #3f6f21;
 }
 
-#top-form_teaser p { 
-	color: #474b44; 
-	font-weight: bold; 
-	margin:auto; 
+#top-form_teaser p {
+	color: #474b44;
+	font-weight: bold;
+	margin:auto;
 	text-align: center;
 	font-family: 'Source Sans Pro Light', Roboto;
 
@@ -126,7 +126,7 @@ body {
 }
 
 .form_teaser {
-	text-align: center;	
+	text-align: center;
 }
 
 /**** FOOTER ****/
@@ -149,7 +149,7 @@ body {
 }
 
 .btn-fb-twit{
- 	text-align: center;  
+ 	text-align: center;
 }
 
 .btn-fb{
