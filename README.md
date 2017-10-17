@@ -4,7 +4,7 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
 
 **Website:** [Voir](http://smartcart.fr/)
 
-**Facebook:** [Voir](https://www.facebook.com/SmartCart_off-757030314487848/)
+**Facebook:** [Voir](https://www.facebook.com/SmartCartfr-150271318914286/)
 
 **Twitter:** [Voir](https://twitter.com/SmartCart_fr)
 
