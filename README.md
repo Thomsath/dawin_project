@@ -1,4 +1,4 @@
-# SMART CART
+# SMARTCART
 
 SmartCart is website that will revolutionize your purchase on Internet, by offering packs of products already prepared !
 
@@ -38,13 +38,18 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
 
 ```git clone https://github.com/Thomsath/dawin_project.git```
 
-2. Use composer to install all dependencies
+2. Clone a specific branch 
+	
+```git clone -b <branch> --single-branch <url>```	
+
+3. Use composer to install all dependencies
 
 ```composer install```
 
-3. Install database
+4. Install database
 
 ```php bin/console doctrine:database:create```
+
 
 
 ## FEATURES
