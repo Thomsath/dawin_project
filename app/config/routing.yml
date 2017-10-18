@@ -1,3 +1,7 @@
+smartcartsmartcart:
+    resource: "@smartcartsmartcartBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
