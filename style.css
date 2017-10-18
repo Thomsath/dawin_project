@@ -12,13 +12,11 @@ body {
 	background-position: 0px 0px;
 	background-color: #f1ece6;
 	position: relative;
-	padding-bottom: 150px;
-	display:table;
 	width:100%;
 }
 
 .main_teaser {
-	margin-top: 10%;
+	margin-top: 13%;
 	display: none;
 }
 #logo {
@@ -33,7 +31,7 @@ body {
 	text-align: center;
 	font-family: 'Ubuntu';
 	text-shadow: #f1ece6 3px 3px, #f1ece6 -3px 3px, #f1ece6 -3px -3px, #f1ece6 3px -3px;
-	font-size: 5.5em;
+	font-size: 5em;
 }
 
 /* ---- PLACEHOLDER ---- */
@@ -119,7 +117,7 @@ body {
 	color: #474b44;
 	font-weight: bold;
 	margin:auto;
-	text-align: center;
+	/*text-align: center;*/
 	font-family: 'Source Sans Pro Light', Roboto;
 
 	font-size: 2rem;
@@ -130,6 +128,11 @@ body {
 }
 
 /**** FOOTER ****/
+
+footer{
+	margin-top: auto;
+}
+
 .btn-transp-white{
 	background-color: transparent;
     border: 1px solid #fff;
@@ -137,30 +140,43 @@ body {
     padding: 8px;
 }
 .container-footer {
-	padding: 25px;
+	padding: 15px;
+	margin-top: 4%;
 	background-color: #fbb12f;
-	position: absolute;
 	color: #fff;
-	bottom: 0;
-    left: 0;
-    right: 0;
 	width: 100%;
-
 }
 
-.btn-fb-twit{
- 	text-align: center;
+/*--------------*/
+
+.btns-center{
+	padding-left: 10%;
 }
 
 .btn-fb{
 	margin-left: 5px;
+	position: absolute !important;
 }
 
 .social-networks{
 	margin-top: 5%;
 }
 
-footer{
-	display:table-row;
-	height:30px;
+/**** Media Query ****/
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min; max-width: @screen-sm-max) { 
+	#cieName, #designer, #newsletter{
+		text-align: center;
+		padding-top: 10px;
+	}
 }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { }
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { }

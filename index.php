@@ -52,7 +52,7 @@ if(isset($_POST['sinscrire'])) {
 					<img src="images/logo.png" id="logo" alt="Logo SmartCart">
 					<h1 id="main_title">It's raining bags!</h1>
 					<br>
-					<p>SmartCart est le site Internet qui va révolutionner vos achats sur Internet, en vous proposant des kits de produits faits pour vous. Arrivée imminente...</p>
+					<p>SmartCart est le site Internet qui va révolutionner vos achats sur Internet, en vous proposant des kits de produits préparés pour vous. Arrivée imminente...</p>
 					<br>
 
 				</div>
@@ -69,7 +69,7 @@ if(isset($_POST['sinscrire'])) {
 			</div>
 		</div>
 		<div class="row social-networks">
-			<div class="col-md-offset-4 col-md-4 btn-fb-twit">
+			<div class="col-md-offset-4 col-md-4 btns-center">
 				<a href="https://twitter.com/SmartCart_fr?ref_src=twsrc%5Etfw" class="twitter-follow-button"
 					data-size="large"
 					data-lang="fr"
@@ -89,13 +89,13 @@ if(isset($_POST['sinscrire'])) {
 	<footer>
 	<div class="container container-footer">
 		<div class="row">
-			<div class="col-md-offset-2 col-md-1">
+			<div class="col-md-2 col-sm-4 col-xs-6" id="cieName">
 				<p>&copy; SmartCart</p>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-4 col-xs-6" id="designer">
 				<p>Designed by Thomas Beaupertuis</p>
 			</div>
-			<div class="col-md-offset-3 col-md-3">
+			<div class="col-md-offset-3 col-md-3 col-sm-4" id="newsletter">
 				<button type="button" class="btn-transp-white" data-toggle="modal" data-target="#myModal">S'inscrire à la Newsletter</button>
 			</div>
 		</div>
