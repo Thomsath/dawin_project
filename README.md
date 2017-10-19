@@ -50,19 +50,20 @@ SmartCart is website that will revolutionize your purchases on the Internet, by 
 
 ```php bin/console doctrine:database:create```
 
+5. Create the database tables
+
+```php bin/console doctrine:schema:update --force```
 
 
 ## FEATURES
 
 #### Front
 
-- Account management
 - Buy a cart of products
 - Search, filter and sort system
 - Comments system
 - Contact support
 - Cart system
-- Orders system
 
 
 #### Back
@@ -70,4 +71,3 @@ SmartCart is website that will revolutionize your purchases on the Internet, by 
 - Users management
 - Carts management
 - Categories management
-- Orders management
