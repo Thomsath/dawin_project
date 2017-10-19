@@ -69,19 +69,21 @@ if(isset($_POST['sinscrire'])) {
 			</div>
 		</div>
 		<div class="row social-networks">
-			<div class="col-md-offset-4 col-md-4 btns-center">
+			<div class="col-md-12">
+				<div class="btns-center">
 				<a href="https://twitter.com/SmartCart_fr?ref_src=twsrc%5Etfw" class="twitter-follow-button"
 					data-size="large"
 					data-lang="fr"
 					data-show-count="false"
 					data-show-screen-name="false" ></a>
 				<div class="fb-like btn-fb"
-					data-href="https://www.facebook.com/SmartCart_off-757030314487848/"
+					data-href="https://www.facebook.com/SmartCartfr-150271318914286/"
 					data-layout="button_count"
 					data-action="like"
 					data-size="large"
 					data-show-faces="false"
 					data-share="false"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -93,7 +95,7 @@ if(isset($_POST['sinscrire'])) {
 				<p>&copy; SmartCart</p>
 			</div>
 			<div class="col-md-3 col-sm-4 col-xs-6" id="designer">
-				<p>Designed by Thomas Beaupertuis</p>
+				<p>By Thomas Beaupertuis</p>
 			</div>
 			<div class="col-md-offset-3 col-md-3 col-sm-4" id="newsletter">
 				<button type="button" class="btn-transp-white" data-toggle="modal" data-target="#myModal">S'inscrire à la Newsletter</button>

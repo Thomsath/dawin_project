@@ -52,6 +52,7 @@ body {
   color: #c3c0b8;
   padding : 8px;
 }
+/*--------------------*/
 
 .form_teaser {
 	top: 20%;
@@ -127,6 +128,30 @@ body {
 	text-align: center;
 }
 
+.btns-center{
+	width: 172px;
+    margin: auto;
+}
+
+.btn-fb{
+	margin-left: 5px;
+	position: absolute !important;
+}
+
+.social-networks{
+	margin-top: 5%;
+}
+
+
+#cieName, #designer{
+	text-align: center;
+	padding-top: 10px;
+}
+
+#newsletter{
+	text-align: right;
+}
+
 /**** FOOTER ****/
 
 footer{
@@ -149,34 +174,36 @@ footer{
 
 /*--------------*/
 
-.btns-center{
-	padding-left: 10%;
-}
 
-.btn-fb{
-	margin-left: 5px;
-	position: absolute !important;
-}
+/*==========  Media Query  ==========*/
 
-.social-networks{
-	margin-top: 5%;
-}
+    /* Custom, iPhone Retina */ 
+    @media (max-width : 320px) {
+    	#main_title{
+    	    font-size: 3.7em;
+    	}
+    }
 
-/**** Media Query ****/
+    /* Extra Small Devices, Phones */ 
+    @media(max-width: 768px) {
+   		#newsletter {
+		    text-align: center;
+		}
+    }
 
-/* Extra small devices (phones, less than 768px) */
-/* No media query since this is the default in Bootstrap */
+    /* Small Devices, Tablets */
+    @media(min-width: 768px) and (max-width: 992px) {
+	    #cieName{
+			text-align: left;
+		}
+    }
 
-/* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min; max-width: @screen-sm-max) { 
-	#cieName, #designer, #newsletter{
-		text-align: center;
-		padding-top: 10px;
-	}
-}
+    /* Medium Devices, Desktops */
+    @media only screen and (min-width : 992px) {
 
-/* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { }
+    }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { }
+    /* Large Devices, Wide Screens */
+    @media only screen and (min-width : 1200px) {
+
+    }
