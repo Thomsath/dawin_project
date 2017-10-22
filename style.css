@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
-@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 html {
     height: 100%;
 }
@@ -65,14 +65,14 @@ body {
 	margin-bottom: 15px;
 }
 .form_teaser p {
-	font-family: 'Source Sans Pro Light', Roboto;
+	font-family: 'Source Sans Pro Light', Open Sans;
 	color: #474b44;
 	font-weight: bold;
 	font-size: 2rem;
 }
 .email_teaser {
 	background-color: white;
-	color: #c3c0b8;
+	color: #474b44;
 	border-radius: 12px;
 	border: 1px solid #cdd2d4;
 	padding: 5px;
@@ -119,7 +119,7 @@ body {
 	font-weight: bold;
 	margin:auto;
 	/*text-align: center;*/
-	font-family: 'Source Sans Pro Light', Roboto;
+	font-family: 'Source Sans Pro Light', Open sans;
 
 	font-size: 2rem;
 }
