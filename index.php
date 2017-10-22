@@ -88,7 +88,10 @@ if(isset($_POST['sinscrire'])) {
 		</div>
 	</div>
 
+	<!-- FOOTER -->
+
 	<footer>
+
 	<div class="container container-footer">
 		<div class="row">
 			<div class="col-md-2 col-sm-4 col-xs-6" id="cieName">

@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
-html {
+
+@font-face {
+	font-family: 'Din';
+	src: url(polices/DIN.otf);
+}
+
+html, body {
     height: 100%;
 }
 body {
 	background:url("images/bg_mainpage.png");
-	background-size: 100%;
 	min-height: 100%;
 	background-repeat: no-repeat;
 	background-position: 0px 0px;
@@ -65,7 +69,7 @@ body {
 	margin-bottom: 15px;
 }
 .form_teaser p {
-	font-family: 'Source Sans Pro Light', Open Sans;
+	font-family: 'Source Sans Pro Light', Din;
 	color: #474b44;
 	font-weight: bold;
 	font-size: 2rem;
@@ -119,7 +123,7 @@ body {
 	font-weight: bold;
 	margin:auto;
 	/*text-align: center;*/
-	font-family: 'Source Sans Pro Light', Open sans;
+	font-family: 'Source Sans Pro Light', Din;
 
 	font-size: 2rem;
 }
@@ -156,6 +160,9 @@ body {
 
 footer{
 	margin-top: auto;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 
 .btn-transp-white{
