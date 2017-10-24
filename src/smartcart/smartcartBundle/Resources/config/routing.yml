@@ -1,3 +1,0 @@
-smartcartsmartcart_homepage:
-    path:     /
-    defaults: { _controller: smartcartsmartcartBundle:Default:index }

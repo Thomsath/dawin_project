@@ -5,7 +5,7 @@
     "autoload": {
         "psr-4": {
             "AppBundle\\": "src/AppBundle",
-            "smartcart\\": "src/smartcart"
+            "SmartCartBundle\\": "src/SmartCartBundle"
         },
         "classmap": [
             "app/AppKernel.php",

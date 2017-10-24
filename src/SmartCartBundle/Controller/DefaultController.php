@@ -1,6 +1,6 @@
 <?php
 
-namespace smartcart\smartcartBundle\Controller;
+namespace SmartCartBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('smartcartsmartcartBundle:Default:index.html.twig');
+        return $this->render('SmartCartBundle:Default:index.html.twig');
     }
 }

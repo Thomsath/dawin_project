@@ -1,6 +1,6 @@
 <?php
 
-namespace smartcart\smartcartBundle\Entity;
+namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Admin
  *
  * @ORM\Table(name="admin")
- * @ORM\Entity(repositoryClass="smartcart\smartcartBundle\Repository\AdminRepository")
+ * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\AdminRepository")
  */
 class Admin
 {
@@ -94,4 +94,3 @@ class Admin
         return $this->password;
     }
 }
-

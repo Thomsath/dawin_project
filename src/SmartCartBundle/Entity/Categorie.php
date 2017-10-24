@@ -1,6 +1,6 @@
 <?php
 
-namespace smartcart\smartcartBundle\Entity;
+namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Categorie
  *
  * @ORM\Table(name="categorie")
- * @ORM\Entity(repositoryClass="smartcart\smartcartBundle\Repository\CategorieRepository")
+ * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\CategorieRepository")
  */
 class Categorie
 {

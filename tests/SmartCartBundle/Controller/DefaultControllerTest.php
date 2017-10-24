@@ -1,6 +1,6 @@
 <?php
 
-namespace smartcart\smartcartBundle\Tests\Controller;
+namespace SmartCartBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 

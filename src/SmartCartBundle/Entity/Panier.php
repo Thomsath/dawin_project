@@ -1,6 +1,6 @@
 <?php
 
-namespace smartcart\smartcartBundle\Entity;
+namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,22 +8,22 @@ use Doctrine\ORM\Mapping as ORM;
  * Panier
  *
  * @ORM\Table(name="panier")
- * @ORM\Entity(repositoryClass="smartcart\smartcartBundle\Repository\PanierRepository")
+ * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\PanierRepository")
  */
 class Panier
 {
     /**
-   * @ORM\ManyToOne(targetEntity="smartcart\smartcartBundle\Entity\Categorie")
+   * @ORM\ManyToOne(targetEntity=SmartCartBundle\Entity\Categorie")
    */
   private $categorie;
-  
-  
+
+
     /**
-   * @ORM\ManyToMany(targetEntity="smartcart\smartcartBundle\Entity\Produit")
+   * @ORM\ManyToMany(targetEntity="SmartCartBundle\Entity\Produit")
    */
   private $produits;
-  
-    
+
+
     /**
      * @var int
      *
@@ -74,7 +74,7 @@ class Panier
      * @ORM\Column(name="image", type="string", length=255)
      */
     private $image;
-    
+
     /**
      * @var int
      *
@@ -237,7 +237,7 @@ class Panier
     {
         return $this->image;
     }
-    
+
     /**
      * Set panierAssocie
      *
@@ -261,7 +261,7 @@ class Panier
     {
         return $this->panierAssocie;
     }
-    
+
     public function setCategorie(Categorie $categorie)
   {
     $this->categorie = $categorie;
@@ -284,11 +284,11 @@ class Panier
     /**
      * Add produit
      *
-     * @param \smartcart\smartcartBundle\Entity\Produit $produit
+     * @param \SmartCartBundle\Entity\Produit $produit
      *
      * @return Panier
      */
-    public function addProduit(\smartcart\smartcartBundle\Entity\Produit $produit)
+    public function addProduit(Produit $produit)
     {
         $this->produits[] = $produit;
 
@@ -298,9 +298,9 @@ class Panier
     /**
      * Remove produit
      *
-     * @param \smartcart\smartcartBundle\Entity\Produit $produit
+     * @param \SmartCartBundle\Entity\Produit $produit
      */
-    public function removeProduit(\smartcart\smartcartBundle\Entity\Produit $produit)
+    public function removeProduit(Produit $produit)
     {
         $this->produits->removeElement($produit);
     }

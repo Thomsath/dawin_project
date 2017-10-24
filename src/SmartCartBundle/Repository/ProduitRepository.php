@@ -1,6 +1,6 @@
 <?php
 
-namespace smartcart\smartcartBundle\Repository;
+namespace SmartCartBundle\Repository;
 
 /**
  * ProduitRepository

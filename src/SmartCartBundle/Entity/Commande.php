@@ -1,6 +1,6 @@
 <?php
 
-namespace smartcart\smartcartBundle\Entity;
+namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,17 +8,17 @@ use Doctrine\ORM\Mapping as ORM;
  * Commande
  *
  * @ORM\Table(name="commande")
- * @ORM\Entity(repositoryClass="smartcart\smartcartBundle\Repository\CommandeRepository")
+ * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\CommandeRepository")
  */
 class Commande
 {
-    
+
         /**
-   * @ORM\ManyToMany(targetEntity="smartcart\smartcartBundle\Entity\Panier")
+   * @ORM\ManyToMany(targetEntity="SmartCartBundle\Entity\Panier")
    */
   private $paniers;
-    
-    
+
+
     /**
      * @var int
      *
@@ -80,11 +80,11 @@ class Commande
     /**
      * Add panier
      *
-     * @param \smartcart\smartcartBundle\Entity\Panier $panier
+     * @param \SmartCartBundle\Entity\Panier $panier
      *
      * @return Commande
      */
-    public function addPanier(\smartcart\smartcartBundle\Entity\Panier $panier)
+    public function addPanier(Panier $panier)
     {
         $this->paniers[] = $panier;
 
@@ -94,9 +94,9 @@ class Commande
     /**
      * Remove panier
      *
-     * @param \smartcart\smartcartBundle\Entity\Panier $panier
+     * @param \SmartCartBundle\Entity\Panier $panier
      */
-    public function removePanier(\smartcart\smartcartBundle\Entity\Panier $panier)
+    public function removePanier(Panier $panier)
     {
         $this->paniers->removeElement($panier);
     }

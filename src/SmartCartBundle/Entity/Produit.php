@@ -1,6 +1,6 @@
 <?php
 
-namespace smartcart\smartcartBundle\Entity;
+namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Produit
  *
  * @ORM\Table(name="produit")
- * @ORM\Entity(repositoryClass="smartcart\smartcartBundle\Repository\ProduitRepository")
+ * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\ProduitRepository")
  */
 class Produit
 {
@@ -84,7 +84,7 @@ class Produit
      */
     private $classement;
 
-    
+
 
     /**
      * Get id
@@ -312,6 +312,5 @@ class Produit
         return $this->classement;
     }
 
-    
-}
 
+}

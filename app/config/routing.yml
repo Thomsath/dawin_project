@@ -1,5 +1,5 @@
-smartcartsmartcart:
-    resource: "@smartcartsmartcartBundle/Resources/config/routing.yml"
+smart_cart:
+    resource: "@SmartCartBundle/Resources/config/routing.yml"
     prefix:   /
 
 app:
