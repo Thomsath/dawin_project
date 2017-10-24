@@ -1,6 +1,6 @@
 # SMARTCART
 
-SmartCart is website that will revolutionize your purchase on Internet, by offering packs of products already prepared !
+SmartCart is website that will revolutionize your purchases on the Internet, by offering you packs of products already prepared !
 
 **Website:** [Voir](http://smartcart.fr/)
 
@@ -38,9 +38,9 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
 
 ```git clone https://github.com/Thomsath/dawin_project.git```
 
-2. Clone a specific branch 
-	
-```git clone -b <branch> --single-branch <url>```	
+2. Clone a specific branch
+
+```git clone -b <branch> --single-branch <url>```
 
 3. Use composer to install all dependencies
 
@@ -50,19 +50,20 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
 
 ```php bin/console doctrine:database:create```
 
+5. Create the database tables
+
+```php bin/console doctrine:schema:update --force```
 
 
 ## FEATURES
 
 #### Front
 
-- Account management
 - Buy a cart of products
 - Search, filter and sort system
 - Comments system
 - Contact support
 - Cart system
-- Orders system
 
 
 #### Back
@@ -70,4 +71,3 @@ SmartCart is website that will revolutionize your purchase on Internet, by offer
 - Users management
 - Carts management
 - Categories management
-- Orders management
