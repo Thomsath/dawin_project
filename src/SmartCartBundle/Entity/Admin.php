@@ -2,6 +2,7 @@
 
 namespace SmartCartBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="admin")
  * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\AdminRepository")
  */
-class Admin
+class Admin extends BaseUser
 {
     /**
      * @var int
@@ -19,22 +20,7 @@ class Admin
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="login", type="string", length=255)
-     */
-    private $login;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="password", type="string", length=255)
-     */
-    private $password;
-
+    protected $id;
 
     /**
      * Get id
@@ -53,9 +39,9 @@ class Admin
      *
      * @return Admin
      */
-    public function setLogin($login)
+    public function setUsername($username)
     {
-        $this->login = $login;
+        $this->username = $username;
 
         return $this;
     }
@@ -65,9 +51,9 @@ class Admin
      *
      * @return string
      */
-    public function getLogin()
+    public function getUsername()
     {
-        return $this->login;
+        return $this->username;
     }
 
     /**

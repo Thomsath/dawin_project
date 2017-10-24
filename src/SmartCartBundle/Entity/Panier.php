@@ -13,7 +13,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Panier
 {
     /**
-   * @ORM\ManyToOne(targetEntity=SmartCartBundle\Entity\Categorie")
+   * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Categorie")
    */
   private $categorie;
 
