@@ -94,7 +94,7 @@ body {
 	padding: 5px 20px;
 	border-radius: 12px;
 	height: 45px;
-    	font-size: 1.5em;
+    font-size: 1.5em;
 	/*box-shadow: 0 2px 0 #3f6f21; */
 }
 
@@ -147,7 +147,7 @@ body {
 }
 
 
-#cieName, #designer{
+#cieName, #designer, #newsletter{
 	text-align: center;
 	padding-top: 10px;
 }

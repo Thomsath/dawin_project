@@ -37,6 +37,7 @@ if(isset($_POST['sinscrire'])) {
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+	<link rel="shortcut icon" href="images/favicon.png" />
 
 	<meta charset="utf-8">
 	<title>SmartCart - Accueil</title>
@@ -101,7 +102,8 @@ if(isset($_POST['sinscrire'])) {
 				<p>Deisgn par Thomas Beaupertuis</p>
 			</div>
 			<div class="col-md-offset-3 col-md-3 col-sm-4" id="newsletter">
-				<button type="button" class="btn-transp-white" data-toggle="modal" data-target="#myModal">S'inscrire à la Newsletter</button>
+				<p>2017-2018</p>
+				<!--<button type="button" class="btn-transp-white" data-toggle="modal" data-target="#myModal">S'inscrire à la Newsletter</button>-->
 			</div>
 		</div>
 	</div>
