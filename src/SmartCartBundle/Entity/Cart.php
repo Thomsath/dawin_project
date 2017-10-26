@@ -13,6 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
 class Cart
 {
     /**
+    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\Product", mappedBy="cart")
+    */
+    private $product;
+
+    /**
     * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Category")
     */
     private $category;
@@ -70,7 +75,7 @@ class Cart
     /**
     * @var int
     *
-    * @ORM\Column(name="associated_cart", type="integer")
+    * @ORM\Column(name="associated_cart", type="integer", nullable=true)
     */
     private $associated_cart;
 
@@ -80,6 +85,11 @@ class Cart
     public function __construct()
     {
         $this->reviews = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    public function __toString()
+    {
+        return $this->name;
     }
 
     /**
@@ -210,7 +220,7 @@ class Cart
     /**
     * Set associated cart
     *
-    * @param integer $panierAssocie
+    * @param integer $associated_cart
     *
     * @return Cart
     */
