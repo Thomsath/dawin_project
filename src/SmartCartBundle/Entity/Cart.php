@@ -13,9 +13,9 @@ use Doctrine\ORM\Mapping as ORM;
 class Cart
 {
     /**
-    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\Product", mappedBy="cart")
+    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\CartProduct", mappedBy="cart")
     */
-    private $product;
+    private $products;
 
     /**
     * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Category")
@@ -85,6 +85,7 @@ class Cart
     public function __construct()
     {
         $this->reviews = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->products = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     public function __toString()
@@ -282,5 +283,28 @@ class Cart
     public function getReviews()
     {
         return $this->reviews;
+    }
+
+    /**
+    * Get products
+    *
+    * @return \Doctrine\Common\Collections\Collection
+    */
+    public function getProducts()
+    {
+        return $this->products;
+    }
+
+    /**
+    * Add review
+    *
+    * @param \SmartCartBundle\Entity\Review $review
+    *
+    * @return Review
+    */
+    public function addProduct(Review $review)
+    {
+        $this->reviews[] = $review;
+        return $this;
     }
 }

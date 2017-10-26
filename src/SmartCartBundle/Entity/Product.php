@@ -3,26 +3,30 @@
 namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * Product
  *
- * @ORM\Table(name="cart_product")
+ * @ORM\Table(name="product")
  * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\ProductRepository")
+ * @UniqueEntity(fields={"productId"})
  */
 class Product
 {
     /**
-    * @ORM\Id
-    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart")
-    */
-    private $cart;
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
 
     /**
      * @var int
      *
      * @ORM\Column(name="productId", type="string")
-     * @ORM\Id
      */
     private $productId;
 
