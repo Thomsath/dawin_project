@@ -6,13 +6,18 @@ use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Admin
+ * User
  *
- * @ORM\Table(name="admin")
+ * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\AdminRepository")
  */
-class Admin extends BaseUser
+class User extends BaseUser
 {
+    /**
+    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\Review", mappedBy="user")
+    */
+    private $reviews;
+
     /**
      * @var int
      *
@@ -21,6 +26,16 @@ class Admin extends BaseUser
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     protected $id;
+
+    /**
+    * Constructor
+    */
+    public function __construct()
+    {
+        parent::__construct();
+
+        $this->reviews = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
      * Get id
@@ -37,12 +52,11 @@ class Admin extends BaseUser
      *
      * @param string $login
      *
-     * @return Admin
+     * @return User
      */
     public function setUsername($username)
     {
         $this->username = $username;
-
         return $this;
     }
 
@@ -61,12 +75,11 @@ class Admin extends BaseUser
      *
      * @param string $password
      *
-     * @return Admin
+     * @return User
      */
     public function setPassword($password)
     {
         $this->password = $password;
-
         return $this;
     }
 
@@ -78,5 +91,38 @@ class Admin extends BaseUser
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+    * Add review
+    *
+    * @param \SmartCartBundle\Entity\Review $review
+    *
+    * @return Review
+    */
+    public function addReview(Review $review)
+    {
+        $this->reviews[] = $review;
+        return $this;
+    }
+
+    /**
+    * Remove review
+    *
+    * @param \SmartCartBundle\Entity\Review $review
+    */
+    public function removeReview(Review $review)
+    {
+        $this->reviews->removeElement($review);
+    }
+
+    /**
+    * Get reviews
+    *
+    * @return \Doctrine\Common\Collections\Collection
+    */
+    public function getReviews()
+    {
+        return $this->reviews;
     }
 }

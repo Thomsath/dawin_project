@@ -7,10 +7,10 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Categorie
  *
- * @ORM\Table(name="categorie")
- * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\CategorieRepository")
+ * @ORM\Table(name="category")
+ * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\CategoryRepository")
  */
-class Categorie
+class Category
 {
     /**
      * @var int
@@ -24,9 +24,9 @@ class Categorie
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255)
+     * @ORM\Column(name="name", type="string", length=255)
      */
-    private $nom;
+    private $name;
 
 
     /**
@@ -40,26 +40,25 @@ class Categorie
     }
 
     /**
-     * Set nom
+     * Set name
      *
-     * @param string $nom
+     * @param string $name
      *
-     * @return Categorie
+     * @return Category
      */
-    public function setNom($nom)
+    public function setName($name)
     {
-        $this->nom = $nom;
-
+        $this->name = $name;
         return $this;
     }
 
     /**
-     * Get nom
+     * Get name
      *
      * @return string
      */
-    public function getNom()
+    public function getName()
     {
-        return $this->nom;
+        return $this->name;
     }
 }
