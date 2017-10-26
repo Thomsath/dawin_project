@@ -99,7 +99,7 @@ if(isset($_POST['sinscrire'])) {
 				<p>&copy; SmartCart</p>
 			</div>
 			<div class="col-md-3 col-sm-4 col-xs-6" id="designer">
-				<p>Deisgn par Thomas Beaupertuis</p>
+				<p>Design par Thomas Beaupertuis</p>
 			</div>
 			<div class="col-md-offset-3 col-md-3 col-sm-4" id="newsletter">
 				<p>2017-2018</p>
