@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * User
  *
  * @ORM\Table(name="user")
- * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\AdminRepository")
+ * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\UserRepository")
  */
 class User extends BaseUser
 {
