@@ -1,3 +1,7 @@
 smart_cart_homepage:
     path:     /
     defaults: { _controller: SmartCartBundle:Default:index }
+
+smart_cart_user_list:
+    path:     /admin/users
+    defaults: { _controller: SmartCartBundle:Admin\User:index }
