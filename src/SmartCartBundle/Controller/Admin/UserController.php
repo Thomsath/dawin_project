@@ -18,4 +18,21 @@ class UserController extends Controller
             'users' => $users
         ]);
     }
+
+    public function deleteAction(Request $request, $userId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->findOneById($userId);
+
+        if(!$user) {
+            throw $this->createNotFoundException(
+                'No user found for id ' . $userId
+            );
+        }
+
+        $em->remove($user);
+        $em->flush();
+
+        return $this->redirectToRoute('smart_cart_admin_user_list');
+    }
 }
