@@ -18,7 +18,7 @@ class UserType extends AbstractType
         ->add('email', EmailType::class)
         ->add('password' , PasswordType::class)
         ->add('enabled', CheckboxType::class, array('required' => false))
-        ->add('admin', CheckboxType::class, array('required' => false, 'mapped' => false))
+        ->add('admin', CheckboxType::class, array('required' => false))
         ->add('save', SubmitType::class, array('label' => 'Sauvegarder'));
     }
 }

@@ -128,4 +128,30 @@ class User extends BaseUser
     {
         return $this->reviews;
     }
+
+    /**
+    * Get is admin
+    *
+    * @return boolean
+    */
+    public function getAdmin()
+    {
+        return $this->hasRole('ROLE_ADMIN');
+    }
+
+    /**
+    * Set admin
+    *
+    * @param boolean
+    * @return User
+    */
+    public function setAdmin($admin)
+    {
+        if($admin) {
+            $this->addRole('ROLE_ADMIN');
+        } else {
+            $this->removeRole('ROLE_ADMIN');
+        }
+        return $this;
+    }
 }

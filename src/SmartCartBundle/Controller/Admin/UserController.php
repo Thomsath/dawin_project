@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use SmartCartBundle\Entity\User;
 use SmartCartBundle\Form\Type\UserType;
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
 class UserController extends Controller
 {
@@ -33,6 +34,36 @@ class UserController extends Controller
 
             if($form->get('admin')->getData()) {
                 $user->addRole('ROLE_ADMIN');
+            }
+
+            $em->persist($user);
+            $em->flush();
+        }
+
+        return $this->render('SmartCartBundle:Admin\User:create.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
+    public function editAction(Request $request, $userId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->findOneById($userId);
+
+        if(!$user) {
+            throw $this->createNotFoundException(
+                'No user found for id ' . $userId
+            );
+        }
+
+        $form = $this->createForm(UserType::class, $user);
+        $form->add('password' , PasswordType::class, ['required' => false]);
+
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            if($form->get('password')->getData()) {
+                $encoder = $this->get('security.encoder_factory')->getEncoder($user);
+                $user->setPassword($encoder->encodePassword($user->getPassword(), $user->getSalt()));
             }
 
             $em->persist($user);
