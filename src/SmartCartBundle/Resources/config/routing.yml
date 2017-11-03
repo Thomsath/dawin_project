@@ -9,3 +9,5 @@ smart_cart_admin_user_list:
 smart_cart_admin_user_delete:
     path:     /admin/user/{userId}/delete
     defaults: { _controller: SmartCartBundle:Admin\User:delete }
+    requirements:
+        userId: '\d+'

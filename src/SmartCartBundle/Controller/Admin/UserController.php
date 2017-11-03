@@ -5,7 +5,6 @@ namespace SmartCartBundle\Controller\Admin;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use SmartCartBundle\Entity\User;
-use SmartCartBundle\Form\Type\UserType;
 
 class UserController extends Controller
 {
