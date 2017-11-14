@@ -1,59 +1,124 @@
 /*********************
-  PRODUCT PAGE
+	PRODUCT PAGE
 **********************/
 
-.stylish-input-group .input-group-addon{
-    background:#fbb12f;
-    color: white;
-    border-color: white;
-}
-.stylish-input-group .form-control{
-  box-shadow:0 0 0;
-  background-color: #f1ece6 ;
-  border-color: white;
-
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
-
-}
-.navbar-toggler{
-  padding : 15px;
-  background: #fbb12f;
+.btn-search{
+	color: #fff;
+	text-align: center;
+	background-color: #ffb12f;
+	border: 1px solid #ffb12f;
+	border-radius: 0px 4px 4px 0px;
+	height: 40px;
+	margin-left: -4px
 }
 
-.orange{
-  background: #fbb12f;
-}
-.orange a{
- color: white;
-
-}
-
-.white{
-  background: white;
-}
-.white a{
- color: black;
-
-}
-.navbar-brand{
-  width: 196px;
-  height: 46px;
-  background-image: url('../../images/SmartCartlogo.png');
-  background-position: center;
-  background-size: cover;
-
-}
-#collapsibleNavbar{
-  float: right;
-}
-#nomargin{
-  border-left: 0px;
-  margin-left: 0px;
+.search{
+	border: 1px solid #f1ece6;
+    border-radius: 4px 0px 0px 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 40px;
+    background-color: #f1ece6;
+    width: 93%;
 }
 
-.nav-item {
-  width: 100%;
+.account{
+	background-color: #ffb12f;
+	text-align: center;
+}
+
+.icon-user, .icon-bag{
+	font-size: 25px;
+}
+
+.icon-user{
+	color: #fff;
+}
+
+.name-user, .myBag{
+	margin-left: 5px;
+	font-size: 17px;
+}
+
+.name-user{
+	color: #fff;
+}
+
+.bag-zone{
+	border-right: 1px solid #f1ece6;
+	text-align: center;
+}
+
+.kit-img{
+	width: 100%;
+	height: 260px;
+	object-fit: cover;
+}
+
+.kit-item{
+	border: 2px solid grey;
+	padding: 5px;
+	text-align: center;
+}
+
+.btn-quantity{
+	padding: 3px 6px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	color: #555;
+	text-align: center;
+	background-color: #eee;
+	border: 1px solid #ccc;
+	border-radius: 4px 0px 0px 4px;
+}
+
+.btn-less{
+	border-radius: 0px 4px 4px 0px;
+	left: -10px;
+	position: relative;
+}
+
+.nb-quantity{
+	width: 40px;
+	height: 22px;
+	border: 1px solid rgba(0,0,0,.15);
+	border-radius: .25rem;
+	text-align: center;
+	position: relative;
+	left: -5px;
+}
+
+.btn-addCart{
+	background-color: #fbb12f;
+	border: 1px solid #ffb12f;
+	border-radius: 4px;
+	color: #fff;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.price{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+.name-kit{
+	display: inline-block;
+}
+
+.stars{
+	margin-left: 28%;
+	color: #ffb12f;
+}
+
+.container-grey{
+	background-color: #f1ece6;
+}
+
+.hr-grey{
+	margin-top: 5px;
+    margin-bottom: 5px;
+    border: 0;
+    border-bottom: 1px solid grey;
 }

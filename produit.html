@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Product</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
@@ -15,40 +17,140 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-md">
-
-  <button id="nomargin" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="glyphicon glyphicon-menu-hamburger"></span>
-  </button>
-  <br>
-  <a class="navbar-brand" href="#"></a>
-  <br>
-  <button class="navbar-toggler" type="button">
-    <span class="glyphicon glyphicon-user"></span>
-  </button>
-  <br>
-  <div class="container">
-    <div class="input-group stylish-input-group">
-        <input type="text" class="form-control">
-        <span class="input-group-addon">
-        <button type="submit">
-            <span class="glyphicon glyphicon-search"></span>
-        </button>
-      </span>
+<div class="container">
+    <div>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="../../images/SmartCartlogo.png">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="search">
+                <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="col-md-2 account">
+                <i class="fa fa-user icon-user"></i><span class="name-user">Nom</span>
+            </div>
+            <div class="col-md-2 bag-zone">
+                <i class="fa fa-shopping-bag icon-bag"></i><span class="myBag">Mon panier</span>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item orange">
-        <a href="#"><span class="glyphicon glyphicon-user"> Utilisateur</span></a>
-      </li>
-      <li class="nav-item white">
-        <a href="#"><span class="glyphicon glyphicon-shopping-cart"> Panier</span></a>
-      </li>
+    <div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">A faire en PHP</a></li>
+          <li class="breadcrumb-item">recupérer chemin</li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="name-kit">Nom du kit</h1>
+            <div class="name-kit stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div>
 
-    </ul>
-  </div>
-</nav>
-<br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="images/peintsol.jpg" class="kit-img" ">
+        </div>
+        <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p class="price">15,00€</p>
+
+            <input type="button" name="more" class="btn-quantity" value="+" >
+            <input type="text" id="quantity" class="nb-quantity" value="1">
+            <input type="button" name="less" class="btn-quantity btn-less" value="-">
+
+            <input type="button" name="add" class="btn-addCart" value="Ajouter au panier">
+
+            <p>En stock - Livraison gratuite</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3> Ce kit contient</h3>
+        </div>
+    </div>
+    <!-- boucle php pour recup le contenu du kit, requet BD-->
+    <div class="row">
+        <div class="col-md-2">
+            <div class="kit-item">  
+                <img src="images/potpeint.jpg" style="height: 105px">
+            </div>
+            <p>Un pot de peinture noire extérieur Luxens</p>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Fréquemment acheté ensemble</h3>
+        </div>
+    </div>
+    <!-- boucle php pour recup, requet BD-->
+    <div class="row">
+        <div class="col-md-2">
+            <div class="">  
+                <img src="images/potpeint.jpg" style="height: 105px">
+            </div>
+            <p>Kit tapisserie grands espaces</p>
+            <p>12.99€</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid container-grey">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Caractéristiques détaillées</h2>
+                <h4>Rouleau très grand manch amovible</h4>
+                <div class="row hr-grey">
+                    <div class="col-md-6">
+                        <p>Inducation du geste de tri</p>
+                    </div>
+                    <div class="col-md-6">
+                    <div>
+                        <p>Nos produit et emballages peuvent faire l'objet de tri.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
+
+<script>
+$(document).ready(function() {
+    var max = 10; //quantity max
+    var min = 1; //quantity min
+    var x = 1; //initial text box count
+    $("input[name='more']").click(function(){ 
+        if(x < max){ 
+            x++; //text box increment
+            $("#quantity").val(x); //add input box
+        }
+    });
+    $("input[name='less']").click(function(){ 
+        if(x >  min){ 
+            x--; //text box increment
+            $("#quantity").val(x); //add input box
+        }
+    });
+});
+
+</script>

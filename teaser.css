@@ -212,6 +212,6 @@ footer{
     }
 
     /* Large Devices, Wide Screens */
-    @media oDnly screen and (min-width : 1200px) {
+    @media only screen and (min-width : 1200px) {
 
     }
