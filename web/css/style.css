@@ -1,0 +1,59 @@
+/*********************
+  PRODUCT PAGE
+**********************/
+
+.stylish-input-group .input-group-addon{
+    background:#fbb12f;
+    color: white;
+    border-color: white;
+}
+.stylish-input-group .form-control{
+  box-shadow:0 0 0;
+  background-color: #f1ece6 ;
+  border-color: white;
+
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+
+}
+.navbar-toggler{
+  padding : 15px;
+  background: #fbb12f;
+}
+
+.orange{
+  background: #fbb12f;
+}
+.orange a{
+ color: white;
+
+}
+
+.white{
+  background: white;
+}
+.white a{
+ color: black;
+
+}
+.navbar-brand{
+  width: 196px;
+  height: 46px;
+  background-image: url('../../images/SmartCartlogo.png');
+  background-position: center;
+  background-size: cover;
+
+}
+#collapsibleNavbar{
+  float: right;
+}
+#nomargin{
+  border-left: 0px;
+  margin-left: 0px;
+}
+
+.nav-item {
+  width: 100%;
+}

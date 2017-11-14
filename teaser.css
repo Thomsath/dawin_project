@@ -1,3 +1,7 @@
+/*********************
+		TEASER
+**********************/
+
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
 
@@ -208,6 +212,6 @@ footer{
     }
 
     /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
+    @media oDnly screen and (min-width : 1200px) {
 
     }
