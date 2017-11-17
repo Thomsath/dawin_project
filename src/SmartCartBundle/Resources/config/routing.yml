@@ -21,3 +21,7 @@ smart_cart_admin_user_edit:
     defaults: { _controller: SmartCartBundle:Admin\User:edit }
     requirements:
         userId: '\d+'
+
+smart_cart_admin_category_list:
+    path:     /admin/categories
+    defaults: { _controller: SmartCartBundle:Admin\Category:index }

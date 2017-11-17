@@ -32,10 +32,6 @@ class UserController extends Controller
             $encoder = $this->get('security.encoder_factory')->getEncoder($user);
             $user->setPassword($encoder->encodePassword($user->getPassword(), $user->getSalt()));
 
-            if($form->get('admin')->getData()) {
-                $user->addRole('ROLE_ADMIN');
-            }
-
             $em->persist($user);
             $em->flush();
         }
