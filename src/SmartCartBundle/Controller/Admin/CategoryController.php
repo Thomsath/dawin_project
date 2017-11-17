@@ -36,4 +36,21 @@ class CategoryController extends Controller
             'form' => $form->createView()
         ]);
     }
+
+    public function deleteAction(Request $request, $categoryId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $category = $em->getRepository(Category::class)->findOneById($categoryId);
+
+        if(!$category) {
+            throw $this->createNotFoundException(
+                'No user found for id ' . $categoryId
+            );
+        }
+
+        $em->remove($category);
+        $em->flush();
+
+        return $this->redirectToRoute('smart_cart_admin_category_list');
+    }
 }

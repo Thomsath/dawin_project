@@ -29,3 +29,9 @@ smart_cart_admin_category_list:
 smart_cart_admin_category_create:
     path:     /admin/category/create
     defaults: { _controller: SmartCartBundle:Admin\Category:create }
+
+smart_cart_admin_category_delete:
+    path:     /admin/category/{categoryId}/delete
+    defaults: { _controller: SmartCartBundle:Admin\Category:delete }
+    requirements:
+        categoryId: '\d+'
