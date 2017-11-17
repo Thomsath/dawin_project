@@ -12,7 +12,7 @@ smart_cart_admin_user_delete:
     requirements:
         userId: '\d+'
 
-smart_cart_user_create:
+smart_cart_admin_user_create:
     path:     /admin/user/create
     defaults: { _controller: SmartCartBundle:Admin\User:create }
 
@@ -25,3 +25,7 @@ smart_cart_admin_user_edit:
 smart_cart_admin_category_list:
     path:     /admin/categories
     defaults: { _controller: SmartCartBundle:Admin\Category:index }
+
+smart_cart_admin_category_create:
+    path:     /admin/category/create
+    defaults: { _controller: SmartCartBundle:Admin\Category:create }

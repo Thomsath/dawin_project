@@ -18,4 +18,22 @@ class CategoryController extends Controller
             'categories' => $categories
         ]);
     }
+
+    public function createAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $category = new Category();
+        $form = $this->createForm(CategoryType::class, $category);
+
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            $em->persist($category);
+            $em->flush();
+        }
+
+        return $this->render('SmartCartBundle:Admin\Category:create.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
 }
