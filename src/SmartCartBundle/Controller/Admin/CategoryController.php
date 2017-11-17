@@ -37,6 +37,30 @@ class CategoryController extends Controller
         ]);
     }
 
+    public function editAction(Request $request, $categoryId)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $category = $em->getRepository(Category::class)->findOneById($categoryId);
+
+        if(!$category) {
+            throw $this->createNotFoundException(
+                'No category found for id ' . $categoryId
+            );
+        }
+
+        $form = $this->createForm(CategoryType::class, $category);
+
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()) {
+            $em->persist($category);
+            $em->flush();
+        }
+
+        return $this->render('SmartCartBundle:Admin\Category:edit.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
     public function deleteAction(Request $request, $categoryId)
     {
         $em = $this->getDoctrine()->getManager();
@@ -44,7 +68,7 @@ class CategoryController extends Controller
 
         if(!$category) {
             throw $this->createNotFoundException(
-                'No user found for id ' . $categoryId
+                'No category found for id ' . $categoryId
             );
         }
 

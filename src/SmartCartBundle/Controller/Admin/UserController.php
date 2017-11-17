@@ -66,7 +66,7 @@ class UserController extends Controller
             $em->flush();
         }
 
-        return $this->render('SmartCartBundle:Admin\User:create.html.twig', [
+        return $this->render('SmartCartBundle:Admin\User:edit.html.twig', [
             'form' => $form->createView()
         ]);
     }

@@ -35,3 +35,9 @@ smart_cart_admin_category_delete:
     defaults: { _controller: SmartCartBundle:Admin\Category:delete }
     requirements:
         categoryId: '\d+'
+
+smart_cart_admin_category_edit:
+    path:     /admin/category/{categoryId}
+    defaults: { _controller: SmartCartBundle:Admin\Category:edit }
+    requirements:
+        categoryId: '\d+'
