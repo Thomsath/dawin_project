@@ -19,7 +19,7 @@
     margin-bottom: 10px;
     height: 40px;
     background-color: #f1ece6;
-    width: 93%;
+    width: 90%;
 }
 
 .account{
@@ -47,6 +47,7 @@
 .bag-zone{
 	border-right: 1px solid #f1ece6;
 	text-align: center;
+	height: 100%
 }
 
 .kit-img{
@@ -56,9 +57,15 @@
 }
 
 .kit-item{
-	border: 2px solid grey;
+	border: 1px solid #ccc;
 	padding: 5px;
 	text-align: center;
+	width: 130px;
+	height: 130px;
+}
+
+.kit-item img{
+	height: 105px;
 }
 
 .btn-quantity{
@@ -77,6 +84,7 @@
 	border-radius: 0px 4px 4px 0px;
 	left: -10px;
 	position: relative;
+	width: 22px;
 }
 
 .nb-quantity{
@@ -100,7 +108,7 @@
 
 .price{
 	font-weight: bold;
-	font-size: 25px;
+	font-size: 30px;
 }
 
 .name-kit{
@@ -121,4 +129,9 @@
     margin-bottom: 5px;
     border: 0;
     border-bottom: 1px solid grey;
+}
+
+.nopadding-side{
+	padding-left: 0;
+	padding-right: 0;
 }
