@@ -3,17 +3,19 @@
 namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
 * Panier
 *
 * @ORM\Table(name="cart")
 * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\CartRepository")
+* @UniqueEntity("name")
 */
 class Cart
 {
     /**
-    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\CartProduct", mappedBy="cart")
+    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\CartProduct", mappedBy="cart",cascade={"persist"})
     */
     private $products;
 
@@ -73,9 +75,9 @@ class Cart
     private $image;
 
     /**
-    * @var int
+    * @var Cart
     *
-    * @ORM\Column(name="associated_cart", type="integer", nullable=true)
+    * @ORM\OneToOne(targetEntity="SmartCartBundle\Entity\Cart")
     */
     private $associated_cart;
 
@@ -221,7 +223,7 @@ class Cart
     /**
     * Set associated cart
     *
-    * @param integer $associated_cart
+    * @param Cart $associated_cart
     *
     * @return Cart
     */
@@ -234,7 +236,7 @@ class Cart
     /**
     * Get associated cart
     *
-    * @return int
+    * @return Cart
     */
     public function getAssociatedCart()
     {
@@ -296,15 +298,25 @@ class Cart
     }
 
     /**
-    * Add review
+    * Set products
     *
-    * @param \SmartCartBundle\Entity\Review $review
-    *
-    * @return Review
+    * @return Cart
     */
-    public function addProduct(Review $review)
+    public function setProducts($products)
     {
-        $this->reviews[] = $review;
+        $this->products = $products;
+        return $this;
+    }
+
+    /**
+    * Add product
+    *
+    * @return Cart
+    */
+    public function addProduct(CartProduct $product)
+    {
+        $this->products->add($product);
+        $product->setCart($this);
         return $this;
     }
 }
