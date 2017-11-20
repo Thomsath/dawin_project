@@ -12,7 +12,12 @@ class CartController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('SmartCartBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $carts = $em->getRepository(Cart::class)->findAll();
+
+        return $this->render('SmartCartBundle:Admin\Cart:index.html.twig', [
+            'carts' => $carts
+        ]);
     }
 
     public function createAction(Request $request)
@@ -57,7 +62,7 @@ class CartController extends Controller
             $em->flush();
         }
 
-        return $this->render('SmartCartBundle:Admin\Cart:create.html.twig', [
+        return $this->render('SmartCartBundle:Admin\Cart:edit.html.twig', [
             'form' => $form->createView()
         ]);
     }
@@ -66,6 +71,13 @@ class CartController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $cart = $em->getRepository(Cart::class)->findOneById($cartId);
+
+        if(!$cart) {
+            throw $this->createNotFoundException(
+                'No cart found for id ' . $cartId
+            );
+        }
+
         $em->remove($cart);
         $em->flush();
 

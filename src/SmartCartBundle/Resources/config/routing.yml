@@ -12,6 +12,12 @@ smart_cart_admin_user_delete:
     requirements:
         userId: '\d+'
 
+smart_cart_admin_user_edit:
+    path:     /admin/user/{userId}
+    defaults: { _controller: SmartCartBundle:Admin\User:edit }
+    requirements:
+        userId: '\d+'
+
 smart_cart_admin_user_create:
     path:     /admin/user/create
     defaults: { _controller: SmartCartBundle:Admin\User:create }
@@ -19,3 +25,19 @@ smart_cart_admin_user_create:
 smart_cart_admin_cart_create:
     path:     /admin/cart/create
     defaults: { _controller: SmartCartBundle:Admin\Cart:create }
+
+smart_cart_admin_cart_delete:
+    path:     /admin/cart/{cartId}/delete
+    defaults: { _controller: SmartCartBundle:Admin\Cart:delete }
+    requirements:
+        userId: '\d+'
+
+smart_cart_admin_cart_list:
+    path:     /admin/carts
+    defaults: { _controller: SmartCartBundle:Admin\Cart:index }
+
+smart_cart_admin_cart_edit:
+    path:     /admin/cart/{cartId}
+    defaults: { _controller: SmartCartBundle:Admin\Cart:edit }
+    requirements:
+        cartId: '\d+'

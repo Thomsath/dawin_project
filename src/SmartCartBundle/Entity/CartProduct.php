@@ -23,6 +23,7 @@ class CartProduct
 
     /**
     * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart")
+    * @ORM\JoinColumn(name="cart_id", referencedColumnName="id", nullable=false)
     */
     private $cart;
 

@@ -15,7 +15,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 class Cart
 {
     /**
-    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\CartProduct", mappedBy="cart",cascade={"persist"})
+    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\CartProduct", mappedBy="cart", cascade={"persist", "remove"})
     */
     private $products;
 
