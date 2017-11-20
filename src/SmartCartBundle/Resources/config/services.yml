@@ -2,3 +2,5 @@ services:
 #    smart_cart.example:
 #        class: SmartCartBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+    api_service:
+        class: SmartCartBundle\Service\CdiscountAPI
