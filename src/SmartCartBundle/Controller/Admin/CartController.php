@@ -4,6 +4,7 @@ namespace SmartCartBundle\Controller\Admin;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\FormError;
 use SmartCartBundle\Entity\Cart;
 use SmartCartBundle\Entity\CartProduct;
 use SmartCartBundle\Form\Type\CartType;
@@ -31,9 +32,17 @@ class CartController extends Controller
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em->persist($cart);
-            $em->flush();
+        if ($form->isSubmitted()) {
+            foreach ($form->get('products') as $product) {
+                if(!$service->getProduct($product->getData()->getProductId())) {
+                    $product->addError(new FormError('Le produit avec l\'ID ' . $product->getData()->getProductId() . ' n\'existe pas !'));
+                }
+            }
+
+            if($form->isValid()) {
+                $em->persist($cart);
+                $em->flush();
+            }
         }
 
         return $this->render('SmartCartBundle:Admin\Cart:create.html.twig', [
@@ -43,6 +52,7 @@ class CartController extends Controller
 
     public function editAction(Request $request, $cartId)
     {
+        $service = $this->get('api_service');
         $em = $this->getDoctrine()->getManager();
         $cart = $em->getRepository(Cart::class)->findOneById($cartId);
 
@@ -57,9 +67,18 @@ class CartController extends Controller
         ));
 
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em->persist($cart);
-            $em->flush();
+
+        if ($form->isSubmitted()) {
+            foreach ($form->get('products') as $product) {
+                if(!$service->getProduct($product->getData()->getProductId())) {
+                    $product->addError(new FormError('Le produit avec l\'ID ' . $product->getData()->getProductId() . ' n\'existe pas !'));
+                }
+            }
+
+            if($form->isValid()) {
+                $em->persist($cart);
+                $em->flush();
+            }
         }
 
         return $this->render('SmartCartBundle:Admin\Cart:edit.html.twig', [

@@ -13,7 +13,7 @@ class CdiscountAPI
 
     public function __construct()
     {
-        $this->client = new Client(['base_uri' => $this->apiUrl, 'timeout' => 2]);
+        $this->client = new Client(['base_uri' => $this->apiUrl, 'timeout' => 5]);
     }
 
     public function getProduct($productId)
