@@ -1,7 +1,6 @@
 <?php
-//$bdd = new PDO('mysql:host=localhost;dbname=pt_smartcart','pt_smartcart', 'U3VJd4Q5');
+$bdd = new PDO('mysql:host=localhost;dbname=pt_smartcart','pt_smartcart', 'U3VJd4Q5');
 
-//$bdd = new PDO('mysql:host=localhost;dbname=cdiscount','root','');
 
 if(isset($_POST['sinscrire'])) {
 	if(!empty($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
@@ -11,9 +10,9 @@ if(isset($_POST['sinscrire'])) {
 
 	$email=$_POST['email'];
 
-	//$requete=$bdd->query("INSERT INTO abonne (mail) values ('$email')");
+	$requete=$bdd->query("INSERT INTO abonne (mail) values ('$email')");
 
-	//$requete->closeCursor();
+	$requete->closeCursor();
 
 	$done = "Merci, nous vous tiendrons informé!";
 	}
@@ -58,13 +57,13 @@ if(isset($_POST['sinscrire'])) {
 
 				</div>
 				<form class="form_teaser" method="POST" action="index.php" onsubmit="return verifForm(this)">
-					<p>Restons en contact, vous ne serez pas spammé mais privilégié !</p>
+					<p>Restons en contact, vous ne serez pas spammé mais <b>privilégié !</b></p>
 
 					<?php if (isset($error)) { ?> <div class="alert alert-danger"> <p id="error"><?php echo $error; ?></p></div> <?php }
 					else if (isset($done)) { ?><div class="alert alert-success"> <p id="error"> <?php echo $done; ?></p></div> <?php } ?>
 
 
-					<input class="email_teaser" type="mail" name="email" placeholder="Votre adresse E-mail" onblur="verifMail(this)" />
+					<input class="email_teaser" type="mail" name="email" placeholder="Votre adresse E-mail" onblur="verifMail()" />
 					<input class="submit_teaser" name="sinscrire" type="submit" value="S'inscrire" />
 				</form>
 			</div>
@@ -121,7 +120,7 @@ if(isset($_POST['sinscrire'])) {
           <form class="form_teaser" method="POST" action="index.php" onsubmit="return verifForm(this)">
 		<p>Restons en contact, vous ne serez pas spammé !</p>
 		<p id="error_pop"><?php if (isset($error_pop)) { echo $error_pop; } ?></p>
-		<input class="email_teaser_pop" type="email" name="email_pop" placeholder="Votre adresse" onblur="verifMail(this)" />
+		<input class="email_teaser_pop" type="email" name="email_pop" placeholder="Votre adresse" onblur="verifMail()" />
 		<input class="submit_teaser_pop" name="sinscrire" type="submit" value="S'inscrire" />
 	</form>
         </div>
