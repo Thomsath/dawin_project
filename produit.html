@@ -16,11 +16,12 @@
   <link rel="stylesheet" href="web/css/style.css">
 </head>
 <body>
+
 <header>
     <div class="container nopadding-side">
         <div class="row">
             <div class="col-md-3">
-                <img src="../../images/SmartCartlogo.png">
+                <img src="images/SmartCartlogo.png">
             </div>
             <div class="col-md-5">
                 <input type="text" class="search">
@@ -57,14 +58,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">Sport</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vin & Bio</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Vin et Bio</a>
+            </li>
             </ul>
         </div>
     </nav>
@@ -92,7 +88,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <img src="images/peintsol.jpg" class="kit-img" ">
+            <img src="images/peintsol.jpg" class="kit-img" >
         </div>
         <div class="col-md-6">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -122,35 +118,35 @@
         <!-- boucle php pour recup le contenu du kit, requet BD-->
         <div class="row">
             <div class="col-md-2">
-                <div class="kit-item">  
-                    <img src="images/potpeint.jpg" >
-                </div>
-                <p>Un pot de peinture noire extérieur Luxens</p>
-            </div>        
-            <div class="col-md-2">
-                <div class="kit-item">  
-                    <img src="images/potpeint.jpg" >
-                </div>
-                <p>Un pot de peinture noire extérieur Luxens</p>
-            </div>       
-            <div class="col-md-2">
-                <div class="kit-item">  
-                    <img src="images/potpeint.jpg" >
-                </div>
-                <p>Un pot de peinture noire extérieur Luxens</p>
-            </div>    
-            <div class="col-md-2">
-                <div class="kit-item">  
+                <div class="kit-item">
                     <img src="images/potpeint.jpg" >
                 </div>
                 <p>Un pot de peinture noire extérieur Luxens</p>
             </div>
             <div class="col-md-2">
-                <div class="kit-item">  
+                <div class="kit-item">
                     <img src="images/potpeint.jpg" >
                 </div>
                 <p>Un pot de peinture noire extérieur Luxens</p>
-            </div>        
+            </div>
+            <div class="col-md-2">
+                <div class="kit-item">
+                    <img src="images/potpeint.jpg" >
+                </div>
+                <p>Un pot de peinture noire extérieur Luxens</p>
+            </div>
+            <div class="col-md-2">
+                <div class="kit-item">
+                    <img src="images/potpeint.jpg" >
+                </div>
+                <p>Un pot de peinture noire extérieur Luxens</p>
+            </div>
+            <div class="col-md-2">
+                <div class="kit-item">
+                    <img src="images/potpeint.jpg" >
+                </div>
+                <p>Un pot de peinture noire extérieur Luxens</p>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -161,7 +157,7 @@
     <!-- boucle php pour recup, requet BD-->
     <div class="row">
         <div class="col-md-2">
-            <div class="">  
+            <div class="">
                 <img src="images/potpeint.jpg" style="height: 105px;">
             </div>
             <p>Kit tapisserie grands espaces</p>
@@ -192,6 +188,80 @@
         </div>
     </div>
 </div>
+</div>
+
+<div class="container">
+
+
+<h3>Avis clients</h3>
+<form class="" action="index.html" method="post">
+  <textarea class="form-control comment" rows="3"></textarea>
+  <br>
+  <br>
+  <fieldset class="rating">
+    <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
+    <input type="radio" id="star4half" name="rating" value="4 and a half" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
+    <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
+    <input type="radio" id="star3half" name="rating" value="3 and a half" /><label class="half" for="star3half" title="Meh - 3.5 stars"></label>
+    <input type="radio" id="star3" name="rating" value="3" /><label class = "full" for="star3" title="Meh - 3 stars"></label>
+    <input type="radio" id="star2half" name="rating" value="2 and a half" /><label class="half" for="star2half" title="Kinda bad - 2.5 stars"></label>
+    <input type="radio" id="star2" name="rating" value="2" /><label class = "full" for="star2" title="Kinda bad - 2 stars"></label>
+    <input type="radio" id="star1half" name="rating" value="1 and a half" /><label class="half" for="star1half" title="Meh - 1.5 stars"></label>
+    <input type="radio" id="star1" name="rating" value="1" /><label class = "full" for="star1" title="Sucks big time - 1 star"></label>
+    <input type="radio" id="starhalf" name="rating" value="half" /><label class="half" for="starhalf" title="Sucks big time - 0.5 stars"></label>
+</fieldset>
+<br>
+<br>
+  <input type="button" name="add" class="btn-green" value="Envoyer mon avis">
+  <br>
+  <br>
+
+</form>
+
+<div class="response">
+<div class="avis">
+  <div class="name-kit stars">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+  </div>
+  <h4>Super Produit</h4>
+  <p class="date">Avis déposé le 20/11/17</p>
+  <h5>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</h5>
+</div>
+<div class="avis">
+  <div class="name-kit stars">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+  </div>
+  <h4>Super Produit</h4>
+  <p class="date">Avis déposé le 20/11/17</p>
+  <h5>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</h5>
+</div>
+<div class="avis">
+  <div class="name-kit stars">
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star"></i>
+      <i class="fa fa-star-o"></i>
+  </div>
+  <h4>Super Produit</h4>
+  <p class="date">Avis déposé le 20/11/17</p>
+  <h5>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</h5>
+</div>
+
+
+
+</div>
+
+
+</div>
 
 </body>
 </html>
@@ -201,14 +271,14 @@ $(document).ready(function() {
     var max = 10; //quantity max
     var min = 1; //quantity min
     var x = 1; //initial text box count
-    $("input[name='more']").click(function(){ 
-        if(x < max){ 
+    $("input[name='more']").click(function(){
+        if(x < max){
             x++; //text box increment
             $("#quantity").val(x); //add input box
         }
     });
-    $("input[name='less']").click(function(){ 
-        if(x >  min){ 
+    $("input[name='less']").click(function(){
+        if(x >  min){
             x--; //text box increment
             $("#quantity").val(x); //add input box
         }

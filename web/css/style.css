@@ -116,7 +116,6 @@
 }
 
 .stars{
-	margin-left: 28%;
 	color: #ffb12f;
 }
 
@@ -135,3 +134,67 @@
 	padding-left: 0;
 	padding-right: 0;
 }
+
+.comment{
+	background-color: #f1ece6;
+}
+
+.btn-green
+{
+	background-color: #89ae03;
+	border: 1px solid #89ae03;
+	border-radius: 4px;
+	color: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+fieldset, label { margin: 0; padding: 0; }
+body{ margin: 20px; }
+h1 { font-size: 1.5em; margin: 10px; }
+
+/****** Style Star Rating Widget *****/
+
+.rating {
+  border: none;
+  float: left;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+  margin: 5px;
+  font-size: 1.25em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.rating > .half:before {
+  content: "\f089";
+  position: absolute;
+}
+
+.rating > label {
+  color: #ddd;
+ float: right;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  }
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
+
+.date {
+	font-size: 75%;
+}
+.avis{
+	border-bottom: 2px solid #fbb12f;
+}
+
+
