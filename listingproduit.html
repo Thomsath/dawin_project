@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Search result</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="web/css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="container nopadding-side">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="images/SmartCartlogo.png">
+            </div>
+            <div class="col-md-5">
+                <input type="text" class="search">
+                <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="col-md-2 account">
+                <i class="fa fa-user icon-user"></i><span class="name-user">Nom</span>
+            </div>
+            <div class="col-md-2">
+                <div  class="bag-zone">
+                    <i class="fa fa-shopping-bag icon-bag"></i><span class="myBag">Mon panier</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Menu -->
+<div class="container nopadding-side">
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Maison</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">High-Tech</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Auto Moto Bateau</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sport</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Vin et Bio</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!-- Content-->
+<div class="container">
+    <div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">A faire en PHP</a></li>
+          <li class="breadcrumb-item">recupérer chemin</li>
+        </ol>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="divresult">
+    <h3 class="justinline"> Peinture</h3> <p class="inlineblock">(500)</p>
+    <div class="inlineblock droite">
+      <p class="trierpar inlineblock"> Trier par :</p>
+      <select class="inlineblock" name="choix">
+        <option value="croissant">Prix croissant</option>
+        <option value="decroissant">Prix décroissant</option>
+        <option value="mieuxnote"> Les mieux notés </option>
+        <option value="nbarticles"> Nombres d'articles </option>
+      </select>
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="inlineblock">
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="justinline">
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    </div>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    </div>
+    <hr class="separation">
+    <div class="inlineblock">
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="justinline">
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    </div>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    </div>
+    <hr class="separation">
+    <div class="inlineblock">
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="justinline">
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    </div>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    <!--un kit -->
+    <div class="col-md-3 col-sm-12 inlineblock mrgnbas">
+    <a href="#"><img class="img-responsive" src="images/peintsol.jpg"></a>
+    <p>Kit peinture sol intérieur</p>
+    <p class="level">Amateur</p>
+    <br>
+    <div class="name-kit stars ">
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star"></i>
+        <i class="fa fa-star-o"></i>
+    </div>
+    <p class="inlineblock">(19)</p>
+    <p class="prix">19€90</p>
+    <input type="button" name="add" class="btn-addCart btn-result" value="Ajouter au panier">
+    </div>
+    </div>
+    <hr class="separation">
+</div>
+
+
+
+
+
+
+</body>
+</html>
+
+<script>
+
+$(document).ready(function() {
+    var max = 10; //quantity max
+    var min = 1; //quantity min
+    var x = 1; //initial text box count
+    $("input[name='more']").click(function(){
+        if(x < max){
+            x++; //text box increment
+            $("#quantity").val(x); //add input box
+        }
+    });
+    $("input[name='less']").click(function(){
+        if(x >  min){
+            x--; //text box increment
+            $("#quantity").val(x); //add input box
+        }
+    });
+});
+</script>

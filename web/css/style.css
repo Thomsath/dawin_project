@@ -1,6 +1,10 @@
 /*********************
 	PRODUCT PAGE
 **********************/
+p{
+	margin-top: 0;
+	margin-bottom: 0;
+}
 
 h1{
 	font-size: 28px;
@@ -196,14 +200,12 @@ p[name="descKit"]{
 	padding-right: 0;
 }
 
-
 form{
 	margin-bottom: 10px;
 }
 
 .comment{
 	background-color: #f1ece6;
-	width: 50%
 }
 
 .btn-green
@@ -212,16 +214,13 @@ form{
 	border: 1px solid #89ae03;
 	border-radius: 4px;
 	color: #fff;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	padding-left: 3%;
-	padding-right: 3%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
-fieldset, label { 
-	margin: 0; 
-	padding: 0; 
-}
+
 
 /****** Style Star Rating Widget *****/
 
@@ -230,10 +229,7 @@ fieldset, label {
   float: left;
 }
 
-.rating > input { 
-	display: none; 
-}
-
+.rating > input { display: none; }
 .rating > label:before {
   margin: 5px;
   font-size: 1.25em;
@@ -254,53 +250,78 @@ fieldset, label {
 
 .rating > input:checked ~ label,
 .rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label { 
-	color: #ffb12f;  
-}
+.rating:not(:checked) > label:hover ~ label { color: #FFD700;  }
 
 .rating > input:checked + label:hover,
 .rating > input:checked ~ label:hover,
 .rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label { 
-	color: #FFED85;  
-}
+.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
 
 .date {
 	font-size: 75%;
 }
-
 .avis{
 	border-bottom: 2px solid #fbb12f;
 }
 
-/******************************/
+.inlineblock{
+	display: inline-block;
+}
 
-/*==========  Media Query  ==========*/
+.justinline{
+	display: inline;
+}
 
-    /* Custom, iPhone Retina */ 
-    @media (max-width : 320px) {
-    	
-    }
+.droite{
+	float: right;
+}
 
-    /* Extra Small Devices, Phones */ 
-    @media(max-width: 768px) {
-   		/*.nopadding-side{
-   			padding-right: 15px;
-   			padding-left: 15px;
-   		}*/
-    }
+.divresult{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #c7c4bd;
+	margin-bottom: 20px;
+}
 
-    /* Small Devices, Tablets */
-    @media(min-width: 768px) and (max-width: 992px) {
-	    
-    }
+.imagesearch{
+	width: 150px;
+	height: 150px;
+}
 
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
+.mrgnbas{
+	margin-bottom: 10px;
+}
 
-    }
+.prix{
+	font-weight: bold;
+	font-size: 150%;
+}
 
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
+.level{
+	font-weight: bold;
+}
 
-    }
+i.strars {
+	padding: 0px;
+	margin: 0px;
+	border:0px;
+}
+
+.trierpar {
+	font-size: 150%;
+}
+
+.btn-result{
+	color: black;
+	width: 100%;
+	padding: 5px;
+}
+
+.separation{
+	border-color: #c7c4bd;
+}
+/* Small Devices, Tablets */
+@media(max-width: 768px){
+	.droite {
+	float: none;
+}
+}
