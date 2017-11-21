@@ -2,6 +2,33 @@
 	PRODUCT PAGE
 **********************/
 
+h1{
+	font-size: 28px;
+	font-weight: bold;
+}
+
+h3{
+	margin-bottom: 20px;	
+}
+
+.navbar{
+	margin-bottom: 0;
+}
+
+.breadcrumb{
+	background-color: transparent;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.breadcrumb-item a{
+	color: #ccc;
+}
+
+.orange{
+	color: #ffb12f;
+}
+
 .btn-search{
 	color: #fff;
 	text-align: center;
@@ -70,6 +97,7 @@
 
 .kit-item ~ p{
 	width: 130px;
+	margin-top: 10px;
 }
 
 .btn-quantity{
@@ -110,9 +138,35 @@
 	padding-right: 5%;
 }
 
+.marginT10{
+	margin-top: 10px;
+}
+
+#stock{
+	color: #89ae03;
+	font-weight: bold;
+}
+
 .price{
 	font-weight: bold;
+	font-size: 40px;
+}
+
+.price-orange{
 	font-size: 30px;
+	font-weight: 600;
+	color: #ffb12f;
+}
+
+.other-kit img{	
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+}
+
+p[name="descKit"]{
+	margin-top: 10px;
+	margin-bottom: 0;
 }
 
 .name-kit{
@@ -121,16 +175,19 @@
 
 .stars{
 	color: #ffb12f;
+	margin-top: 20px;
 }
 
 .container-grey{
 	background-color: #f1ece6;
 }
 
+.characteristics{
+	padding-bottom: 1%;
+}
+
 .hr-grey{
-	margin-top: 5px;
     margin-bottom: 5px;
-    border: 0;
     border-bottom: 1px solid grey;
 }
 
@@ -140,6 +197,9 @@
 }
 
 
+form{
+	margin-bottom: 10px;
+}
 
 .comment{
 	background-color: #f1ece6;

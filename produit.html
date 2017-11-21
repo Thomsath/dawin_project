@@ -7,13 +7,16 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="web/css/style.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="web/css/style.css">
 </head>
 <body>
 
@@ -66,13 +69,16 @@
 <div class="container">
     <div>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">A faire en PHP</a></li>
-          <li class="breadcrumb-item">recupérer chemin</li>
+          <li class="breadcrumb-item"><a href="#">Bricolage</a></li>
+          <li class="breadcrumb-item"><a href="#">Peinture</a></li>
+          <li class="breadcrumb-item"><a href="#">Amateur</a></li>
         </ol>
     </div>
     <div class="row">
-        <div class="col-md-12">
-            <h1 class="name-kit">Nom du kit</h1>
+        <div class="col-md-6">
+            <h1 class="name-kit">Kit peinture sol grands espaces amateur</h1>
+        </div>
+        <div class="col-md-6">
             <div class="name-kit stars">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -101,8 +107,9 @@
             <input type="button" name="less" class="btn-quantity btn-less" value="-">
 
             <input type="button" name="add" class="btn-addCart" value="Ajouter au panier">
-
-            <p>En stock - Livraison gratuite</p>
+            <div class="marginT10">
+                <span id="stock">En stock </span><span>- Livraison gratuite</span>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -150,22 +157,38 @@
     </div>
     <!-- boucle php pour recup, requet BD-->
     <div class="row">
-        <div class="col-md-2">
-            <div class="">
-                <img src="images/potpeint.jpg" style="height: 105px;">
+        <div class="col-md-2 other-kit">
+            <div>
+                <img src="images/peintsol.jpg">
             </div>
-            <p>Kit tapisserie grands espaces</p>
-            <p>12.99€</p>
+            <p name="descKit">Kit tapisserie grands espaces</p>
+            <p class="price-orange">12€99</p>
+        </div>
+        <div class="col-md-2 other-kit">
+            <div>
+                <img src="images/peintsol.jpg">
+            </div>
+            <p name="descKit">Kit tapisserie grands espaces</p>
+            <p class="price-orange">12€99</p>
+        </div>
+        <div class="col-md-2 other-kit">
+            <div>
+                <img src="images/peintsol.jpg">
+            </div>
+            <p name="descKit">Kit tapisserie grands espaces</p>
+            <p class="price-orange">12€99</p>
         </div>
     </div>
 </div>
 <div class="container-fluid container-grey">
     <div class="container">
+        <div class="row characteristics">
+            <h3>Caractéristiques détaillées</h3>
+        </div>
         <div class="row">
             <div class="col-md-6">
-                <h2>Caractéristiques détaillées</h2>
-                <h4>Rouleau très grand manch amovible</h4>
-                <div class="row hr-grey">
+                <h4>Rouleau très grand manche amovible</h4>
+                <div class="row">
                     <div class="col-md-6">
                         <p>Inducation du geste de tri</p>
                     </div>
@@ -175,9 +198,85 @@
                         </div>
                     </div>
                 </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Support de destination</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Mur et plafond</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Usage du produit</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Peinture</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Composition</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Rouleau mur et plafond avec manche extensible max 30cm</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
-
+                <h4>Rouleau très grand manche amovible</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Inducation du geste de tri</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Nos produit et emballages peuvent faire l'objet de tri.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Support de destination</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Mur et plafond</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Usage du produit</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Peinture</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Composition</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Rouleau mur et plafond avec manche extensible max 30cm</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             <hr>
         </div>
@@ -186,7 +285,7 @@
 
 <div class="container">
     <h3>Avis clients</h3>
-    <form class="" action="index.html" method="post">
+    <form action="index.html" method="post">
         <textarea class="form-control comment" rows="3"></textarea>
         <fieldset class="rating">
             <input type="radio" id="star5" value="5" />
