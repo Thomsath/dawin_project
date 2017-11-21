@@ -76,6 +76,9 @@ fos_user:
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
+    registration:
+        form:
+            type: SmartCartBundle\Form\Type\RegistrationFormType
 
 ewz_recaptcha:
     public_key:  6LcGnzkUAAAAAOVJrGilvuhFiXTx-KFojmek7tlw
