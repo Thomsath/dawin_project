@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\FormError;
 use SmartCartBundle\Entity\Cart;
 use SmartCartBundle\Entity\CartProduct;
+use SmartCartBundle\Entity\Category;
 use SmartCartBundle\Form\Type\CartType;
 
 class CartController extends Controller
@@ -15,9 +16,11 @@ class CartController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $carts = $em->getRepository(Cart::class)->findAll();
+        $categories = $em->getRepository(Category::class)->findAll();
 
         return $this->render('SmartCartBundle:Admin\Cart:index.html.twig', [
-            'carts' => $carts
+            'carts' => $carts,
+            'categories' => $categories
         ]);
     }
 
