@@ -355,6 +355,64 @@ i.strars {
 	margin-left: 5px;
 }
 
+.minilinespace{
+	margin-top: 10px;
+	line-height: 0;
+}
+
+
+.footer-bs {
+  background-color: #363636;
+	color: rgba(255,255,255,1.00);
+	padding: 10px;
+}
+
+.footer-bs h3 {
+	font-size: 110%;
+	font-weight: bold;
+}
+
+.footer-bs a {
+	color:rgba(255,255,255,1.00);
+	text-decoration: none;
+	display: block
+}
+
+.footer-bs a:hover {
+	color:rgba(255,255,255,0.80);
+	text-decoration:none;
+}
+
+.footer-bs img.icon {
+ width: 32px;
+ height: 32px;
+ padding-right: 10px;
+ padding-bottom: 10px;
+}
+
+.footerlogo{
+	width: 50px;
+	height: 50px;
+}
+
+.bottomfooter{
+	background-color: #fbb12f;
+	color: white;
+}
+
+.aligncenter{
+	text-align: center;
+}
+
+.greyhomecontent{
+	background: #f1ece6;
+}
+
+#myCarousel , .bandeau{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
 /* Change color of the stars before the one hovered*/
 .starstest:hover .etoile {
 	color: #ffb12f;
@@ -369,6 +427,9 @@ i.strars {
 	transform: scaleX(-1);
 	margin-left: -2px;
 }
+
+
+
 
 /*------Media Query ------*/
 
@@ -387,4 +448,9 @@ i.strars {
 	.marginT20xs{
 		margin-top: 20px;
 	}
+
+	.logofooterdiv{
+		display: none;
+	}
+
 }
