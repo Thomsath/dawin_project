@@ -65,3 +65,9 @@ smart_cart_admin_category_edit:
     defaults: { _controller: SmartCartBundle:Admin\Category:edit }
     requirements:
         categoryId: '\d+'
+
+smart_cart_product:
+    path:     /cart/{cartId}
+    defaults: { _controller: SmartCartBundle:Cart:index }
+    requirements:
+        cartId: '\d+'
