@@ -1,1 +1,16 @@
-Hello World!
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        {% for category in categories %}
+        {{ category.name }}
+        {% endfor %}
+
+        {% for popularRatingCart in popularRatingCarts %}
+        {{ popularRatingCart.name }}
+        {% endfor %}
+    </body>
+</html>
