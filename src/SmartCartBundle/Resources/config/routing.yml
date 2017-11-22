@@ -2,6 +2,10 @@ smart_cart_homepage:
     path:     /
     defaults: { _controller: SmartCartBundle:Default:index }
 
+smart_cart_legal_mentions:
+    path:     /mentions
+    defaults: { _controller: SmartCartBundle:Default:legalMentions }
+
 smart_cart_admin_user_list:
     path:     /admin/users
     defaults: { _controller: SmartCartBundle:Admin\User:index }

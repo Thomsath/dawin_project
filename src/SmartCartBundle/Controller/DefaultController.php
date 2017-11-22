@@ -21,4 +21,9 @@ class DefaultController extends Controller
             'categories' => $categories
         ]);
     }
+
+    public function legalMentionsAction()
+    {
+        return $this->render('SmartCartBundle:Default:mentions.html.twig');
+    }
 }
