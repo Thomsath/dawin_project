@@ -12,7 +12,7 @@ h1{
 }
 
 h3{
-	margin-bottom: 20px;	
+	margin-bottom: 20px;
 }
 
 .navbar{
@@ -62,18 +62,12 @@ h3{
 	font-size: 25px;
 }
 
-.icon-user{
-	color: #fff;
-}
 
 .name-user, .myBag{
 	margin-left: 5px;
 	font-size: 17px;
 }
 
-.name-user{
-	color: #fff;
-}
 
 .bag-zone{
 	border-right: 1px solid #f1ece6;
@@ -162,7 +156,7 @@ h3{
 	color: #ffb12f;
 }
 
-.other-kit img{	
+.other-kit img{
     height: 130px;
     width: 130px;
     object-fit: cover;
