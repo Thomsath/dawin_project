@@ -78,7 +78,7 @@
         <div class="col-md-6">
             <h1 class="name-kit">Kit peinture sol grands espaces amateur</h1>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6 stars-title">
             <div class="name-kit stars">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -119,39 +119,44 @@
     </div>
     <!-- boucle php pour recup le contenu du kit, requet BD-->
     <div class="row">
-        <div class="col-md-2">
-            <div class="kit-item">
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
                 <img src="images/potpeint.jpg" >
             </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
             <p>Un pot de peinture noire extérieur Luxens</p>
         </div>
-        <div class="col-md-2">
-            <div class="kit-item">
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
                 <img src="images/potpeint.jpg" >
             </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
             <p>Un pot de peinture noire extérieur Luxens</p>
         </div>
-        <div class="col-md-2">
-            <div class="kit-item">
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
                 <img src="images/potpeint.jpg" >
             </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
             <p>Un pot de peinture noire extérieur Luxens</p>
         </div>
-        <div class="col-md-2">
-            <div class="kit-item">
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
                 <img src="images/potpeint.jpg" >
             </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
             <p>Un pot de peinture noire extérieur Luxens</p>
         </div>
-        <div class="col-md-2">
-            <div class="kit-item">
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
                 <img src="images/potpeint.jpg" >
             </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
             <p>Un pot de peinture noire extérieur Luxens</p>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-sm-3 col-md-12">
             <h3>Fréquemment acheté ensemble</h3>
         </div>
     </div>
@@ -183,7 +188,9 @@
 <div class="container-fluid container-grey">
     <div class="container">
         <div class="row characteristics">
-            <h3>Caractéristiques détaillées</h3>
+            <div class="col-md-12">
+                <h3>Caractéristiques détaillées</h3>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -232,7 +239,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 marginT20xs">
                 <h4>Rouleau très grand manche amovible</h4>
                 <div class="row">
                     <div class="col-md-6">
@@ -287,7 +294,7 @@
     <h3>Avis clients</h3>
     <form action="index.html" method="post">
         <textarea class="form-control comment" rows="3"></textarea>
-        <fieldset class="rating">
+        <!--<fieldset class="rating">
             <input type="radio" id="star5" value="5" />
             <label class = "full" for="star5"></label>
             <input type="radio" id="star4half" value="4.5" />
@@ -309,13 +316,29 @@
             <input type="radio" id="starhalf"  value="0.5" />
             <label class="half" for="starhalf"></label>
         </fieldset>
-        <br><br>
+        <br><br>-->
+
+        <div class="rating">
+            <label> Evaluation : </label>
+            <div class="starstest">
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+            </div>
+        </div>
         <input type="button" name="add" class="btn-green" value="Envoyer mon avis">
     </form>
 
-    <div class="row avis">
+    <div class="row">
         <div class="col-md-2">
-            <div class="name-kit stars">
+            <div class="stars stars-comment">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -324,14 +347,15 @@
             </div> 
         </div>
         <div class="col-md-10">
-            <h4>Super Produit</h4>
+            <h4 class="nomarginB">Super Produit</h4>
             <p class="date">Avis déposé le 20/11/17</p>
             <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
         </div>
     </div>
-    <div class="row avis">
+    <div class="hr-avis"></div>
+    <div class="row">
         <div class="col-md-2">
-            <div class="name-kit stars">
+            <div class="stars stars-comment">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -340,14 +364,15 @@
             </div> 
         </div>
         <div class="col-md-10">
-            <h4>Super Produit</h4>
+            <h4 class="nomarginB">Super Produit</h4>
             <p class="date">Avis déposé le 20/11/17</p>
             <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
         </div>
     </div>
-    <div class="row avis">
+    <div class="hr-avis"></div>
+    <div class="row">
         <div class="col-md-2">
-            <div class="name-kit stars">
+            <div class="stars stars-comment">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -356,11 +381,12 @@
             </div> 
         </div>
         <div class="col-md-10">
-            <h4>Super Produit</h4>
+            <h4 class="nomarginB">Super Produit</h4>
             <p class="date">Avis déposé le 20/11/17</p>
             <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
         </div>
     </div>    
+    <div class="hr-avis"></div>
 </div>
 
 </body>
