@@ -15,8 +15,8 @@ function surligne(champ, erreur) {
 		}
 	}*/
 
-	function verifForm(f) {
-		var mailOk = verifMail(f.email);
+	function verifForm() {
+		var mailOk = verifMail(email);
 
 		if (mailOk) {
 			test.innerHTML = "<div class=\"alert alert-success danger-email\"> <p id=\"error\">Merci, nous vous tiendrons informé !</p> </div>";
