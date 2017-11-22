@@ -3,6 +3,7 @@
 namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Review
@@ -42,6 +43,8 @@ class Review
      * @var string
      *
      * @ORM\Column(name="rating", type="string", columnDefinition="enum('0','1','2','3','4','5')")
+     *
+     * @Assert\Choice(choices = {"0","1","2","3","4","5"}, message = "La note n'est pas valide.")
      */
     private $rating;
 

@@ -4,6 +4,7 @@ namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
 * Panier
@@ -43,6 +44,13 @@ class Cart
     * @var string
     *
     * @ORM\Column(name="name", type="string", length=255)
+    *
+    * @Assert\Length(
+    *      min = 5,
+    *      max = 255,
+    *      minMessage = "Le nom du panier doit faire au moins {{ limit }} caractères",
+    *      maxMessage = "Le nom du panier ne doit pas excéder {{ limit }} caractères"
+    * )
     */
     private $name;
 
@@ -57,6 +65,11 @@ class Cart
     * @var int
     *
     * @ORM\Column(name="quantity", type="integer")
+    *
+    * @Assert\Type(
+    *     type="integer",
+    *     message="La quantité de panier(s) n'est pas valide."
+    * )
     */
     private $quantity;
 
@@ -64,6 +77,11 @@ class Cart
     * @var float
     *
     * @ORM\Column(name="price", type="float")
+    *
+    * @Assert\Type(
+    *     type="float",
+    *     message="Le prix du panier n'est pas valide."
+    * )
     */
     private $price;
 
@@ -71,6 +89,10 @@ class Cart
     * @var string
     *
     * @ORM\Column(name="image", type="string", length=255)
+    *
+    * @Assert\Url(
+    *    message = "L'URL de l'image du panier n'est pas valide.",
+    * )
     */
     private $image;
 

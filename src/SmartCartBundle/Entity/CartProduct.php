@@ -3,6 +3,7 @@
 namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * CartProduct
@@ -31,6 +32,11 @@ class CartProduct
      * @var string
      *
      * @ORM\Column(name="productId", type="string", length=255)
+     *
+     * @Assert\Type(
+     *     type="string",
+     *     message="L'ID du produit n'est pas valide."
+     * )
      */
     private $productId;
 
@@ -38,6 +44,11 @@ class CartProduct
      * @var int
      *
      * @ORM\Column(name="quantity", type="integer")
+     *
+     * @Assert\Type(
+     *     type="integer",
+     *     message="La quantité du produit n''est pas valide."
+     * )
      */
     private $quantity;
 
