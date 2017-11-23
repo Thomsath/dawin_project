@@ -179,7 +179,7 @@ h3{
 	top: 30%;
 }
 
-.other-kit img{	
+.other-kit img{
     height: 130px;
     width: 130px;
     object-fit: cover;
@@ -442,13 +442,65 @@ i.strars {
 	margin-left: -2px;
 }
 
+.marge{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	line-height: 0.75;
+}
 
+
+.prixaccueil{
+	font-weight: bold;
+	font-size: 200%;
+}
+
+.type{
+	font-size: 150%;
+	line-height: 0.1;
+}
+
+.blanc {
+	background-color: white;
+	border: 2px solid #d8dae5;
+}
+
+.normallineheight
+{
+	line-height: normal;
+}
+
+.paddingaccueilbasproduit{
+	padding: 5px;
+	padding-left: 10px;
+}
+
+.paddingaccueildroitesuggest{
+	padding: 5px;
+	padding-bottom: 0px;
+}
+
+.enstock{
+	font-weight: bold;
+	color: #89ae03;
+}
+
+.centerblock{
+	padding-top: 8px;
+}
+
+@media(min-width: 992px){
+
+	.paddingaccueildroitesuggest{
+	margin-top: 15%;
+	}
+
+}
 
 
 /*------Media Query ------*/
 
 /* XS */
-@media(max-width: 768px){
+@media(max-width: 720px){
 	.droite {
 		float: none;
 	}
