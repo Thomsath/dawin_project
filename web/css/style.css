@@ -434,9 +434,6 @@ i.strars {
 	line-height: 0.75;
 }
 
-img.margeimgaccueil{
-	margin-bottom: 20px;
-}
 
 .prixaccueil{
 	font-weight: bold;
@@ -445,6 +442,7 @@ img.margeimgaccueil{
 
 .type{
 	font-size: 150%;
+	line-height: 0.1;
 }
 
 .blanc {
@@ -470,6 +468,10 @@ img.margeimgaccueil{
 .enstock{
 	font-weight: bold;
 	color: #89ae03;
+}
+
+.centerblock{
+	padding: 1%;
 }
 
 @media(min-width: 992px){
