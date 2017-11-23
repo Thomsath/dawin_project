@@ -471,7 +471,7 @@ i.strars {
 }
 
 .centerblock{
-	padding: 1%;
+	padding-top: 8px;
 }
 
 @media(min-width: 992px){
