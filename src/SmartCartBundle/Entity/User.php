@@ -134,7 +134,8 @@ class User extends BaseUser
     */
     public function addReview(Review $review)
     {
-        $this->reviews[] = $review;
+        $this->reviews->add($review);
+        $review->setUser($this);
         return $this;
     }
 

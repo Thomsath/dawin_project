@@ -43,6 +43,18 @@ class Category
     */
     private $name;
 
+    /**
+    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\Cart", mappedBy="category", cascade={"persist", "remove"})
+    */
+    private $carts;
+
+    /**
+    * Constructor
+    */
+    public function __construct()
+    {
+        $this->carts = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
     * Get id
@@ -75,6 +87,30 @@ class Category
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+    * Add cart
+    *
+    * @param \SmartCartBundle\Entity\Cart $cart
+    *
+    * @return Category
+    */
+    public function addCart(Cart $cart)
+    {
+        $this->carts->add($cart);
+        $cart->setCategory($this);
+        return $this;
+    }
+
+    /**
+    * Get carts
+    *
+    * @return array
+    */
+    public function getCarts()
+    {
+        return $this->carts;
     }
 
     public function __toString()

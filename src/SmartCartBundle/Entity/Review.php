@@ -104,4 +104,46 @@ class Review
     {
         return $this->rating;
     }
+
+    /**
+    * Set cart
+    *
+    * @return Review
+    */
+    public function setCart(Cart $cart)
+    {
+        $this->cart = $cart;
+        return $this;
+    }
+
+    /**
+    * Get cart
+    *
+    * @return Cart
+    */
+    public function getCart()
+    {
+        return $this->cart;
+    }
+
+    /**
+    * Set review
+    *
+    * @return Review
+    */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+        return $this;
+    }
+
+    /**
+    * Get user
+    *
+    * @return User
+    */
+    public function getUser()
+    {
+        return $this->user;
+    }
 }
