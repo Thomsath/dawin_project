@@ -19,6 +19,10 @@ h3{
 	margin-bottom: 0;
 }
 
+.textCenter{
+	text-align: center;
+}
+
 .navbar{
 	margin-bottom: 0;
 }
@@ -89,8 +93,8 @@ h3{
 	border: 1px solid #ccc;
 	padding: 5px;
 	text-align: center;
-	width: 130px;
-	height: 130px;
+	max-width: 130px;
+	max-height: 130px;
 }
 
 .kit-item img{
@@ -102,8 +106,14 @@ h3{
 	margin-top: 10px;
 }
 
+.quantity{
+	display: inline-block;
+}
+
 .btn-quantity{
 	padding: 3px 6px;
+	height: 35px;
+	width: 30px;
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 1;
@@ -114,16 +124,15 @@ h3{
 	border-radius: 4px 0px 0px 4px;
 }
 
-.btn-less{
+.btn-more{
 	border-radius: 0px 4px 4px 0px;
 	left: -10px;
 	position: relative;
-	width: 22px;
 }
 
 .nb-quantity{
-	width: 40px;
-	height: 22px;
+	width: 45px;
+    height: 35px;
 	border: 1px solid rgba(0,0,0,.15);
 	border-radius: .25rem;
 	text-align: center;
@@ -136,8 +145,11 @@ h3{
 	border: 1px solid #ffb12f;
 	border-radius: 4px;
 	color: #fff;
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 20%;
+	padding-right: 20%;
+	height: 35px;
+    font-size: 20px;
+    color: #000;
 }
 
 .marginT10{
@@ -163,6 +175,8 @@ h3{
 .bullet-point{
 	color: #ffb12f;
 	font-size: 18px;
+	position: absolute;
+	top: 30%;
 }
 
 .other-kit img{	
@@ -442,7 +456,7 @@ i.strars {
 	.kit-item ~ p{
 		width: auto;
 		display: inline-block;
-		margin-left: 10px;
+		margin-left: 25px;
 	}
 
 	.marginT20xs{
@@ -453,4 +467,32 @@ i.strars {
 		display: none;
 	}
 
+	.stars-title{
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
+
+	.kit-desc{
+		margin-top: 10px;
+	}
+
+	.center-addCart{
+		text-align: center;
+	}
+	.btn-addCart{
+		width: 100%;
+		margin-top: 10px;
+	}
+
+}
+
+/*SM*/
+@media(min-width: 768px) and (max-width: 992px) {
+	
+}
+
+@media(min-width: 768px){
+	.center-addCart{
+		display: inline-block;
+	}
 }
