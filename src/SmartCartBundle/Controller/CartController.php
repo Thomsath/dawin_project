@@ -20,8 +20,17 @@ class CartController extends Controller
             );
         }
 
+        $service = $this->get('api_service');
+
+        $productIdList = [];
+        foreach ($cart->getProducts() as $p) {
+            $productIdList[] = $p->getProductId();
+        }
+        $products = $service->getProducts($productIdList);
+
         return $this->render('SmartCartBundle:Default:cart.html.twig', [
-            'cart' => $cart
+            'cart' => $cart,
+            'products' => $products
         ]);
     }
 

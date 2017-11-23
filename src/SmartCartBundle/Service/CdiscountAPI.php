@@ -38,4 +38,25 @@ class CdiscountAPI
         }
         return null;
     }
+
+    public function getProducts($productIdList)
+    {
+        $res = $this->client->post('GetProduct', ['json' => [
+            'ApiKey' => $this->apiKey,
+            'ProductRequest' => [
+                'ProductIdList' => $productIdList,
+                'Scope' => [
+                    'Offers' => false,
+                    'AssociatedProducts' => false,
+                    'Images' => true,
+                    'Ean' => false
+                ]
+            ]
+        ]]);
+        $products = json_decode((string)$res->getBody());
+        if(count($products) > 0) {
+            return $products;
+        }
+        return null;
+    }
 }
