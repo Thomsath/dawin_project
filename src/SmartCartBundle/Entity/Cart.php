@@ -21,7 +21,7 @@ class Cart
     private $products;
 
     /**
-    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Category")
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Category", inversedBy="carts")
     */
     private $category;
 

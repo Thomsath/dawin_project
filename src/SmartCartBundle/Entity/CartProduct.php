@@ -23,7 +23,7 @@ class CartProduct
     protected $id;
 
     /**
-    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart")
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart", inversedBy="products")
     * @ORM\JoinColumn(name="cart_id", referencedColumnName="id", nullable=false)
     */
     private $cart;

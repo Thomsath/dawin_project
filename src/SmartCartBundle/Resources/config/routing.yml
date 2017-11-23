@@ -26,10 +26,6 @@ smart_cart_admin_user_edit:
     requirements:
         userId: '\d+'
 
-smart_cart_admin_user_create:
-    path:     /admin/user/create
-    defaults: { _controller: SmartCartBundle:Admin\User:create }
-
 smart_cart_admin_cart_create:
     path:     /admin/cart/create
     defaults: { _controller: SmartCartBundle:Admin\Cart:create }
@@ -75,3 +71,9 @@ smart_cart_product:
     defaults: { _controller: SmartCartBundle:Cart:index }
     requirements:
         cartId: '\d+'
+
+smart_cart_category_product:
+    path:     /{categoryId}
+    defaults: { _controller: SmartCartBundle:Cart:category }
+    requirements:
+        categoryId: '\d+'

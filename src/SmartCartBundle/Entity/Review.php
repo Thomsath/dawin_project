@@ -14,12 +14,12 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Review
 {
     /**
-    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\User")
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\User", inversedBy="reviews")
     */
     private $user;
 
     /**
-    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart")
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart", inversedBy="reviews")
     */
     private $cart;
 
