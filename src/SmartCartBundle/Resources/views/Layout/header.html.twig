@@ -1,2 +1,6 @@
 <!-- Liste de toutes les catégories -->
 {{ dump(categories) }}
+
+{{ form_start(searchForm, {'action': path('smart_cart_search_product'), 'method': 'POST'}) }}
+
+{{ form_end(searchForm) }}

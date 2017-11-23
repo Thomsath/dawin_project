@@ -19,4 +19,20 @@ class CartRepository extends \Doctrine\ORM\EntityRepository
         ->setMaxResults($limit)
         ->getQuery()->getResult();
     }
+
+    public function findAllContains($keywords) {
+        $q = $this->createQueryBuilder('c')
+        ->select('c');
+
+        foreach(explode(" ", $keywords) as $v) {
+              $q->orWhere($q->expr()->like('c.name', ':'.$v))
+              ->setParameter($v,'%'.$v.'%')
+              ->orWhere($q->expr()->like('c.description', ':'.$v))
+              ->setParameter($v,'%'.$v.'%');
+        }
+
+        return $q
+        ->orderby('c.name', 'ASC')
+        ->getQuery()->getResult();
+    }
 }

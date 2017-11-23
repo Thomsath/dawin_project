@@ -77,3 +77,8 @@ smart_cart_category_product:
     defaults: { _controller: SmartCartBundle:Cart:category }
     requirements:
         categoryId: '\d+'
+
+smart_cart_search_product:
+    path:     /search
+    defaults: { _controller: SmartCartBundle:Search:index }
+    methods: POST
