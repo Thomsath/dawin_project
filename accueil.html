@@ -2,38 +2,51 @@
 <html lang="fr">
 <head>
   <title>SmartCart - Accueil</title>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="web/css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="web/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <header>
     <div class="container nopadding-side">
-        <div class="row">
-            <div class="col-md-3 ">
+        <div class="row justinline">
+            <div class="col-md-3 col-sm-6 centernavlogoandsearch centerblock justinline logo">
                 <img src="images/SmartCartlogo.png">
             </div>
-            <div class="col-md-5">
-                <input type="text" class="search">
-                <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
-            </div>
-            <div class="col-md-2 account centerblock">
-              <div class="centerblock">
-                <i class="fa fa-user icon-user"></i><span class="name-user">Nom</span>
+
+            <div class="col-sm-6 displayxs">
+              <div class="justinline">
+                <i class="fa fa-user icon-user icon"></i>
+                <i class="fa fa-shopping-bag icon-bag icon"></i>
               </div>
             </div>
-            <div class="col-md-2 centerblock">
+
+            <div class="col-md-5 centernavlogoandsearch justinline">
+                <input type="text" class="search">
+                <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
+            </div>
+
+            <div class="col-md-2 account centerblock displaylg">
+              <div class="user-zone centerblock">
+                <i class="fa fa-user icon-user icon"></i><span class="name-user">Nom</span>
+              </div>
+            </div>
+
+            <div class="col-md-2 centerblock displaylg">
                 <div class="bag-zone centerblock">
-                    <i class="fa fa-shopping-bag icon-bag"></i><span class="myBag">Mon panier</span>
+                    <i class="fa fa-shopping-bag icon-bag icon"></i><span class="myBag">Mon panier</span>
                 </div>
             </div>
         </div>
@@ -75,7 +88,6 @@
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
 
-
   <div class="carousel-inner">
     <div class="item active">
       <img src="images/slider_BF_big.png" alt="">
@@ -99,10 +111,13 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+
 <div class="container">
   <h3>LES BEST-SELLERS DU MOIS : NIVEAU AMATEUR</h3>
 </div>
+
 <div class="greyhomecontent">
+
 <div class="container">
   <div class="col-md-3 col-sm-12 inlineblock marge">
     <div class="blanc">
@@ -603,4 +618,7 @@
     </div>
   </div>
 </div>
+
+
+
 </html>
