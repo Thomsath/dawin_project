@@ -14,6 +14,10 @@ class Fixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
+        $productIdList = $productIdListHistory = ["ASUSZ300M6A037A","bunnikd3100ktat4","MD513NFA","ASU4712900508604","ASUZ301M1D021A","Z170C1L020A",
+        "ASUST101HAGR030T","ASUF541SCXX165T","ASUF751NATY018T","E402WAGA002T","ASUE402NAGA226T","ASU4712900361957","90YH0091M8UA00","ASU4716659439516",
+        "ASU4716659893424","XONARU5","OCC7OYZ53674QCJ","CE5000RJ4","TLEC505EM","AUC0065030849906","GOO0811571016686","TLEC530EM"];
+
         for ($c=1; $c < 8; $c++) {
             $category = new Category();
             $category->setName('Category '.$c);
@@ -26,10 +30,17 @@ class Fixtures extends Fixture
                 $cart->setPrice(mt_rand(2,50));
                 $cart->setImage('http://image'.$i.'.org/');
 
-                for ($u=1; $u < mt_rand(0,4); $u++) {
+                for ($u=1; $u < mt_rand(2,9); $u++) {
                     $cartProduct = new CartProduct();
                     $cartProduct->setCart($cart);
-                    $cartProduct->setProductId("2GEQ4".$u.$i);
+
+                    $productIdIndex = mt_rand(0,count($productIdList)-1);
+
+                    $productId = $productIdList[$productIdIndex];
+                    unset($productIdList[$productIdIndex]);
+                    $productIdList = array_values($productIdList);
+
+                    $cartProduct->setProductId($productId);
                     $cartProduct->setQuantity(mt_rand(0,64));
 
                     $cart->addProduct($cartProduct);
@@ -60,6 +71,8 @@ class Fixtures extends Fixture
 
                 $manager->persist($cart);
                 $category->addCart($cart);
+
+                $productIdList = $productIdListHistory;
             }
 
             $manager->persist($category);

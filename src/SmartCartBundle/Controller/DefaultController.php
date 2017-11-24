@@ -8,7 +8,7 @@ use SmartCartBundle\Entity\Category;
 
 class DefaultController extends Controller
 {
-    private $popularRatingCartLimit = 5;
+    private $popularRatingCartLimit = 10;
 
     public function indexAction()
     {
