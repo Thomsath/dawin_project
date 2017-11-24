@@ -17,6 +17,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="js/fb.js"></script>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </head>
 <body>
 
@@ -79,12 +83,25 @@
             <h1 class="name-kit">Kit peinture sol grands espaces amateur</h1>
         </div>
         <div class="col-md-6 stars-title">
-            <div class="name-kit stars">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="name-kit stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+                <div class="col-sm-8 marginT10XS">
+                    <!-- Twitter-->
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-hashtags="SmartCart" data-show-count="false">Tweet</a>
+                    <!--Facebbok-->
+                    <!--Mettre lien de la page du produit a partager (marche pas avec localhost pour le moment-->
+                    <div class="fb-share-button btnFB-share" data-href="#" data-layout="button" data-size="small" data-mobile-iframe="false">
+                        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FSmartCartfr-150271318914286%2F&amp;src=sdkpreparse">Partager</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -106,7 +123,7 @@
                     <br class="hidden-sm hidden-md hidden-lg">
                 </div>
                 <div class="center-addCart">
-                    <input type="button" name="add" class="btn-addCart" value="Ajouter au panier">
+                    <input type="button" name="add" class="btn-addCart" value="Acheter maintenant">
                 </div>
             <div class="marginT10">
                 <span id="stock">En stock </span><span>- Livraison gratuite</span>
@@ -156,23 +173,23 @@
     </div>
     <!-- boucle php pour recup, requet BD-->
     <div class="row">
-        <div class="col-md-2 other-kit">
+        <div class="col-sm-3 col-md-2 other-kit">
             <div>
-                <img src="images/peintsol.jpg">
+                <img class="img-responsive" src="images/peintsol.jpg">
             </div>
             <p name="descKit">Kit tapisserie grands espaces</p>
             <p class="price-orange">12€99</p>
         </div>
         <div class="col-md-2 other-kit">
             <div>
-                <img src="images/peintsol.jpg">
+                <img class="img-responsive" src="images/peintsol.jpg">
             </div>
             <p name="descKit">Kit tapisserie grands espaces</p>
             <p class="price-orange">12€99</p>
         </div>
         <div class="col-md-2 other-kit">
             <div>
-                <img src="images/peintsol.jpg">
+                <img class="img-responsive" src="images/peintsol.jpg">
             </div>
             <p name="descKit">Kit tapisserie grands espaces</p>
             <p class="price-orange">12€99</p>
@@ -313,7 +330,7 @@
         <br><br>-->
 
         <div class="rating">
-            <label> Evaluation : </label>
+            <label> Evaluation </label>
             <div class="starstest">
                 <i class="fa fa-star-half etoile"></i>
                 <i class="fa fa-star-half reverse etoile"></i>

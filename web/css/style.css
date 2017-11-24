@@ -141,12 +141,11 @@ h3{
 	background-color: #fbb12f;
 	border: 1px solid #ffb12f;
 	border-radius: 4px;
-	color: #fff;
-	padding-left: 20%;
-	padding-right: 20%;
+	color: #000;
+	padding-left: 15%;
+	padding-right: 15%;
 	height: 35px;
-    font-size: 20px;
-    color: #000;
+    font-size: 18px;
 }
 
 .marginT10{
@@ -177,8 +176,8 @@ h3{
 }
 
 .other-kit img{
-    height: 130px;
-    width: 130px;
+    max-height: 130px;
+    /*width: 130px;*/
     object-fit: cover;
 }
 
@@ -189,6 +188,11 @@ p[name="descKit"]{
 
 .name-kit{
 	display: inline-block;
+}
+
+.btnFB-share{
+	position: absolute !important;
+	margin-left: 15px;
 }
 
 .stars{
@@ -336,7 +340,7 @@ i.strars {
 }
 
 .btn-result{
-	color: black;
+	color: #000;
 	width: 100%;
 	padding: 5px;
 }
@@ -345,7 +349,7 @@ i.strars {
 	border-color: #c7c4bd;
 }
 
-/*Test notation etoile*/
+/****Test notation etoile******/
 
 .etoile {
 	color: #bdb8b3;
@@ -365,6 +369,8 @@ i.strars {
 	font-size: 20px;
 	margin-left: 5px;
 }
+
+/***************************/
 
 .minilinespace{
 	margin-top: 10px;
@@ -557,6 +563,19 @@ i.strars {
 		display: inline;
 	}
 	
+	.pagination>li>a, .pagination>li>span{
+	border: 1px solid #d7d9ea;
+}
+
+/*------Media Query ------*/
+
+/* XS */
+@media(max-width: 720px){
+	.marginT10XS{
+		margin-top: 10px;
+	}
+
+
 	.droite {
 		float: none;
 	}
@@ -605,10 +624,23 @@ i.strars {
 		margin-top: 10px;
 	}
 
+	.container-grey h4{
+		width: 100vw;	
+	    padding: 10px 29px;
+	    background-color: #fff;
+	    position: relative;
+	    margin-left: -50vw;
+	    left: 50%;
+	}	
+
+	.comment{
+		width: 100%;
+	}
+
 }
 
 @media(min-width: 770px){
 	.center-addCart{
 		display: inline-block;
 	}
-}
+
