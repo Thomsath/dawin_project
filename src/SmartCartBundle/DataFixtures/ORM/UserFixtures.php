@@ -28,6 +28,7 @@ class UserFixtures extends Fixture
         $encoder = $this->container->get('security.password_encoder');
         $password = $encoder->encodePassword($user, 'admin');
         $user->setPassword($password);
+        $user->setEnabled(true);
 
         $manager->persist($user);
 

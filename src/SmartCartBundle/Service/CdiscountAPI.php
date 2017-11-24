@@ -13,7 +13,7 @@ class CdiscountAPI
 
     public function __construct()
     {
-        $this->client = new Client(['base_uri' => $this->apiUrl, 'timeout' => 5]);
+        $this->client = new Client(['base_uri' => $this->apiUrl, 'timeout' => 12]);
     }
 
     public function getProduct($productId)
@@ -58,5 +58,48 @@ class CdiscountAPI
             return $products;
         }
         return null;
+    }
+
+    public function pushToCart($apiCartId, $productId, $productQuantity)
+    {
+        $product = $this->getProduct($productId);
+        if(!$product->BestOffer) {
+            return null;
+        }
+
+        $offerId = $product->BestOffer->Id;
+        $sellerId = $product->BestOffer->Seller->Id;
+
+        $res = $this->client->post('PushToCart', ['json' => [
+            'ApiKey' => $this->apiKey,
+            'PushToCartRequest' => [
+                'CartGUID' => $apiCartId,
+                'OfferId' => $offerId,
+                'ProductId' => $productId,
+                'Quantity' => $productQuantity,
+                'SellerId' => $sellerId,
+            ]
+        ]]);
+
+        $result = json_decode((string)$res->getBody());
+        return array($result->CartGUID, $result->CheckoutUrl);
+    }
+
+    public function getProductMaxQuantity($productId)
+    {
+        $productUrl = $this->getProduct($productId)->BestOffer->ProductURL;
+
+        $client = new Client();
+        $res = $client->request('GET', $productUrl);
+
+        $html = $res->getBody();
+
+        preg_match_all('/<select[^>]+?ProductFormData.ProductPostedForm.QuantitySelected[^>]+?>(.*?)<\/select>/s', $html, $matches);
+        $maxQuantity = $matches[1][0];
+        $maxQuantity = explode("\n", $maxQuantity);
+        $maxQuantity = $maxQuantity[count($maxQuantity)-2];
+        $maxQuantity = intval(preg_replace('/[^0-9]+/', '', $maxQuantity), 10);
+
+        return $maxQuantity;
     }
 }

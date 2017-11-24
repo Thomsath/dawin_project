@@ -82,3 +82,9 @@ smart_cart_search_product:
     path:     /search
     defaults: { _controller: SmartCartBundle:Search:index }
     methods: POST
+
+smart_cart_order:
+    path:     /order/{cartId}
+    defaults: { _controller: SmartCartBundle:Cart:order }
+    requirements:
+        cartId: '\d+'

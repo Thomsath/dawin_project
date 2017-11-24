@@ -17,6 +17,8 @@ class SearchController extends Controller
         $form = $this->createForm(SearchType::class);
 
         $form->handleRequest($request);
+        $carts = array();
+
         if($form->isSubmitted() && $form->isValid())
         {
             $search = $form->get('search')->getData();
