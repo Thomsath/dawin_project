@@ -26,4 +26,9 @@ class DefaultController extends Controller
     {
         return $this->render('SmartCartBundle:Default:mentions.html.twig');
     }
+
+    public function cguAction()
+    {
+        return $this->render('SmartCartBundle:Default:cgu.html.twig');
+    }
 }
