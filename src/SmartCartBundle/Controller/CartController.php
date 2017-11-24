@@ -50,15 +50,11 @@ class CartController extends Controller
         $apiCartId = "";
         $redirectUrl = "";
 
-        foreach ($cart->getProducts() as $p) {
-            $apiResponse = $service->pushToCart($apiCartId, $p->getProductId(), 1);
-            if($apiResponse == null) {
-                $redirectUrl = $this->generateUrl('smart_cart_product', array('cartId' => $cartId));
-                break;
-            }
-            $apiCartId = $apiResponse[0];
-            $redirectUrl = $apiResponse[1];
-        }
+        $failUrl = $this->generateUrl('smart_cart_product', array('cartId' => $cartId));
+
+        $apiResult = $service->pushToCart($cart->getProducts());
+        $redirectUrl = $apiResult != null ? $apiResult : $failUrl;
+
         return $this->redirect($redirectUrl);
     }
 

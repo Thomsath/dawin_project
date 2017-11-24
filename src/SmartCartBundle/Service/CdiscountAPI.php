@@ -54,35 +54,58 @@ class CdiscountAPI
             ]
         ]]);
         $products = json_decode((string)$res->getBody());
+
         if(count($products) > 0) {
             return $products;
         }
         return null;
     }
 
-    public function pushToCart($apiCartId, $productId, $productQuantity)
+    public function pushToCart($productList)
     {
-        $product = $this->getProduct($productId);
-        if(!$product->BestOffer) {
-            return null;
+        $_productList = array();
+        foreach($productList as $p) {
+            $_productList[] = $p->getProductId();
         }
+        $productList = $_productList;
 
-        $offerId = $product->BestOffer->Id;
-        $sellerId = $product->BestOffer->Seller->Id;
+        $checkoutUrl = null;
+        $apiCount = ceil(count($productList) / 5);
+        for($i=0;$i<count($apiCount);$i++)
+        {
+            $cartGuid = "";
 
-        $res = $this->client->post('PushToCart', ['json' => [
-            'ApiKey' => $this->apiKey,
-            'PushToCartRequest' => [
-                'CartGUID' => $apiCartId,
-                'OfferId' => $offerId,
-                'ProductId' => $productId,
-                'Quantity' => $productQuantity,
-                'SellerId' => $sellerId,
-            ]
-        ]]);
+            $products = $this->getProducts(array_slice($productList, $i * 5, $apiCount * 5));
+            if($products->Products == null) {
+                return null;
+            }
 
-        $result = json_decode((string)$res->getBody());
-        return array($result->CartGUID, $result->CheckoutUrl);
+            foreach($products->Products as $product) {
+                if($product->BestOffer == null) {
+                    return null;
+                }
+
+                $offerId = $product->BestOffer->Id;
+                $sellerId = $product->BestOffer->Seller->Id;
+
+                $res = $this->client->post('PushToCart', ['json' => [
+                    'ApiKey' => $this->apiKey,
+                    'PushToCartRequest' => [
+                        'CartGUID' => $cartGuid,
+                        'OfferId' => $offerId,
+                        'ProductId' => $product->Id,
+                        'Quantity' => 1,
+                        'SellerId' => $sellerId,
+                    ]
+                ]]);
+
+                $result = json_decode((string)$res->getBody());
+
+                $checkoutUrl = $result->CheckoutUrl;
+                $cartGuid = $result->CartGUID;
+            }
+        }
+        return $checkoutUrl;
     }
 
     public function getProductMaxQuantity($productId)
