@@ -557,8 +557,8 @@ i.strars {
 }
 
 .centerblock{
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 .user-zone{
@@ -664,7 +664,7 @@ input.nomargin{
 		margin-left: 10px;
 	}
 	.justdisplayxs{
-		display: inline;
+		display: none;
 	}
 
 	.displaylg{
@@ -673,7 +673,9 @@ input.nomargin{
 
 
 }
+/*------Media Query ------*/
 
+/* XS */
 @media(max-width: 769px){
 	.logo{
 		min-width: 196px;
@@ -687,11 +689,11 @@ input.nomargin{
 	.pagination>li>a, .pagination>li>span{
 	border: 1px solid #d7d9ea;
 }
+.justdisplayxs{
+	display: inline;
+}
 
-/*------Media Query ------*/
 
-/* XS */
-@media(max-width: 770px){
 	.marginT10XS{
 		margin-top: 10px;
 	}
@@ -747,11 +749,7 @@ input.nomargin{
 
 }
 
-@media(min-width: 770px){
-
-}
-
-@media(max-width: 770px){
+@media(max-width: 769px){
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
@@ -797,7 +795,7 @@ input.nomargin{
 	}
 }
 
-@media(min-width: 980px){
+@media(min-width: 990px){
 
 	.center-addCart{
 		display: inline-block;
@@ -805,7 +803,7 @@ input.nomargin{
 
 }
 
-@media(max-width: 980px){
+@media(max-width: 989px){
 	.btn-addCart{
 		width: 100%;
 		margin-top: 10px;
