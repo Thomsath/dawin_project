@@ -601,7 +601,7 @@ form.inscriptionform input[type="text"],form.inscriptionform input[type="email"]
 {
 	display: inline-block;
 	height: 36px;
-	width: 90%;
+
 }
 
 .elementform{
@@ -609,8 +609,8 @@ form.inscriptionform input[type="text"],form.inscriptionform input[type="email"]
 	margin-bottom: 20px;
 }
 
-input[type="text"].elementform, input[type="email"].elementform, input[type="password"].elementform , .textincription p{
-width: 90%;
+.elementform input[type="text"], .elementform input[type="email"], .elementform input[type="password"] , .textincription p{
+width: 100%;
 }
 
 h1.tiltleincription
@@ -626,6 +626,10 @@ h1.tiltleincription
 
 .navicons{
 	padding: 5px;
+}
+
+input.nomargin{
+	margin: 0px;
 }
 
 
