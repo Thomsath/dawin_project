@@ -1,4 +1,70 @@
 /*********************
+	CONNECTION PAGE
+**********************/
+
+#titleConnect{
+	font-weight: normal;
+}
+
+input[name="mdp"], input[name="pseudo"]{
+	border: none;
+	margin-left: 5px;
+}
+
+input[name="mdp"]::placeholder, input[name="pseudo"]::placeholder{
+	color: #afafaf;
+}
+
+#infos h5{
+	margin-bottom: 5px;
+	font-weight: bold;
+}
+
+.borderB{
+	border-bottom: 1px solid #d7d9e4;
+	width: 100%
+}
+
+#infos .row{
+	margin-bottom: 25px
+}
+
+input[name="connect"]{
+	margin-bottom: 25px;
+}
+
+.blocConnect{
+	border: 1px solid #f1ece6;
+	box-shadow: 3px 3px 8px #ececec;
+}
+
+.divOrange{
+	height: 28px;
+    background-color: #ffb12f;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.whiteLine{
+	position: relative;
+    height: 3px;
+    background-color: #fff;
+    top: 74%;
+    z-index: 1;
+}
+
+.underlinded{
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.notRegistred{
+	text-align: center;
+	font-size: 16px;
+	margin-top: 20px;
+}
+
+/*********************
 	PRODUCT PAGE
 **********************/
 
@@ -559,11 +625,6 @@ i.strars {
 		display: none;
 	}
 
-	.stars-title{
-		margin-top: 0;
-		margin-bottom: 10px;
-	}
-
 	.kit-desc{
 		margin-top: 10px;
 	}
@@ -604,9 +665,14 @@ i.strars {
 	.pagination>li>a, .pagination>li>span{
 		border: 1px solid #d7d9ea;	
 	}
+
+	.stars-title{
+		margin-top: 0;
+		margin-bottom: 10px;
+	}
 }
 
-@media(min-width: 770px) and (max-width: 980px){
+@media(min-width: 770px) and (max-width: 990px){
 
 	.logo{
 		min-width: 196px;
@@ -627,7 +693,9 @@ i.strars {
 		display: none;
 	}
 
-
+	.btn-addCart{
+		font-size: 14px;
+	}
 }
 
 @media(min-width: 980px){
