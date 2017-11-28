@@ -577,6 +577,11 @@ i.strars {
 	display: none;
 }
 
+.justdisplayxs{
+	display: none;
+}
+
+
 .displaylg{
 	display: inline;
 }
@@ -657,6 +662,9 @@ input.nomargin{
 		display: inline;
 		margin-top: 45px;
 		margin-left: 10px;
+	}
+	.justdisplayxs{
+		display: inline;
 	}
 
 	.displaylg{
