@@ -1,0 +1,357 @@
+{% extends "::header.html.twig" %}
+
+{% block contenuPage %}
+
+<!-- Content-->
+<div class="container">
+    <div>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Bricolage</a></li>
+          <li class="breadcrumb-item"><a href="#">Peinture</a></li>
+          <li class="breadcrumb-item"><a href="#">Amateur</a></li>
+        </ol>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <h1 class="name-kit">Kit peinture sol grands espaces amateur</h1>
+        </div>
+        <div class="col-md-6 stars-title">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="name-kit stars">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+                <div class="col-sm-8 marginT10XS">
+                    <!-- Twitter-->
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="small" data-hashtags="SmartCart" data-show-count="false">Tweet</a>
+                    <!--Facebbok-->
+                    <!--Mettre lien de la page du produit a partager (marche pas avec localhost pour le moment-->
+                    <div class="fb-share-button btnFB-share" data-href="#" data-layout="button" data-size="small" data-mobile-iframe="false">
+                        <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FSmartCartfr-150271318914286%2F&amp;src=sdkpreparse">Partager</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="images/peintsol.jpg" class="kit-img" >
+        </div>
+        <div class="col-md-6">
+            <p class="kit-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.</p>
+
+            <p class="price">15,00€</p>
+                <div class="quantity">
+                    <input type="button" name="less" class="btn-quantity" value="-" >
+                    <input type="text" id="quantity" class="nb-quantity" value="1">
+                    <input type="button" name="more" class="btn-quantity btn-more" value="+">
+                    <br class="hidden-sm hidden-md hidden-lg">
+                </div>
+                <div class="center-addCart">
+                    <input type="button" name="add" class="btn-addCart" value="Acheter maintenant">
+                </div>
+            <div class="marginT10">
+                <span id="stock">En stock </span><span>- Livraison gratuite</span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-md-5">
+            <h3> Ce kit contient</h3>
+        </div>
+    </div>
+    <!-- boucle php pour recup le contenu du kit, requet BD-->
+    <div class="row">
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
+                <img class="img-responsive" src="images/potpeint.jpg" >
+            </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
+            <p>Un pot de peinture noire extérieur Luxens</p>
+        </div>
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
+                <img class="img-responsive" src="images/potpeint.jpg" >
+            </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
+            <p>Un pot de peinture noire extérieur Luxens</p>
+        </div>
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
+                <img class="img-responsive" src="images/potpeint.jpg" >
+            </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
+            <p>Un pot de peinture noire extérieur Luxens</p>
+        </div>
+        <div class="col-sm-3 col-md-2">
+            <div class="kit-item hidden-xs">
+                <img class="img-responsive" src="images/potpeint.jpg" >
+            </div>
+            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
+            <p>Un pot de peinture noire extérieur Luxens</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-3 col-md-12">
+            <h3>Fréquemment acheté ensemble</h3>
+        </div>
+    </div>
+    <!-- boucle php pour recup, requet BD-->
+    <div class="row">
+        <div class="col-xs-6 col-md-2 other-kit">
+            <div>
+                <img class="img-responsive" src="images/peintsol.jpg">
+            </div>
+            <p name="descKit">Kit tapisserie grands espaces</p>
+            <p class="price-orange">12€99</p>
+        </div>
+        <div class="col-xs-6 col-md-2 other-kit">
+            <div>
+                <img class="img-responsive" src="images/peintsol.jpg">
+            </div>
+            <p name="descKit">Kit tapisserie grands espaces</p>
+            <p class="price-orange">12€99</p>
+        </div>
+        <div class="col-xs-6 col-md-2 other-kit">
+            <div>
+                <img class="img-responsive" src="images/peintsol.jpg">
+            </div>
+            <p name="descKit">Kit tapisserie grands espaces</p>
+            <p class="price-orange">12€99</p>
+        </div>
+    </div>
+</div>
+<div class="container-fluid container-grey">
+    <div class="container">
+        <div class="row characteristics">
+            <div class="col-md-12">
+                <h3>Caractéristiques détaillées</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Rouleau très grand manche amovible</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Inducation du geste de tri</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Nos produit et emballages peuvent faire l'objet de tri.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Support de destination</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Mur et plafond</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Usage du produit</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Peinture</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Composition</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Rouleau mur et plafond avec manche extensible max 30cm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 marginT20xs">
+                <h4>Rouleau très grand manche amovible</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Inducation du geste de tri</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Nos produit et emballages peuvent faire l'objet de tri.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Support de destination</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Mur et plafond</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Usage du produit</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Peinture</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hr-grey"></div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Composition</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div>
+                            <p>Rouleau mur et plafond avec manche extensible max 30cm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h3>Avis clients</h3>
+    <form action="index.html" method="post">
+        <textarea class="form-control comment" rows="3"></textarea>
+        <!--<fieldset class="rating">
+            <input type="radio" id="star5" value="5" />
+            <label class = "full" for="star5"></label>
+            <input type="radio" id="star4half" value="4.5" />
+            <label class="half" for="star4half"></label>
+            <input type="radio" id="star4" value="4" />
+            <label class = "full" for="star4"></label>
+            <input type="radio" id="star3half"  value="3.5" />
+            <label class="half" for="star3half"></label>
+            <input type="radio" id="star3"  value="3" />
+            <label class = "full" for="star3"></label>
+            <input type="radio" id="star2half"  value="2.5" />
+            <label class="half" for="star2half"></label>
+            <input type="radio" id="star2"  value="2" />
+            <label class = "full" for="star2"></label>
+            <input type="radio" id="star1half"  value="1.5" />
+            <label class="half" for="star1half"></label>
+            <input type="radio" id="star1"  value="1" />
+            <label class = "full" for="star1"></label>
+            <input type="radio" id="starhalf"  value="0.5" />
+            <label class="half" for="starhalf"></label>
+        </fieldset>
+        <br><br>-->
+
+        <div class="rating">
+            <label> Evaluation </label>
+            <div class="starstest">
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+                <i class="fa fa-star-half etoile"></i>
+                <i class="fa fa-star-half reverse etoile"></i>
+            </div>
+        </div>
+        <input type="button" name="add" class="btn-green" value="Envoyer mon avis">
+    </form>
+
+    <div class="row">
+        <div class="col-md-2">
+            <div class="stars stars-comment">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div> 
+        </div>
+        <div class="col-md-10">
+            <h4 class="nomarginB">Super Produit</h4>
+            <p class="date">Avis déposé le 20/11/17</p>
+            <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
+        </div>
+    </div>
+    <div class="hr-avis"></div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="stars stars-comment">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div> 
+        </div>
+        <div class="col-md-10">
+            <h4 class="nomarginB">Super Produit</h4>
+            <p class="date">Avis déposé le 20/11/17</p>
+            <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
+        </div>
+    </div>
+    <div class="hr-avis"></div>
+    <div class="row">
+        <div class="col-md-2">
+            <div class="stars stars-comment">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+            </div> 
+        </div>
+        <div class="col-md-10">
+            <h4 class="nomarginB">Super Produit</h4>
+            <p class="date">Avis déposé le 20/11/17</p>
+            <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
+        </div>
+    </div>    
+    <div class="hr-avis"></div>
+</div>
+
+{% endblock %}
+
+<script>
+$(document).ready(function() {
+    var max = 10; //quantity max
+    var min = 1; //quantity min
+    var x = 1; //initial text box count
+    $("input[name='more']").click(function(){
+        if(x < max){
+            x++; //text box increment
+            $("#quantity").val(x); //add input box
+        }
+    });
+    $("input[name='less']").click(function(){
+        if(x >  min){
+            x--; //text box increment
+            $("#quantity").val(x); //add input box
+        }
+    });
+});
+
+</script>
