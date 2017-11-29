@@ -131,6 +131,7 @@ h3{
 
 .icon-user, .icon-bag{
 	font-size: 25px;
+	color: #000;
 }
 
 
@@ -476,6 +477,13 @@ i.strars {
 	padding-bottom: 10px;
 }
 
+.icon-FbT{
+	max-width: 32px;
+    max-height: 32px;
+    padding-right: 5px;
+    display: inline-block;
+}
+
 .footerlogo{
 	width: 50px;
 	height: 50px;
@@ -562,7 +570,7 @@ i.strars {
 }
 
 .user-zone{
-	color: white;
+	color: #000;
 }
 
 .iconsearch{
@@ -667,6 +675,7 @@ input.nomargin{
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
+		padding-left: 40px;
 	}
 
 	.justinline{
@@ -774,7 +783,7 @@ input.nomargin{
 
 	.displayxs{
 		display: inline;
-		margin-top: 45px;
+		margin-top: 17px;
 		margin-left: 15px;
 	}
 
