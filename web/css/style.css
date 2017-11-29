@@ -85,9 +85,7 @@ h3{
 	text-align: center;
 }
 
-.navbar{
-	margin-bottom: 0;
-}
+
 
 .breadcrumb{
 	background-color: transparent;
@@ -646,11 +644,15 @@ input.nomargin{
 }
 
 .navbar-toggler{
-	position: absolute;
-	top: -125px;
+	/*position: absolute;*/
+	top: -105px;
 	background-color: #fbb12f;
 	border:none;
 	padding: 6px 8px;
+}
+
+.navbar{
+	background-color: #f1ece6;
 }
 
 .fa-bars, .fa-times{
@@ -678,6 +680,16 @@ input.nomargin{
 
 /* XS */
 @media(max-width: 770px){
+
+	.navbar{
+		margin-bottom: 0;
+		background-color: transparent;
+		margin-top: -20px; 
+
+		float: left;
+	    top: -105px;
+	}
+
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
@@ -761,6 +773,7 @@ input.nomargin{
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
+		margin-left: 10px;
 	}
 
 	.justinline{
@@ -774,6 +787,12 @@ input.nomargin{
 	.stars-title{
 		margin-top: 0;
 		margin-bottom: 10px;
+	}
+}
+
+@media(min-width: 770px){
+	.navbar{
+		background-color: #f1ece6;
 	}
 }
 

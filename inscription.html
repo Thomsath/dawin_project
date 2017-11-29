@@ -68,10 +68,14 @@
 
 <div class="nopadding-side">
     <nav class="navbar navbar-expand-md navbar-light">
-          <a class="nav-link justdisplayxs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+        <div>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
         <i class="fa fa-bars" name="btnMenu"></i>
         </button>
+    </div>
+
+          <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
+
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <div class="container">
@@ -80,7 +84,7 @@
 
             <li class="nav-item">
               <div class="dropdown">
-                <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home navicons displaylg" aria-hidden="true"></i>Maison</a>
+                <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home navicons hidden-xs" aria-hidden="true"></i>Maison</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
                 <a class="dropdown-item" href="#">EXEMPLE</a>
               </div>
@@ -88,7 +92,7 @@
             </li>
             <li class="nav-item">
               <div class="dropdown">
-                <a class="nav-link" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench navicons displaylg" aria-hidden="true"></i>Jardin et Bricolage</a>
+                <a class="nav-link" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench navicons hidden-xs" aria-hidden="true"></i>Jardin et Bricolage</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
                 <a class="dropdown-item" href="#">EXEMPLE</a>
               </div>
@@ -96,7 +100,7 @@
             </li>
             <li class="nav-item">
               <div class="dropdown">
-                <a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-laptop navicons displaylg" aria-hidden="true"></i>Informatique</a>
+                <a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-laptop navicons hidden-xs" aria-hidden="true"></i>Informatique</a>
               <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
                 <a class="dropdown-item" href="#">EXEMPLE</a>
               </div>
@@ -104,7 +108,7 @@
             </li>
             <li class="nav-item">
                 <div class="dropdown">
-                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mobile navicons displaylg" aria-hidden="true"></i>TV & Son</a>
+                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mobile navicons hidden-xs" aria-hidden="true"></i>TV & Son</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
                   <a class="dropdown-item" href="#">EXEMPLE</a>
                 </div>
@@ -112,7 +116,7 @@
             </li>
             <li class="nav-item">
                 <div class="dropdown">
-                <a class="nav-link" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television navicons displaylg" aria-hidden="true"></i>Téléphonie</a>
+                <a class="nav-link" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television navicons hidden-xs" aria-hidden="true"></i>Téléphonie</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
                   <a class="dropdown-item" href="#">EXEMPLE</a>
                 </div>
@@ -120,7 +124,7 @@
             </li>
             <li class="nav-item">
             <div class="dropdown">
-            <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-futbol-o navicons displaylg" aria-hidden="true"></i>Sport</a>
+            <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-futbol-o navicons hidden-xs" aria-hidden="true"></i>Sport</a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <a class="dropdown-item" href="#">FOOTBALL</a>
               <a class="dropdown-item" href="#">BASKETBALL</a>
@@ -352,10 +356,22 @@
 </html>
 
 <script>
-    $("i[name='btnMenu'").click(function(){
-        if($("i[name='btnMenu'").hasClass("fa fa-times"))
-            $("i[name='btnMenu'").attr('class','fa fa-bars');
-        else
-            $("i[name='btnMenu'").attr('class','fa fa-times');
-    });
+$("i[name='btnMenu'").click(function(){
+    if($("i[name='btnMenu'").hasClass("fa fa-times")){
+        $("i[name='btnMenu'").attr('class','fa fa-bars');
+        $(".navbar").css("background-color","transparent");
+    }else{
+        $("i[name='btnMenu'").attr('class','fa fa-times');
+        $(".navbar").css("background-color","#f1ece6");
+    }
+});
+
+$(window).resize(function() {
+    if($(window).width() > 770){
+        if($(".navbar").css("background-color","transparent")){
+            $(".navbar").css("background-color","#f1ece6");
+        }
+    }
+
+});
 </script>
