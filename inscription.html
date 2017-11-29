@@ -22,15 +22,13 @@
 <header>
     <div class="container nopadding-side">
         <div class="row justinline">
-            <div class="col-md-3 col-sm-6 justinline logo">
+            <div class="col-xs-offset-2 col-xs-6 col-md-3 col-sm-6 justinline logo nopadding-side">
                 <img src="images/SmartCartlogo.png">
             </div>
 
-            <div class="col-sm-6 displayxs">
-              <div class="justinline">
+            <div class="col-xs-2 col-sm-6 displayxs">
                 <i class="fa fa-user icon-user icon"></i>
-                <i class="fa fa-user-plus icon-bag icon" aria-hidden="true"></i>
-              </div>
+                <i class="fa fa-user-plus icon-bag icon hidden-xs" aria-hidden="true"></i>
             </div>
 
             <div class="col-md-5 justinline">
@@ -69,10 +67,10 @@
 </header>
 
 <div class="nopadding-side">
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav class="navbar navbar-expand-md navbar-light">
           <a class="nav-link justdisplayxs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fa fa-bars" name="btnMenu"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -347,7 +345,13 @@
     </div>
   </div>
 </div>
-
-
-
 </html>
+
+<script>
+    $("i[name='btnMenu'").click(function(){
+        if($("i[name='btnMenu'").hasClass("fa fa-times"))
+            $("i[name='btnMenu'").attr('class','fa fa-bars');
+        else
+            $("i[name='btnMenu'").attr('class','fa fa-times');
+    });
+</script>

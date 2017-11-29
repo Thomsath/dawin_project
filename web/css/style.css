@@ -637,6 +637,20 @@ input.nomargin{
 	margin: 0px;
 }
 
+.navbar-toggler{
+	position: absolute;
+	top: -125px;
+	background-color: #fbb12f;
+	border:none;
+	padding: 6px 8px;
+}
+
+.fa-bars, .fa-times{
+	font-size: 25px;
+	color: #fff;
+}
+
+
 
 /*------Media Query ------*/
 @media(min-width: 980px){
@@ -646,37 +660,10 @@ input.nomargin{
 	}
 */
 }
-
-@media(min-width: 770px) and (max-width: 980px){
-
-	.logo{
-		min-width: 196px;
-		min-height: 46px;
-	}
-
-	.justinline{
-		display: inline;
-	}
-
-	.displayxs{
-		display: inline;
-		margin-top: 45px;
-		margin-left: 10px;
-	}
-	.justdisplayxs{
-		display: none;
-	}
-
-	.displaylg{
-		display: none;
-	}
-
-
-}
 /*------Media Query ------*/
 
 /* XS */
-@media(max-width: 769px){
+@media(max-width: 770px){
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
@@ -687,11 +674,11 @@ input.nomargin{
 	}
 
 	.pagination>li>a, .pagination>li>span{
-	border: 1px solid #d7d9ea;
-}
-.justdisplayxs{
-	display: inline;
-}
+		border: 1px solid #d7d9ea;
+	}
+	.justdisplayxs{
+		display: inline;
+	}
 
 
 	.marginT10XS{
@@ -705,7 +692,6 @@ input.nomargin{
 
 	.displayxs{
 		display:inline;
-		margin-top: 40px;
 	}
 
 	.displaylg{
@@ -747,9 +733,15 @@ input.nomargin{
 		width: 100%;
 	}
 
+	.icon{
+		padding-right:0;
+		padding-bottom: 0;
+		padding-top: 15px;
+	}
+
 }
 
-@media(max-width: 769px){
+@media(max-width: 770px){
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
@@ -783,7 +775,7 @@ input.nomargin{
 	.displayxs{
 		display: inline;
 		margin-top: 45px;
-		margin-left: 10px;
+		margin-left: 15px;
 	}
 
 	.displaylg{
