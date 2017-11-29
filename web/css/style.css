@@ -633,7 +633,7 @@ h1.tiltleincription
 
 .paddinginscription{
 	padding: 40px;
-	padding-right: 0px;
+	padding-right: 40px;
 	padding-left: 40px;
 }
 
@@ -657,6 +657,12 @@ input.nomargin{
 	font-size: 25px;
 	color: #fff;
 }
+
+.row{
+	display: inline;
+}
+
+
 
 
 
@@ -741,6 +747,7 @@ input.nomargin{
 	.comment{
 		width: 100%;
 	}
+
 
 	.icon{
 		padding-right:0;
