@@ -17,54 +17,121 @@
 </head>
 <body>
 
+
+
 <header>
     <div class="container nopadding-side">
-        <div class="row">
-            <div class="col-md-3">
-                <img src="images/SmartCartlogo.png">
+        <div class="row justinline">
+            <div class="col-md-3 col-sm-6 centernavlogoandsearch centerblock justinline logo">
+                <img src="images/SmartCartlogo.png" alt="Logo de SmartCart">
             </div>
-            <div class="col-md-5">
+
+            <div class="col-sm-6 displayxs">
+              <div class="justinline">
+                <i class="fa fa-user icon-user icon"></i>
+                <i class="fa fa-shopping-bag icon-bag icon"></i>
+              </div>
+            </div>
+
+            <div class="col-md-5 centernavlogoandsearch justinline">
                 <input type="text" class="search">
-                <button type="submit" class="btn-search"><i class="fa fa-search"></i></button>
+                <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
             </div>
-            <div class="col-md-2 account">
-                <i class="fa fa-user icon-user"></i><span class="name-user">Nom</span>
+
+            <div class="col-md-2 account centerblock displaylg">
+              <div class="user-zone centerblock">
+                <i class="fa fa-user icon-user icon"></i><span class="name-user">Nom</span>
+              </div>
             </div>
-            <div class="col-md-2">
-                <div  class="bag-zone">
-                    <i class="fa fa-shopping-bag icon-bag"></i><span class="myBag">Mon panier</span>
+
+            <div class="col-md-2 centerblock displaylg">
+                <div class="bag-zone centerblock">
+                    <i class="fa fa-shopping-bag icon-bag icon"></i><span class="myBag">Mon panier</span>
                 </div>
             </div>
         </div>
     </div>
 </header>
-<!-- Menu -->
-<div class="container nopadding-side">
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+
+
+<div class="nopadding-side">
+    <nav class="navbar navbar-expand-md navbar-light">
+        <div>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+        <i class="fa fa-bars" name="btnMenu"></i>
         </button>
+    </div>
+
+          <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
+
+
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+            <div class="container">
+
+            <ul class="navbar-nav text-md-center nav-justified w-100">
+
             <li class="nav-item">
-                <a class="nav-link" href="#">Maison</a>
+              <div class="dropdown">
+                <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home navicons hidden-xs" aria-hidden="true"></i>Maison</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                <a class="dropdown-item" href="#">EXEMPLE</a>
+              </div>
+              </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">High-Tech</a>
+              <div class="dropdown">
+                <a class="nav-link" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench navicons hidden-xs" aria-hidden="true"></i>Jardin et Bricolage</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                <a class="dropdown-item" href="#">EXEMPLE</a>
+              </div>
+              </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Auto Moto Bateau</a>
+              <div class="dropdown">
+                <a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-laptop navicons hidden-xs" aria-hidden="true"></i>Informatique</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                <a class="dropdown-item" href="#">EXEMPLE</a>
+              </div>
+              </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sport</a>
+                <div class="dropdown">
+                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mobile navicons hidden-xs" aria-hidden="true"></i>TV & Son</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                  <a class="dropdown-item" href="#">EXEMPLE</a>
+                </div>
+                </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Vin et Bio</a>
+                <div class="dropdown">
+                <a class="nav-link" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television navicons hidden-xs" aria-hidden="true"></i>Téléphonie</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                  <a class="dropdown-item" href="#">EXEMPLE</a>
+                </div>
+                </div>
             </li>
-            </ul>
+            <li class="nav-item">
+            <div class="dropdown">
+            <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-futbol-o navicons hidden-xs" aria-hidden="true"></i>Sport</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">FOOTBALL</a>
+              <a class="dropdown-item" href="#">BASKETBALL</a>
+              <a class="dropdown-item" href="#">HANDBALL</a>
+              <a class="dropdown-item" href="#">RUGBY</a>
+              <a class="dropdown-item" href="#">SKATEBOARD</a>
+              <a class="dropdown-item" href="#">NATATION</a>
+            </div>
+            </div>
+
+            </li>
+          </ul>
+          </div>
         </div>
     </nav>
 </div>
+
+
+
 <!-- Content-->
 <div class="container">
     <div>
@@ -81,12 +148,12 @@
     <h3 class="justinline"> Peinture</h3> <p class="inlineblock">(500)</p>
     <div class="inlineblock droite">
       <p class="trierpar inlineblock"> Trier par :</p>
-      <select class="inlineblock" name="choix">
-        <option value="croissant">Prix croissant</option>
-        <option value="decroissant">Prix décroissant</option>
-        <option value="mieuxnote"> Les mieux notés </option>
-        <option value="nbarticles"> Nombres d'articles </option>
-      </select>
+          <select class="inlineblock" name="choix">
+            <option value="croissant">Prix croissant</option>
+            <option value="decroissant">Prix décroissant</option>
+            <option value="mieuxnote"> Les mieux notés </option>
+            <option value="nbarticles"> Nombres d'articles </option>
+          </select>
     </div>
     </div>
 </div>
