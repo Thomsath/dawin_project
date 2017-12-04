@@ -313,44 +313,6 @@ form{
 	padding-right: 5%;
 }
 
-
-
-/****** Style Star Rating Widget *****/
-/*
-.rating {
-  border: none;
-  float: left;
-}
-
-.rating > input { display: none; }
-.rating > label:before {
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-}
-
-.rating > .half:before {
-  content: "\f089";
-  position: absolute;
-}
-
-.rating > label {
-  color: #ddd;
- float: right;
-}
-
-.rating > input:checked ~ label,
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  }
-
-.rating > input:checked + label:hover,
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
-*/
-
 .date {
 	font-size: 75%;
 	color: #bdb8b3;
@@ -426,7 +388,7 @@ select.inlineblock {
 	border-color: #c7c4bd;
 }
 
-/****Test notation etoile******/
+/****notation etoile******/
 
 .etoile {
 	color: #bdb8b3;
@@ -456,7 +418,7 @@ select.inlineblock {
 
 
 .footer-bs {
-  	background-color: #363636;
+  background-color: #363636;
 	color: rgba(255,255,255,1.00);
 	padding: 30px;
 }
@@ -478,8 +440,7 @@ select.inlineblock {
 }
 
 .footer-bs img.icon {
- width: 32px;
- height: 32px;
+ 	height: 40px;
 }
 
 .icon{
@@ -588,6 +549,11 @@ select.inlineblock {
 .iconsearch{
 	font-size: 140%;
 }
+
+.centernavlogoandsearch{
+	margin-top: 15px;
+}
+
 .displayxs{
 	display: none;
 }
@@ -637,7 +603,9 @@ h1.tiltleincription
 {
 	font-weight: normal;
 }
-
+.row-signup {
+		display: inline;
+}
 .paddinginscription{
 	padding: 40px;
 	padding-right: 40px;
@@ -688,7 +656,7 @@ input.nomargin{
 	.navbar{
 		margin-bottom: 0;
 		background-color: transparent;
-		margin-top: -20px; 
+		margin-top: -20px;
 
 		float: left;
 	    top: -105px;
@@ -772,6 +740,8 @@ input.nomargin{
 		padding-right:0;
 		padding-bottom: 0;
 		padding-top: 15px;
+		margin-bottom:16px;
+		margin-right:7px;
 	}
 
 	select.inlineblock {
@@ -835,6 +805,9 @@ input.nomargin{
 
 	.btn-addCart{
 		font-size: 14px;
+	}
+	.displaylg{
+		display: none;
 	}
 }
 

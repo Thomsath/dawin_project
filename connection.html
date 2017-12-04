@@ -3,134 +3,125 @@
 <head>
   <title>SmartCart - Se connecter</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="web/css/style.css">
-  <link rel="shortcut icon" href="images/favicon.png" />
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="web/css/style.css">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/fb.js"></script>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 
-</head>
-<body>
-<header>
-    <div class="container nopadding-side">
-        <div class="row justinline">
-            <div class="col-md-3 col-sm-6 centernavlogoandsearch centerblock justinline logo">
-                <img src="images/SmartCartlogo.png" alt="Logo de SmartCart">
-            </div>
+    <header>
+      <div class="container nopadding-side">
+           <div class="row justinline">
+              <div class="col-xs-9 col-md-3 col-sm-6 justinline logo nopadding-side">
+                   <a href="index.php"><img src="images/SmartCartlogo.png"></a>
+               </div>
 
-            <div class="col-sm-6 displayxs">
-              <div class="justinline">
-                <i class="fa fa-user icon-user icon"></i>
-                <i class="fa fa-shopping-bag icon-bag icon"></i>
+               <a href="connection.php"><div class="col-xs-2 col-sm-6 displayxs">
+                   <i class="fa fa-user icon-user icon"></i>
+                  <i class="fa fa-user-plus icon-bag icon hidden-xs hidden-sm" aria-hidden="true"></i>
+               </div></a>
+
+               <div class="col-md-5 justinline">
+                  <input type="text" class="search">
+                  <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
               </div>
-            </div>
 
-            <div class="col-md-5 centernavlogoandsearch justinline">
-                <input type="text" class="search">
-                <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
-            </div>
+              <a href="connection.php"><div class="col-md-2 account centerblock displaylg">
+                 <div class="user-zone centerblock">
+                 <i class="fa fa-user icon-user icon"></i><span class="name-user">S'identifier</span>
+                 </div>
+               </div></a>
 
-            <div class="col-md-2 account centerblock displaylg">
-              <div class="user-zone centerblock">
-                <i class="fa fa-user icon-user icon"></i><span class="name-user">Nom</span>
-              </div>
-            </div>
-
-            <div class="col-md-2 centerblock displaylg">
-                <div class="bag-zone centerblock">
-                    <i class="fa fa-shopping-bag icon-bag icon"></i><span class="myBag">Mon panier</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-
-<div class="nopadding-side">
-    <nav class="navbar navbar-expand-md navbar-light">
-        <div>
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-        <i class="fa fa-bars" name="btnMenu"></i>
-        </button>
-    </div>
-
-          <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
-
-
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <div class="container">
-
-            <ul class="navbar-nav text-md-center nav-justified w-100">
-
-            <li class="nav-item">
-              <div class="dropdown">
-                <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home navicons hidden-xs" aria-hidden="true"></i>Maison</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                <a class="dropdown-item" href="#">EXEMPLE</a>
-              </div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <div class="dropdown">
-                <a class="nav-link" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench navicons hidden-xs" aria-hidden="true"></i>Jardin et Bricolage</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                <a class="dropdown-item" href="#">EXEMPLE</a>
-              </div>
-              </div>
-            </li>
-            <li class="nav-item">
-              <div class="dropdown">
-                <a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-laptop navicons hidden-xs" aria-hidden="true"></i>Informatique</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                <a class="dropdown-item" href="#">EXEMPLE</a>
-              </div>
-              </div>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown">
-                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mobile navicons hidden-xs" aria-hidden="true"></i>TV & Son</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                  <a class="dropdown-item" href="#">EXEMPLE</a>
-                </div>
-                </div>
-            </li>
-            <li class="nav-item">
-                <div class="dropdown">
-                <a class="nav-link" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television navicons hidden-xs" aria-hidden="true"></i>Téléphonie</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                  <a class="dropdown-item" href="#">EXEMPLE</a>
-                </div>
-                </div>
-            </li>
-            <li class="nav-item">
-            <div class="dropdown">
-            <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-futbol-o navicons hidden-xs" aria-hidden="true"></i>Sport</a>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">FOOTBALL</a>
-              <a class="dropdown-item" href="#">BASKETBALL</a>
-              <a class="dropdown-item" href="#">HANDBALL</a>
-              <a class="dropdown-item" href="#">RUGBY</a>
-              <a class="dropdown-item" href="#">SKATEBOARD</a>
-              <a class="dropdown-item" href="#">NATATION</a>
-            </div>
-            </div>
-
-            </li>
-          </ul>
+              <a href="inscription.php"><div class="col-md-2 centerblock displaylg">
+                  <div class="bag-zone centerblock">
+                      <i class="fa fa-user-plus icon-bag icon" aria-hidden="true"></i><span class="myBag">S'inscrire</span>
+                  </div>
+              </div></a>
           </div>
-        </div>
-    </nav>
-</div>
+      </div>
+  </header>
+
+  <div class="nopadding-side">
+      <nav class="navbar navbar-expand-md navbar-light">
+          <div>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+          <i class="fa fa-bars" name="btnMenu"></i>
+          </button>
+      </div>
+
+            <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
+
+
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <div class="container">
+
+              <ul class="navbar-nav text-md-center nav-justified w-100">
+
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home navicons hidden-xs" aria-hidden="true"></i>Maison</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                  <a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
+                </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench navicons hidden-xs" aria-hidden="true"></i>Jardin et Bricolage</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                  <a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
+                </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-laptop navicons hidden-xs" aria-hidden="true"></i>Informatique</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                  <a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
+                </div>
+                </div>
+              </li>
+              <li class="nav-item">
+                  <div class="dropdown">
+                    <a class="nav-link" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mobile navicons hidden-xs" aria-hidden="true"></i>TV & Son</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                    <a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
+                  </div>
+                  </div>
+              </li>
+              <li class="nav-item">
+                  <div class="dropdown">
+                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television navicons hidden-xs" aria-hidden="true"></i>Téléphonie</a>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                    <a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
+                  </div>
+                  </div>
+              </li>
+              <li class="nav-item">
+              <div class="dropdown">
+              <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-futbol-o navicons hidden-xs" aria-hidden="true"></i>Sport</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="listingproduit.php">FOOTBALL</a>
+                <a class="dropdown-item" href="listingproduit.php">BASKETBALL</a>
+                <a class="dropdown-item" href="listingproduit.php">HANDBALL</a>
+                <a class="dropdown-item" href="listingproduit.php">RUGBY</a>
+                <a class="dropdown-item" href="listingproduit.php">SKATEBOARD</a>
+                <a class="dropdown-item" href="listingproduit.php">NATATION</a>
+              </div>
+              </div>
+
+              </li>
+            </ul>
+            </div>
+          </div>
+      </nav>
+  </div>
 <div class="container">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 offset-lg-2 col-lg-8 blocConnect">
