@@ -779,6 +779,10 @@ input.nomargin{
 		display: block;
 	}
 
+	.btn-green {
+		width: 100%;
+	}
+
 }
 
 @media(max-width: 770px){
