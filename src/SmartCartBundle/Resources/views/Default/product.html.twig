@@ -1,6 +1,14 @@
-{% extends "::header.html.twig" %}
+{% extends "::VueMere.html.twig" %}
 
-{% block contenuPage %}
+{% block stylesheets %}
+ {{ parent() }}					   
+{% endblock %}
+
+{% block header %}
+ {{ parent() }}
+{% endblock %}
+
+{% block body %}
 
 <!-- Content-->
 <div class="container">
@@ -335,6 +343,12 @@
 
 {% endblock %}
 
+{% block footer %}
+ {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+ {{ parent() }}
 <script>
 $(document).ready(function() {
     var max = 10; //quantity max
@@ -355,3 +369,4 @@ $(document).ready(function() {
 });
 
 </script>
+{% endblock %}

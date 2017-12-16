@@ -1,9 +1,5 @@
 smart_cart_homepage:
     path:     /
-    defaults: { _controller: SmartCartBundle:Default:index }
-	
-smart_cart_home:
-    path:     /home
     defaults: { _controller: SmartCartBundle:Default:home }
 
 smart_cart_connection:
@@ -18,7 +14,7 @@ smart_cart_listing_product:
     path:     /listingProduct
     defaults: { _controller: SmartCartBundle:Default:listingProduct }
 	
-smart_cart_produit:
+smart_cart_product:
     path:     /product
     defaults: { _controller: SmartCartBundle:Default:product }
 
