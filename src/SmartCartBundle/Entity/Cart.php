@@ -78,10 +78,6 @@ class Cart
     *
     * @ORM\Column(name="price", type="float")
     *
-    * @Assert\Type(
-    *     type="float",
-    *     message="Le prix du panier n'est pas valide."
-    * )
     */
     private $price;
 

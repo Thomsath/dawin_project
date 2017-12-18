@@ -26,6 +26,7 @@ class CartController extends Controller
 
     public function createAction(Request $request)
     {
+        $service = $this->get('api_service');
         $cart = new Cart();
 
         $em = $this->getDoctrine()->getManager();
@@ -40,6 +41,10 @@ class CartController extends Controller
                 if(!$service->getProduct($product->getData()->getProductId())) {
                     $product->addError(new FormError('Le produit avec l\'ID ' . $product->getData()->getProductId() . ' n\'existe pas !'));
                 }
+            }
+
+            foreach ($cart->getProducts() as $product) {
+                $product->setCart($cart);
             }
 
             if($form->isValid()) {

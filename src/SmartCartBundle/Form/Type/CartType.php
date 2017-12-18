@@ -30,15 +30,14 @@ class CartType extends AbstractType
         ->add('image', UrlType::class)
         ->add('associated_cart', EntityType::class, array('class' => 'SmartCartBundle:Cart','empty_data' => '', 'required' => false))
         ->add('products', CollectionType::class, array(
-            'entry_type' => ProductType::class
+            'entry_type' => ProductType::class,
+            'entry_options' => array('label' => false),
+            'allow_add' => true,
         ))
         ->add('category', EntityType::class, array(
             'class' => Category::class
         ))
         ->add('save', SubmitType::class, array('label' => 'Sauvegarder'));
-/*
-        $builder
-        ->get('products')->addModelTransformer(new StringToProductTransformer($em));*/
     }
 
     public function configureOptions(OptionsResolver $resolver)
