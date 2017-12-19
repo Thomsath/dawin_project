@@ -81,6 +81,10 @@ h3{
 	margin-bottom: 0;
 }
 
+.nomarginT{
+	margin-top: 0;
+}
+
 .textCenter{
 	text-align: center;
 }
@@ -440,7 +444,7 @@ select.inlineblock {
 }
 
 .footer-bs img.icon {
- 	height: 40px;
+ 	height: 35px;
 }
 
 .icon{
@@ -640,6 +644,63 @@ input.nomargin{
 	color: #fff;
 }
 
+/*********************
+	CONTACT US PAGE
+**********************/
+#contact_us .navbar{
+	margin-bottom: 0;
+}
+
+.bg_whoAreWe{
+	background-image: url('../../images/bg_mainpage.png');
+	background-size: cover;
+	padding: 20px 0 20px 0;
+}
+
+.col_profilPic{
+	max-width: 20%;
+	position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.contact_us_row{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.bg_profilPic{
+	background-color: #f1ece6;
+}
+.picture_us{
+	width: 100%;
+}
+
+.descp_us{
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+input[name="emailContact"]{
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+
+#formContact input[type="text"]{
+	height: 40px;
+}
+
+#formContact input[type="text"], textarea[name="descpContact"]{
+	font-size: 20px; 
+}
+
+#formContact input[type="text"]:focus, textarea[name="descpContact"]:focus{
+	border-color: #fbb12f;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px rgba(251, 178, 58, 0.6);;
+}
 /*------Media Query ------*/
 @media(min-width: 980px){
 /*
