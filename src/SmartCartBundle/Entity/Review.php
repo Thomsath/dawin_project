@@ -35,6 +35,13 @@ class Review
     /**
      * @var string
      *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="text", type="string", length=255)
      */
     private $text;
@@ -127,7 +134,7 @@ class Review
     }
 
     /**
-    * Set review
+    * Set user
     *
     * @return Review
     */
@@ -145,5 +152,26 @@ class Review
     public function getUser()
     {
         return $this->user;
+    }
+
+    /**
+    * Set title
+    *
+    * @return Review
+    */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+    * Get user
+    *
+    * @return Review
+    */
+    public function getTitle()
+    {
+        return $this->title;
     }
 }

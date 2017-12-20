@@ -491,6 +491,7 @@ i.strars {
 .bottomfooter{
 	background-color: #fbb12f;
 	color: white;
+	padding: 10px;
 }
 
 .aligncenter{
@@ -502,7 +503,6 @@ i.strars {
 }
 
 #myCarousel , .bandeau{
-	margin-top: 30px;
 	margin-bottom: 30px;
 }
 

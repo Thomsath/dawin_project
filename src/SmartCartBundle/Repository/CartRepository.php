@@ -12,7 +12,7 @@ class CartRepository extends \Doctrine\ORM\EntityRepository
 {
     public function findAllOrderByRating($limit) {
         return $this->createQueryBuilder('c')
-        ->select('c.name, c.description, c.image, c.price, AVG(r.rating)-1 as rating, COUNT(r.rating) as rating_count')
+        ->select('c.id, c.name, c.description, c.image, c.price, AVG(r.rating)-1 as rating, COUNT(r.rating) as rating_count')
         ->leftJoin('c.reviews', 'r')
         ->groupBy('c.id')
         ->orderby('rating', 'DESC')
@@ -22,7 +22,7 @@ class CartRepository extends \Doctrine\ORM\EntityRepository
 
     public function findOthers($limit) {
         return $this->createQueryBuilder('c')
-        ->select('c.name, c.description, c.image, c.price, AVG(r.rating)-1 as rating, COUNT(r.rating) as rating_count')
+        ->select('c.id, c.name, c.description, c.image, c.price, AVG(r.rating)-1 as rating, COUNT(r.rating) as rating_count')
         ->leftJoin('c.reviews', 'r')
         ->groupBy('c.id')
         ->setMaxResults($limit)

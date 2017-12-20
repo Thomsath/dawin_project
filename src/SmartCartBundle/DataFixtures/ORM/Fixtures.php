@@ -20,16 +20,16 @@ class Fixtures extends Fixture
 
         for ($c=1; $c < 8; $c++) {
             $category = new Category();
-            $category->setName('Category '.$c);
+            $category->setName('Catégorie '.$c);
             $category->setIcon('home');
 
             for ($i = 1; $i < mt_rand(8,16); $i++) {
                 $cart = new Cart();
-                $cart->setName('Cart '.$i);
-                $cart->setDescription('Cart '.$i.' description');
+                $cart->setName('Panier n°'.$i);
+                $cart->setDescription('Description du panier n°'.$i);
                 $cart->setQuantity(mt_rand(10,100));
                 $cart->setPrice(mt_rand(2,50));
-                $cart->setImage('http://image'.$i.'.org/');
+                $cart->setImage('http://thecatapi.com/api/images/get?format=src&type=gif&size=med');
 
                 for ($u=1; $u < mt_rand(2,9); $u++) {
                     $cartProduct = new CartProduct();
@@ -57,8 +57,8 @@ class Fixtures extends Fixture
 
                 for ($u=1; $u < mt_rand(0,5); $u++) {
                     $review = new Review();
-                    $review->setText("Review title ".$u);
-                    $review->setText("My review content ".$u);
+                    $review->setTitle("Titre de l'avis ".$u);
+                    $review->setText("Contenu de l'avis ".$u);
                     $review->setRating(mt_rand(0,5));
                     $review->setCart($cart);
 

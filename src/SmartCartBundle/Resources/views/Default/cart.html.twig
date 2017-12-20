@@ -1,11 +1,11 @@
 {% extends "::VueMere.html.twig" %}
 
 {% block stylesheets %}
- {{ parent() }}
+{{ parent() }}
 {% endblock %}
 
 {% block header %}
- {{ parent() }}
+{{ parent() }}
 {% endblock %}
 
 {% block body %}
@@ -14,9 +14,10 @@
 <div class="container">
     <div>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Bricolage</a></li>
-          <li class="breadcrumb-item"><a href="#">Peinture</a></li>
-          <li class="breadcrumb-item"><a href="#">Amateur</a></li>
+            {% if cart.category.category %}
+            <li class="breadcrumb-item"><a href="{{ path('smart_cart_category_product', {'categoryId': cart.category.category.id}) }}">{{ cart.category.category.name }}</a></li>
+            {% endif %}
+            <li class="breadcrumb-item"><a href="{{ path('smart_cart_category_product', {'categoryId': cart.category.id}) }}">{{ cart.category.name }}</a></li>
         </ol>
     </div>
     <div class="row">
@@ -48,21 +49,21 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <img src="images/peintsol.jpg" class="kit-img" >
+            <img src="{{ cart.image }}" class="kit-img" >
         </div>
         <div class="col-md-6">
             <p class="kit-desc">{{ cart.description }}</p>
 
             <p class="price">{{ cart.price }}€</p>
-                <div class="quantity">
-                    <input type="button" name="less" class="btn-quantity" value="-" >
-                    <input type="text" id="quantity" class="nb-quantity" value="1">
-                    <input type="button" name="more" class="btn-quantity btn-more" value="+">
-                    <br class="hidden-sm hidden-md hidden-lg">
-                </div>
-                <div class="center-addCart">
-                    <input type="button" name="add" class="btn-addCart" value="Acheter maintenant">
-                </div>
+            <div class="quantity">
+                <input type="button" name="less" class="btn-quantity" value="-" >
+                <input type="text" id="quantity" class="nb-quantity" value="1">
+                <input type="button" name="more" class="btn-quantity btn-more" value="+">
+                <br class="hidden-sm hidden-md hidden-lg">
+            </div>
+            <div class="center-addCart">
+                <input type="button" name="add" class="btn-addCart" value="Acheter maintenant">
+            </div>
             <div class="marginT10">
                 <span id="stock">En stock </span><span>- Livraison gratuite</span>
             </div>
@@ -81,7 +82,11 @@
                 <img class="img-responsive" src="{{ product.MainImageUrl }}" >
             </div>
             <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
+            {% if product.Name|length > 27 %}
+            <p>{{ product.Name|slice(0, 27) }}...</p>
+            {% else %}
             <p>{{ product.Name }}</p>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
@@ -95,7 +100,9 @@
         {% for cart in categoryCarts %}
         <div class="col-xs-6 col-md-2 other-kit">
             <div>
-                <img class="img-responsive" src="{{ cart.image }}">
+                <a href="{{ path('smart_cart_product', {'cartId': cart.id}) }}">
+                    <img class="img-responsive" src="{{ cart.image }}">
+                </a>
             </div>
             <p name="descKit">{{ cart.name }}</p>
             <p class="price-orange">{{ cart.price }}€</p>
@@ -112,14 +119,10 @@
         </div>
         <div class="row">
             {% for product in products.Products %}
-            <div class="col-md-6">
+            <div class="col-md-6" style="height:180px;">
                 <h4>{{ product.Name }}</h4>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div>
-                            <p>{{ product.Description }}</p>
-                        </div>
-                    </div>
+                <div class="col-md-12">
+                    <p>{{ product.Description }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -132,101 +135,101 @@
     <form action="index.html" method="post">
         <textarea class="form-control comment" rows="3"></textarea>
         <!--<fieldset class="rating">
-            <input type="radio" id="star5" value="5" />
-            <label class = "full" for="star5"></label>
-            <input type="radio" id="star4half" value="4.5" />
-            <label class="half" for="star4half"></label>
-            <input type="radio" id="star4" value="4" />
-            <label class = "full" for="star4"></label>
-            <input type="radio" id="star3half"  value="3.5" />
-            <label class="half" for="star3half"></label>
-            <input type="radio" id="star3"  value="3" />
-            <label class = "full" for="star3"></label>
-            <input type="radio" id="star2half"  value="2.5" />
-            <label class="half" for="star2half"></label>
-            <input type="radio" id="star2"  value="2" />
-            <label class = "full" for="star2"></label>
-            <input type="radio" id="star1half"  value="1.5" />
-            <label class="half" for="star1half"></label>
-            <input type="radio" id="star1"  value="1" />
-            <label class = "full" for="star1"></label>
-            <input type="radio" id="starhalf"  value="0.5" />
-            <label class="half" for="starhalf"></label>
-        </fieldset>
-        <br><br>-->
+        <input type="radio" id="star5" value="5" />
+        <label class = "full" for="star5"></label>
+        <input type="radio" id="star4half" value="4.5" />
+        <label class="half" for="star4half"></label>
+        <input type="radio" id="star4" value="4" />
+        <label class = "full" for="star4"></label>
+        <input type="radio" id="star3half"  value="3.5" />
+        <label class="half" for="star3half"></label>
+        <input type="radio" id="star3"  value="3" />
+        <label class = "full" for="star3"></label>
+        <input type="radio" id="star2half"  value="2.5" />
+        <label class="half" for="star2half"></label>
+        <input type="radio" id="star2"  value="2" />
+        <label class = "full" for="star2"></label>
+        <input type="radio" id="star1half"  value="1.5" />
+        <label class="half" for="star1half"></label>
+        <input type="radio" id="star1"  value="1" />
+        <label class = "full" for="star1"></label>
+        <input type="radio" id="starhalf"  value="0.5" />
+        <label class="half" for="starhalf"></label>
+    </fieldset>
+    <br><br>-->
 
-        <div class="rating">
-            <label> Evaluation </label>
-            <div class="starstest">
-                <i class="fa fa-star-half etoile"></i>
-                <i class="fa fa-star-half reverse etoile"></i>
-                <i class="fa fa-star-half etoile"></i>
-                <i class="fa fa-star-half reverse etoile"></i>
-                <i class="fa fa-star-half etoile"></i>
-                <i class="fa fa-star-half reverse etoile"></i>
-                <i class="fa fa-star-half etoile"></i>
-                <i class="fa fa-star-half reverse etoile"></i>
-                <i class="fa fa-star-half etoile"></i>
-                <i class="fa fa-star-half reverse etoile"></i>
-            </div>
-        </div>
-        <input type="button" name="add" class="btn-green" value="Envoyer mon avis">
-    </form>
-
-    {% for review in cart.reviews %}
-    <div class="row">
-        <div class="col-md-2">
-            <div class="stars stars-comment">
-                {% if review.rating <= 1 %}
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
-                {% elseif review.rating <= 2 %}
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
-                {% elseif review.rating <= 3 %}
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-                <i class="fa fa-star-o"></i>
-                {% elseif review.rating <= 4 %}
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-                {% else %}
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                {% endif %}
-            </div>
-        </div>
-        <div class="col-md-10">
-            <h4 class="nomarginB">{{ review.text }}</h4>
-            <p class="date">Avis déposé le 20/11/17</p>
-            <p>{{ review.text }}</p>
+    <div class="rating">
+        <label> Evaluation </label>
+        <div class="starstest">
+            <i class="fa fa-star-half etoile"></i>
+            <i class="fa fa-star-half reverse etoile"></i>
+            <i class="fa fa-star-half etoile"></i>
+            <i class="fa fa-star-half reverse etoile"></i>
+            <i class="fa fa-star-half etoile"></i>
+            <i class="fa fa-star-half reverse etoile"></i>
+            <i class="fa fa-star-half etoile"></i>
+            <i class="fa fa-star-half reverse etoile"></i>
+            <i class="fa fa-star-half etoile"></i>
+            <i class="fa fa-star-half reverse etoile"></i>
         </div>
     </div>
-    <div class="hr-avis"></div>
+    <input type="button" name="add" class="btn-green" value="Envoyer mon avis">
+</form>
+
+{% for review in cart.reviews %}
+<div class="row">
+    <div class="col-md-2">
+        <div class="stars stars-comment">
+            {% if review.rating <= 1 %}
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            {% elseif review.rating <= 2 %}
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            {% elseif review.rating <= 3 %}
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            <i class="fa fa-star-o"></i>
+            {% elseif review.rating <= 4 %}
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-o"></i>
+            {% else %}
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            {% endif %}
+        </div>
+    </div>
+    <div class="col-md-10">
+        <h4 class="nomarginB">{{ review.title }}</h4>
+        <p class="date">Avis déposé le 20/11/17</p>
+        <p>{{ review.text }}</p>
+    </div>
+</div>
+<div class="hr-avis"></div>
 {% endfor %}
 </div>
 
 {% endblock %}
 
 {% block footer %}
- {{ parent() }}
+{{ parent() }}
 {% endblock %}
 
 {% block javascripts %}
- {{ parent() }}
+{{ parent() }}
 <script>
 $(document).ready(function() {
     var max = 10; //quantity max

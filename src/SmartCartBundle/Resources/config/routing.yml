@@ -10,10 +10,6 @@ smart_cart_inscription:
     path:     /inscription
     defaults: { _controller: SmartCartBundle:Default:inscription }
 
-smart_cart_listing_product:
-    path:     /listingProduct
-    defaults: { _controller: SmartCartBundle:Default:listingProduct }
-
 smart_cart_admin_user_list:
     path:     /admin/users
     defaults: { _controller: SmartCartBundle:Admin\User:index }
