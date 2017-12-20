@@ -707,7 +707,7 @@ input[name="emailContact"]{
 }
 
 #formContact input[type="text"], textarea[name="descpContact"]{
-	font-size: 20px; 
+	font-size: 20px;
 }
 
 #formContact input[type="text"]:focus, textarea[name="descpContact"]:focus{
@@ -724,11 +724,37 @@ input[name="emailContact"]{
 
 .content404{
 	font-size: 95px;
+	padding-right: 30px;
 }
 
 .borderR-orange{
 	border-right: 2px solid #fbb12f;
+	text-align: right;
 }
+
+.addmargintopsmtolg
+{
+	margin-top: 19%;
+}
+
+.oops{
+	text-align:left;
+}
+
+.bigbutton{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.backlink{
+	margin-top: 15px;
+}
+.backlink a{
+
+	text-decoration: none;
+	color: black;
+}
+
+
 
 /*********************
 	  MEDIA QUERY
@@ -736,9 +762,27 @@ input[name="emailContact"]{
 
 /* XS */
 @media(max-width:  580px){
+	.bigbutton{
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+	.content404{
+		font-size: 95px;
+		text-align: center;
+		padding-right: 0px;
+	}
 	.borderR-orange{
 		border-bottom: 2px solid #fbb12f;
 		border-right: 0;
+		text-align: left;
+	}
+	.oops{
+		text-align:center;
+	}
+	.addmargintopsmtolg
+	{
+		margin-top: 0%;
 	}
 }
 
