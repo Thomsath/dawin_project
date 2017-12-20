@@ -14,10 +14,6 @@ smart_cart_listing_product:
     path:     /listingProduct
     defaults: { _controller: SmartCartBundle:Default:listingProduct }
 
-smart_cart_product:
-    path:     /product
-    defaults: { _controller: SmartCartBundle:Default:product }
-
 smart_cart_admin_user_list:
     path:     /admin/users
     defaults: { _controller: SmartCartBundle:Admin\User:index }

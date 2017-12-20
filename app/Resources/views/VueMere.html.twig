@@ -1,322 +1,271 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}SmartCart - Accueil{% endblock %}</title>
-        {% block stylesheets %}
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  		  	<link rel="stylesheet" href="web/css/style.css">
-			<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-		{% endblock %}
-    
-    </head>
-	
-    <body>
-		{% block header %}
-			<header>
-    		<div class="container nopadding-side">
-				<div class="row justinline">
-					<div class="col-xs-9 col-md-3 col-sm-6 justinline logo nopadding-side">
-						<a href="index.php"><img src="images/SmartCartlogo.png"></a>
-					</div>
-						<a href="connection.php">
-						<div class="col-xs-2 col-sm-6 displayxs">
-                 		<i class="fa fa-user icon-user icon"></i>
-                		<i class="fa fa-user-plus icon-bag icon hidden-xs hidden-sm" aria-hidden="true"></i>
-						</div></a>
- 
-						<div class="col-md-5 justinline">
-							<input type="text" class="search">
-							<button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
-						</div>
-					
-						<a href="connection.php">
-						<div class="col-md-2 account centerblock displaylg">
-							<div class="user-zone centerblock">
-								<i class="fa fa-user icon-user icon"></i><span class="name-user">S'identifier</span>
-               				</div>
-             			</div></a>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}SmartCart - Accueil{% endblock %}</title>
+    {% block stylesheets %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    {% endblock %}
 
-            			<a href="inscription.php"><div class="col-md-2 centerblock displaylg">
-						<div class="bag-zone centerblock">
-                    		<i class="fa fa-user-plus icon-bag icon" aria-hidden="true"></i><span class="myBag">S'inscrire</span>
-						</div>
-            			</div></a>
-        		</div>
-    		</div>
-			</header>
+</head>
 
-			<div class="nopadding-side">
-				<nav class="navbar navbar-expand-md navbar-light">
-					<div>
-					 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-					<i class="fa fa-bars" name="btnMenu"></i>
-					</button>
-				</div>
+<body>
+    {% block header %}
+    <header>
+        <div class="container nopadding-side">
+            <div class="row justinline">
+                <div class="col-xs-9 col-md-3 col-sm-6 justinline logo nopadding-side">
+                    <a href="index.php"><img src="{{ asset('images/SmartCartlogo.png') }}"></a>
+                </div>
+                <a href="connection.php">
+                    <div class="col-xs-2 col-sm-6 displayxs">
+                        <i class="fa fa-user icon-user icon"></i>
+                        <i class="fa fa-user-plus icon-bag icon hidden-xs hidden-sm" aria-hidden="true"></i>
+                    </div></a>
 
-					  <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
+                    <div class="col-md-5 justinline">
+                        <input type="text" class="search">
+                        <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
+                    </div>
 
+                    <a href="connection.php">
+                        <div class="col-md-2 account centerblock displaylg">
+                            <div class="user-zone centerblock">
+                                <i class="fa fa-user icon-user icon"></i><span class="name-user">S'identifier</span>
+                            </div>
+                        </div></a>
 
-					<div class="collapse navbar-collapse" id="navbarNavDropdown">
-						<div class="container">
+                        <a href="inscription.php"><div class="col-md-2 centerblock displaylg">
+                            <div class="bag-zone centerblock">
+                                <i class="fa fa-user-plus icon-bag icon" aria-hidden="true"></i><span class="myBag">S'inscrire</span>
+                            </div>
+                        </div></a>
+                    </div>
+                </div>
+            </header>
 
-						<ul class="navbar-nav text-md-center nav-justified w-100">
+            <div class="nopadding-side">
+                <nav class="navbar navbar-expand-md navbar-light">
+                    <div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+                            <i class="fa fa-bars" name="btnMenu"></i>
+                        </button>
+                    </div>
 
-						<li class="nav-item">
-						  <div class="dropdown">
-							<a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-home navicons hidden-xs" aria-hidden="true"></i>Maison</a>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-							<a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
-						  </div>
-						  </div>
-						</li>
-						<li class="nav-item">
-						  <div class="dropdown">
-							<a class="nav-link" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench navicons hidden-xs" aria-hidden="true"></i>Jardin et Bricolage</a>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-							<a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
-						  </div>
-						  </div>
-						</li>
-						<li class="nav-item">
-						  <div class="dropdown">
-							<a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-laptop navicons hidden-xs" aria-hidden="true"></i>Informatique</a>
-						  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-							<a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
-						  </div>
-						  </div>
-						</li>
-						<li class="nav-item">
-							<div class="dropdown">
-							  <a class="nav-link" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mobile navicons hidden-xs" aria-hidden="true"></i>TV & Son</a>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-							  <a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
-							</div>
-							</div>
-						</li>
-						<li class="nav-item">
-							<div class="dropdown">
-							<a class="nav-link" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television navicons hidden-xs" aria-hidden="true"></i>Téléphonie</a>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-							  <a class="dropdown-item" href="listingproduit.php">EXEMPLE</a>
-							</div>
-							</div>
-						</li>
-						<li class="nav-item">
-						<div class="dropdown">
-						<a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-futbol-o navicons hidden-xs" aria-hidden="true"></i>Sport</a>
-						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-						  <a class="dropdown-item" href="listingproduit.php">FOOTBALL</a>
-						  <a class="dropdown-item" href="listingproduit.php">BASKETBALL</a>
-						  <a class="dropdown-item" href="listingproduit.php">HANDBALL</a>
-						  <a class="dropdown-item" href="listingproduit.php">RUGBY</a>
-						  <a class="dropdown-item" href="listingproduit.php">SKATEBOARD</a>
-						  <a class="dropdown-item" href="listingproduit.php">NATATION</a>
-						</div>
-						</div>
-
-						</li>
-					  </ul>
-					  </div>
-					</div>
-				</nav>
-			</div>
-		{% endblock %}
-		
-		{% block body %}{% endblock %}
-	
-		{% block footer %}
-			<footer class="footer-bs">
-			  <div class="container">
-					<div class="row">
-					  <div class="col-xs-12 logofooterdiv">
-						  <img class="footerlogo center-block" src="images/logoblanc.png" alt="" />
-					  </div>
-
-						<div class="col-md-3">
-						<h3>A PROPOS</h3>
-						  <a href="#">Qui sommes-nous ?</a>
-						  <a href="#">Contactez nous</a>
-						  <a href="#">Plan du site</a>
-						</ul>
-					  </div>
-						<div class="col-md-6">
-						<h3>INFORMATIONS LEGALES</h3>
-						<a href="#" data-toggle="modal" data-target="#MentionLegal">Mentions légales</a>
-						<a href="#" data-toggle="modal" data-target="#ConditionGenUtilisation">Conditions générales d'utilisation</a>
-						</div>
-						<div class="col-md-3">
-						<br>
-						<a href="https://twitter.com/SmartCart_fr?ref_src=twsrc%5Etfw">
-						  <img class="icon-FbT img-responsive" src="images/Twitter.png" alt="" />Suivez-nous sur Twitter
-						</a>
-						<a href="https://www.facebook.com/SmartCartfr-150271318914286/">
-						  <img class="icon-FbT img-responsive" src="images/facebook.png" alt="" />Suivez-nous sur Facebook
-						</a>
-					  </div>
-					</div>
-				  </div>
-				</footer>
-				<div class="col-xs-12 bottomfooter">
-					<p class="aligncenter">
-					  Made in Bordeaux  ©  SmartCart - 2017-2018
-					</p>
-				</div>
-			</body>
-
-			<!-- Mention légale -->
-			<div class="modal fade" id="MentionLegal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<h2 class="modal-title" id="exampleModalLabel">Mentions légales</h2>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
-					</button>
-				  </div>
-				  <div class="modal-body">
-					Ce site est édité par la société SmartCart.<br>
-					Siège social : SmartCart - 15, Rue de Naudet - 33175 Gradignan<br>
-
-					Développement, hébergement :<br>
-					IUT Informatique de Bordeaux - www.iut.u-bordeaux.fr/info/<br>
-					15, Rue de Naudet - 33175 Gradignan
-
-					<h3>Informatique et liberté</h3>
-
-					Aucune information personnelle n'est collectée à votre insu. Les informations que vous nous communiquez lors d’une demande de devis, de renseignements ou d’inscription à la newsletter par courrier, par téléphone, par e-mail ou par formulaire sont uniquement destinées au traitement administratif et commercial de votre demande par la société SmartCart.
-					Elles ne font l'objet d'aucune cession à des tiers. SmartCart traite les informations qui vous concernent avec la plus grande confidentialité.
-					Conformément à la loi « Informatique et Libertés » n°78-17 du 6 janvier 1978, vous disposez d'un droit d'accès, de rectification et d'opposition aux données personnelles vous concernant. Pour l'exercer, il suffit de nous en faire la demande par écrit aux coordonnées suivantes : 15, Rue de Naudet, 33175 Gradignan, France.
-
-					<h3>Droit d'auteur / copyright</h3>
-					L'ensemble du contenu du présent site Internet, y compris nom de domaine, marques, logo, texte… est la propriété de la société SmartCart, il est protégé par les lois en vigueur de la législation française sur la propriété intellectuelle.
-					Aucun élément de ce site ne peut être copié, reproduit, détourné ou dénaturé, et ce, sur quelque support que ce soit, sans constituer un acte de contrefaçon au sens des articles L 335-2 et suivants du code de la propriété intellectuelle.
-
-					<h3>Accès au site</h3>
-
-					L'utilisateur de ce site reconnaît disposer de la compétence et des moyens nécessaires pour accéder et utiliser ce site. SmartCart ne saurait être tenu responsable des éléments en dehors de son contrôle et des dommages qui pourraient éventuellement être subis par l'environnement technique de l'utilisateur et notamment, ses ordinateurs, logiciels, équipements réseaux et tout autre matériel utilisé pour accéder ou utiliser le service et/ou les informations.
-					Il est rappelé que le fait d'accéder ou de se maintenir frauduleusement dans un système informatique, d'entraver ou de fausser le fonctionnement d'un tel système, d'introduire ou de modifier frauduleusement des données dans un système informatique constitue des délits passibles de sanctions pénales.
-
-					<h3>Limitation de responsabilité</h3>
-
-					SmartCart s'attache à transmettre des informations régulièrement mises à jour, notamment sur les actualités ainsi que sur le contenu des articles. Toutefois des informations erronées ou des omissions peuvent être constatées, suite notamment à des erreurs de saisie ou de mise en page. Si vous en faisiez le constat nous vous invitons à nous le signaler pour que nous puissions procéder à leur rectification.
-					Nous nous réservons par ailleurs le droit de modifier les informations ou les éventuelles offres commerciales fournies par le présent site, dans le cadre de nos opérations d'actualisation et de mise à jour des données, et ce sans préavis.
-					Les liens hypertextes mis en oeuvre au sein du présent site Internet, en direction d'autres sites et/ou de pages personnelles et d'une manière générale vers toutes ressources existantes sur Internet, ne sauraient engager la responsabilité de SmartCart.
-					De même que la société SmartCart ne pourra en aucune façon être tenue pour responsable des sites ayant un lien hypertexte avec le présent site et décline toute responsabilité quant à leur contenu et à leur utilisation.
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				  </div>
-				</div>
-			  </div>
-			</div>
-
-			<!-- Conditions générales d'utilisation -->
-			<div class="modal fade" id="ConditionGenUtilisation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			  <div class="modal-dialog" role="document">
-				<div class="modal-content">
-				  <div class="modal-header">
-					<h2 class="modal-title" id="exampleModalLabel">Conditions générales d'utilisation</h2>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
-					</button>
-				  </div>
-				  <div class="modal-body">
-					Le présent document a pour objet de définir les modalités et conditions dans lesquelles d’une part,  SmartCart , ci-après dénommé l’EDITEUR, met à la disposition de ses utilisateurs le site, et les services disponibles sur le site et d’autre part, la manière par laquelle l’utilisateur accède au site et utilise ses services.
-					Toute connexion au site est subordonnée au respect des présentes conditions.
-					Pour l’utilisateur, le simple accès au site de l’EDITEUR à l’adresse URL suivante www.smartcart.fr implique l’acceptation de l’ensemble des conditions décrites ci-après.
-
-					<h3>Propriété intellectuelle</h3>
-
-					La structure générale du site www.smartcart.fr , ainsi que les textes, graphiques, images, sons et  vidéos la composant, sont la propriété de l'éditeur ou de ses partenaires. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale des contenus et services proposés par le site www.smartcart.fr , par quelque procédé que ce soit, sans l'autorisation préalable et par écrit du responsable de SmartCart et/ou de ses partenaires est strictement interdite et serait susceptible de constituer une contrefaçon au sens des articles L 335-2 et suivants du Code de la propriété intellectuelle.
-					La marque "SmartCart" est une marque déposée par SmartCart. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale de cette marque, de quelque nature que ce soit, est totalement prohibée.
-
-					<h3>Liens hypertextes</h3>
-
-					Le site www.smartcart.fr peut contenir des liens hypertextes vers d’autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site www.smartcart.fr
-					Il est possible de créer un lien vers la page de présentation de ce site sans autorisation expresse de l’EDITEUR. Aucune autorisation ou demande d’information préalable ne peut être exigée par l’éditeur à l’égard d’un site qui souhaite établir un lien vers le site de l’éditeur. Il convient toutefois d’afficher ce site dans une nouvelle fenêtre du navigateur. Cependant, l’EDITEUR se réserve le droit de demander la suppression d’un lien qu’il estime non conforme à l’objet du site www.smartcart.fr
-
-					<h3>Responsabilité de l’éditeur</h3>
-
-					Les informations et/ou documents figurant sur ce site et/ou accessibles par ce site proviennent de sources considérées comme étant fiables.
-					Toutefois, ces informations et/ou documents sont susceptibles de contenir des inexactitudes techniques et des erreurs typographiques.
-					L’EDITEUR se réserve le droit de les corriger, dès que ces erreurs sont portées à sa connaissance.
-					Il est fortement recommandé de vérifier l’exactitude et la pertinence des informations et/ou documents mis à disposition sur ce site.
-					Les informations et/ou documents disponibles sur ce site sont susceptibles d’être modifiés à tout moment, et peuvent avoir fait l’objet de mises à jour. En particulier, ils peuvent avoir fait l’objet d’une mise à jour entre le moment de leur téléchargement et celui où l’utilisateur en prend connaissance.
-					L’utilisation des informations et/ou documents disponibles sur ce site se fait sous l’entière et seule responsabilité de l’utilisateur, qui assume la totalité des conséquences pouvant en découler, sans que l’EDITEUR puisse être recherché à ce titre, et sans recours contre ce dernier.
-					L’EDITEUR ne pourra en aucun cas être tenu responsable de tout dommage de quelque nature qu’il soit résultant de l’interprétation ou de l’utilisation des informations et/ou documents disponibles sur ce site.
-
-					<h3>Accès au site</h3>
-
-					L’éditeur s’efforce de permettre l’accès au site 24 heures sur 24, 7 jours sur 7, sauf en cas de force majeure ou d’un événement hors du contrôle de l’EDITEUR, et sous réserve des éventuelles pannes et interventions de maintenance nécessaires au bon fonctionnement du site et des services.
-					Par conséquent, l’EDITEUR ne peut garantir une disponibilité du site et/ou des services, une fiabilité des transmissions et des performances en terme de temps de réponse ou de qualité. Il n’est prévu aucune assistance technique vis à vis de l’utilisateur que ce soit par des moyens électronique ou téléphonique.
-					La responsabilité de l’éditeur ne saurait être engagée en cas d’impossibilité d’accès à ce site et/ou d’utilisation des services.
-					Par ailleurs, l’EDITEUR peut être amené à interrompre le site ou une partie des services, à tout moment sans préavis, le tout sans droit à indemnités. L’utilisateur reconnaît et accepte que l’EDITEUR ne soit pas responsable des interruptions, et des conséquences qui peuvent en découler pour l’utilisateur ou tout tiers.
-
-					<h3>Modification des conditions d’utilisation</h3>
-
-					L’EDITEUR se réserve la possibilité de modifier, à tout moment et sans préavis, les présentes conditions d’utilisation afin de les adapter aux évolutions du site et/ou de son exploitation.
-
-					<h3>Règles d'usage d'Internet</h3>
-
-					L’utilisateur déclare accepter les caractéristiques et les limites d’Internet, et notamment reconnaît que :
-					L’EDITEUR n’assume aucune responsabilité sur les services accessibles par Internet et n’exerce aucun contrôle de quelque forme que ce soit sur la nature et les caractéristiques des données qui pourraient transiter par l’intermédiaire de son centre serveur.
-					L’utilisateur reconnaît que les données circulant sur Internet ne sont pas protégées notamment contre les détournements éventuels. La présence du logo SmartCart institue une présomption simple de validité. La communication de toute information jugée par l’utilisateur de nature sensible ou confidentielle se fait à ses risques et périls.
-					L’utilisateur reconnaît que les données circulant sur Internet peuvent être réglementées en termes d’usage ou être protégées par un droit de propriété.
-					L’utilisateur est seul responsable de l’usage des données qu’il consulte, interroge et transfère sur Internet.
-					L’utilisateur reconnaît que l’EDITEUR ne dispose d’aucun moyen de contrôle sur le contenu des services accessibles sur Internet
-
-					<h3>Droit applicable</h3>
-
-					Tant le présent site que les modalités et conditions de son utilisation sont régis par le droit français, quel que soit le lieu d’utilisation. En cas de contestation éventuelle, et après l’échec de toute tentative de recherche d’une solution amiable, les tribunaux français seront seuls compétents pour connaître de ce litige.
-					Pour toute question relative aux présentes conditions d’utilisation du site, vous pouvez nous écrire à l’adresse suivante : <b>smartcartfr@gmail.com</b>
-				  </div>
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		{% endblock %}
-        
-        {% block javascripts %}
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-			<script>
-				$("i[name='btnMenu'").click(function(){
-    				if($("i[name='btnMenu'").hasClass("fa fa-times")){
-							$("i[name='btnMenu'").attr('class','fa fa-bars');
-							$(".navbar").css("background-color","transparent");
-					}
-					else{
-						$("i[name='btnMenu'").attr('class','fa fa-times');
-						$(".navbar").css("background-color","#f1ece6");
-					}
-				});
-
-				$(window).resize(function() {
-					if($(window).width() > 770){
-						if($(".navbar").css("background-color","transparent")){
-							$(".navbar").css("background-color","#f1ece6");
-						}
-					}
-
-				});
-			</script>
-		{% endblock %}
-</html>
+                    <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
 
 
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <div class="container">
 
+                            <ul class="navbar-nav text-md-center nav-justified w-100">
+                                {% for category in categories %}
+                                <li class="nav-item">
+                                    <div class="dropdown">
+                                        <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fa fa-{{ category.icon }} navicons hidden-xs" aria-hidden="true"></i>
+                                            {{ category.name }}
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                                            <a class="dropdown-item" href="{{ path('smart_cart_category_product', {'categoryId': 1}) }}">EXEMPLE</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            {% endblock %}
 
+            {% block body %}{% endblock %}
 
+            {% block footer %}
+            <footer class="footer-bs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 logofooterdiv">
+                            <img class="footerlogo center-block" src="images/logoblanc.png" alt="" />
+                        </div>
 
+                        <div class="col-md-3">
+                            <h3>A PROPOS</h3>
+                            <a href="#">Qui sommes-nous ?</a>
+                            <a href="#">Contactez nous</a>
+                            <a href="#">Plan du site</a>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h3>INFORMATIONS LEGALES</h3>
+                        <a href="#" data-toggle="modal" data-target="#MentionLegal">Mentions légales</a>
+                        <a href="#" data-toggle="modal" data-target="#ConditionGenUtilisation">Conditions générales d'utilisation</a>
+                    </div>
+                    <div class="col-md-3">
+                        <br>
+                        <a href="https://twitter.com/SmartCart_fr?ref_src=twsrc%5Etfw">
+                            <img class="icon-FbT img-responsive" src="images/Twitter.png" alt="" />Suivez-nous sur Twitter
+                        </a>
+                        <a href="https://www.facebook.com/SmartCartfr-150271318914286/">
+                            <img class="icon-FbT img-responsive" src="images/facebook.png" alt="" />Suivez-nous sur Facebook
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="col-xs-12 bottomfooter">
+            <p class="aligncenter">
+                Made in Bordeaux  ©  SmartCart - 2017-2018
+            </p>
+        </div>
+    </body>
 
-  
-  
+    <!-- Mention légale -->
+    <div class="modal fade" id="MentionLegal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Mentions légales</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Ce site est édité par la société SmartCart.<br>
+                    Siège social : SmartCart - 15, Rue de Naudet - 33175 Gradignan<br>
+
+                    Développement, hébergement :<br>
+                    IUT Informatique de Bordeaux - www.iut.u-bordeaux.fr/info/<br>
+                    15, Rue de Naudet - 33175 Gradignan
+
+                    <h3>Informatique et liberté</h3>
+
+                    Aucune information personnelle n'est collectée à votre insu. Les informations que vous nous communiquez lors d’une demande de devis, de renseignements ou d’inscription à la newsletter par courrier, par téléphone, par e-mail ou par formulaire sont uniquement destinées au traitement administratif et commercial de votre demande par la société SmartCart.
+                    Elles ne font l'objet d'aucune cession à des tiers. SmartCart traite les informations qui vous concernent avec la plus grande confidentialité.
+                    Conformément à la loi « Informatique et Libertés » n°78-17 du 6 janvier 1978, vous disposez d'un droit d'accès, de rectification et d'opposition aux données personnelles vous concernant. Pour l'exercer, il suffit de nous en faire la demande par écrit aux coordonnées suivantes : 15, Rue de Naudet, 33175 Gradignan, France.
+
+                    <h3>Droit d'auteur / copyright</h3>
+                    L'ensemble du contenu du présent site Internet, y compris nom de domaine, marques, logo, texte… est la propriété de la société SmartCart, il est protégé par les lois en vigueur de la législation française sur la propriété intellectuelle.
+                    Aucun élément de ce site ne peut être copié, reproduit, détourné ou dénaturé, et ce, sur quelque support que ce soit, sans constituer un acte de contrefaçon au sens des articles L 335-2 et suivants du code de la propriété intellectuelle.
+
+                    <h3>Accès au site</h3>
+
+                    L'utilisateur de ce site reconnaît disposer de la compétence et des moyens nécessaires pour accéder et utiliser ce site. SmartCart ne saurait être tenu responsable des éléments en dehors de son contrôle et des dommages qui pourraient éventuellement être subis par l'environnement technique de l'utilisateur et notamment, ses ordinateurs, logiciels, équipements réseaux et tout autre matériel utilisé pour accéder ou utiliser le service et/ou les informations.
+                    Il est rappelé que le fait d'accéder ou de se maintenir frauduleusement dans un système informatique, d'entraver ou de fausser le fonctionnement d'un tel système, d'introduire ou de modifier frauduleusement des données dans un système informatique constitue des délits passibles de sanctions pénales.
+
+                    <h3>Limitation de responsabilité</h3>
+
+                    SmartCart s'attache à transmettre des informations régulièrement mises à jour, notamment sur les actualités ainsi que sur le contenu des articles. Toutefois des informations erronées ou des omissions peuvent être constatées, suite notamment à des erreurs de saisie ou de mise en page. Si vous en faisiez le constat nous vous invitons à nous le signaler pour que nous puissions procéder à leur rectification.
+                    Nous nous réservons par ailleurs le droit de modifier les informations ou les éventuelles offres commerciales fournies par le présent site, dans le cadre de nos opérations d'actualisation et de mise à jour des données, et ce sans préavis.
+                    Les liens hypertextes mis en oeuvre au sein du présent site Internet, en direction d'autres sites et/ou de pages personnelles et d'une manière générale vers toutes ressources existantes sur Internet, ne sauraient engager la responsabilité de SmartCart.
+                    De même que la société SmartCart ne pourra en aucune façon être tenue pour responsable des sites ayant un lien hypertexte avec le présent site et décline toute responsabilité quant à leur contenu et à leur utilisation.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conditions générales d'utilisation -->
+    <div class="modal fade" id="ConditionGenUtilisation" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="exampleModalLabel">Conditions générales d'utilisation</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Le présent document a pour objet de définir les modalités et conditions dans lesquelles d’une part,  SmartCart , ci-après dénommé l’EDITEUR, met à la disposition de ses utilisateurs le site, et les services disponibles sur le site et d’autre part, la manière par laquelle l’utilisateur accède au site et utilise ses services.
+                    Toute connexion au site est subordonnée au respect des présentes conditions.
+                    Pour l’utilisateur, le simple accès au site de l’EDITEUR à l’adresse URL suivante www.smartcart.fr implique l’acceptation de l’ensemble des conditions décrites ci-après.
+
+                    <h3>Propriété intellectuelle</h3>
+
+                    La structure générale du site www.smartcart.fr , ainsi que les textes, graphiques, images, sons et  vidéos la composant, sont la propriété de l'éditeur ou de ses partenaires. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale des contenus et services proposés par le site www.smartcart.fr , par quelque procédé que ce soit, sans l'autorisation préalable et par écrit du responsable de SmartCart et/ou de ses partenaires est strictement interdite et serait susceptible de constituer une contrefaçon au sens des articles L 335-2 et suivants du Code de la propriété intellectuelle.
+                    La marque "SmartCart" est une marque déposée par SmartCart. Toute représentation et/ou reproduction et/ou exploitation partielle ou totale de cette marque, de quelque nature que ce soit, est totalement prohibée.
+
+                    <h3>Liens hypertextes</h3>
+
+                    Le site www.smartcart.fr peut contenir des liens hypertextes vers d’autres sites présents sur le réseau Internet. Les liens vers ces autres ressources vous font quitter le site www.smartcart.fr
+                    Il est possible de créer un lien vers la page de présentation de ce site sans autorisation expresse de l’EDITEUR. Aucune autorisation ou demande d’information préalable ne peut être exigée par l’éditeur à l’égard d’un site qui souhaite établir un lien vers le site de l’éditeur. Il convient toutefois d’afficher ce site dans une nouvelle fenêtre du navigateur. Cependant, l’EDITEUR se réserve le droit de demander la suppression d’un lien qu’il estime non conforme à l’objet du site www.smartcart.fr
+
+                    <h3>Responsabilité de l’éditeur</h3>
+
+                    Les informations et/ou documents figurant sur ce site et/ou accessibles par ce site proviennent de sources considérées comme étant fiables.
+                    Toutefois, ces informations et/ou documents sont susceptibles de contenir des inexactitudes techniques et des erreurs typographiques.
+                    L’EDITEUR se réserve le droit de les corriger, dès que ces erreurs sont portées à sa connaissance.
+                    Il est fortement recommandé de vérifier l’exactitude et la pertinence des informations et/ou documents mis à disposition sur ce site.
+                    Les informations et/ou documents disponibles sur ce site sont susceptibles d’être modifiés à tout moment, et peuvent avoir fait l’objet de mises à jour. En particulier, ils peuvent avoir fait l’objet d’une mise à jour entre le moment de leur téléchargement et celui où l’utilisateur en prend connaissance.
+                    L’utilisation des informations et/ou documents disponibles sur ce site se fait sous l’entière et seule responsabilité de l’utilisateur, qui assume la totalité des conséquences pouvant en découler, sans que l’EDITEUR puisse être recherché à ce titre, et sans recours contre ce dernier.
+                    L’EDITEUR ne pourra en aucun cas être tenu responsable de tout dommage de quelque nature qu’il soit résultant de l’interprétation ou de l’utilisation des informations et/ou documents disponibles sur ce site.
+
+                    <h3>Accès au site</h3>
+
+                    L’éditeur s’efforce de permettre l’accès au site 24 heures sur 24, 7 jours sur 7, sauf en cas de force majeure ou d’un événement hors du contrôle de l’EDITEUR, et sous réserve des éventuelles pannes et interventions de maintenance nécessaires au bon fonctionnement du site et des services.
+                    Par conséquent, l’EDITEUR ne peut garantir une disponibilité du site et/ou des services, une fiabilité des transmissions et des performances en terme de temps de réponse ou de qualité. Il n’est prévu aucune assistance technique vis à vis de l’utilisateur que ce soit par des moyens électronique ou téléphonique.
+                    La responsabilité de l’éditeur ne saurait être engagée en cas d’impossibilité d’accès à ce site et/ou d’utilisation des services.
+                    Par ailleurs, l’EDITEUR peut être amené à interrompre le site ou une partie des services, à tout moment sans préavis, le tout sans droit à indemnités. L’utilisateur reconnaît et accepte que l’EDITEUR ne soit pas responsable des interruptions, et des conséquences qui peuvent en découler pour l’utilisateur ou tout tiers.
+
+                    <h3>Modification des conditions d’utilisation</h3>
+
+                    L’EDITEUR se réserve la possibilité de modifier, à tout moment et sans préavis, les présentes conditions d’utilisation afin de les adapter aux évolutions du site et/ou de son exploitation.
+
+                    <h3>Règles d'usage d'Internet</h3>
+
+                    L’utilisateur déclare accepter les caractéristiques et les limites d’Internet, et notamment reconnaît que :
+                    L’EDITEUR n’assume aucune responsabilité sur les services accessibles par Internet et n’exerce aucun contrôle de quelque forme que ce soit sur la nature et les caractéristiques des données qui pourraient transiter par l’intermédiaire de son centre serveur.
+                    L’utilisateur reconnaît que les données circulant sur Internet ne sont pas protégées notamment contre les détournements éventuels. La présence du logo SmartCart institue une présomption simple de validité. La communication de toute information jugée par l’utilisateur de nature sensible ou confidentielle se fait à ses risques et périls.
+                    L’utilisateur reconnaît que les données circulant sur Internet peuvent être réglementées en termes d’usage ou être protégées par un droit de propriété.
+                    L’utilisateur est seul responsable de l’usage des données qu’il consulte, interroge et transfère sur Internet.
+                    L’utilisateur reconnaît que l’EDITEUR ne dispose d’aucun moyen de contrôle sur le contenu des services accessibles sur Internet
+
+                    <h3>Droit applicable</h3>
+
+                    Tant le présent site que les modalités et conditions de son utilisation sont régis par le droit français, quel que soit le lieu d’utilisation. En cas de contestation éventuelle, et après l’échec de toute tentative de recherche d’une solution amiable, les tribunaux français seront seuls compétents pour connaître de ce litige.
+                    Pour toute question relative aux présentes conditions d’utilisation du site, vous pouvez nous écrire à l’adresse suivante : <b>smartcartfr@gmail.com</b>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    {% block javascripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+    <script>
+    $("i[name='btnMenu'").click(function(){
+        if($("i[name='btnMenu'").hasClass("fa fa-times")){
+            $("i[name='btnMenu'").attr('class','fa fa-bars');
+            $(".navbar").css("background-color","transparent");
+        }
+        else{
+            $("i[name='btnMenu'").attr('class','fa fa-times');
+            $(".navbar").css("background-color","#f1ece6");
+        }
+    });
+
+    $(window).resize(function() {
+        if($(window).width() > 770){
+            if($(".navbar").css("background-color","transparent")){
+                $(".navbar").css("background-color","#f1ece6");
+            }
+        }
+
+    });
+    </script>
+    {% endblock %}
+    </html>

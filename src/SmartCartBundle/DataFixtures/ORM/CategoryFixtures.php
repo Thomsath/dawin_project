@@ -13,6 +13,7 @@ class CategoryFixtures extends Fixture
         for ($i = 10; $i < 12; $i++) {
             $category = new Category();
             $category->setName('Category '.$i);
+            $category->setIcon('home');
             $manager->persist($category);
         }
 

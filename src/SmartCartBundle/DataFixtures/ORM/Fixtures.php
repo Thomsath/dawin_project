@@ -21,6 +21,7 @@ class Fixtures extends Fixture
         for ($c=1; $c < 8; $c++) {
             $category = new Category();
             $category->setName('Category '.$c);
+            $category->setIcon('home');
 
             for ($i = 1; $i < mt_rand(8,16); $i++) {
                 $cart = new Cart();
@@ -44,6 +45,14 @@ class Fixtures extends Fixture
                     $cartProduct->setQuantity(mt_rand(0,64));
 
                     $cart->addProduct($cartProduct);
+
+                    $r = mt_rand(0,3);
+                    if($r <= 1)
+                        $cart->setLevel('amateur');
+                    else if($r <= 2)
+                        $cart->setLevel('professionnel');
+                    else
+                        $cart->setLevel('intermediaire');
                 }
 
                 for ($u=1; $u < mt_rand(0,5); $u++) {
