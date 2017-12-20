@@ -29,7 +29,7 @@ class CartController extends Controller
             $productIdList[] = $p->getProductId();
         }
         $products = $service->getProducts($productIdList);
-        dump($products);
+
         return $this->render('SmartCartBundle:Default:cart.html.twig', [
             'cart' => $cart,
             'products' => $products,
