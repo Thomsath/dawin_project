@@ -644,6 +644,19 @@ input.nomargin{
 	color: #fff;
 }
 
+.dropdown-menu i, .navbar li .fa-chevron-right{
+	color: #fbb12f;
+}
+
+.navbar li .fa-chevron-right{
+    float: right;
+    margin-top: 7px;
+}
+
+.navbar li a{
+	display: inline-block;
+}
+
 /*********************
 	CONTACT US PAGE
 **********************/
@@ -728,15 +741,66 @@ input[name="emailContact"]{
 		border-right: 0;
 	}
 }
+
+@media(max-width: 600px){
+	.openXSmenu{
+		width: 47% !important;
+	}
+}
 @media(max-width: 770px){
 
 	.navbar{
 		margin-bottom: 0;
 		background-color: transparent;
 		margin-top: -20px;
-
-		float: left;
+		/*float: left;*/
 	    top: -105px;
+	}
+
+	.navbar-nav {
+	    margin: 7.5px 0 5px;
+	}
+
+	.navbar li{
+		text-align: left !important;
+	}
+
+	.dropdown-menu hr, .navbar li{
+		margin: 2px 0 5px 0;
+		border-bottom: 1px solid #ccc;
+		border-top: 0;
+	}
+
+	.dropdown-menu{
+		background-color: #f1ece6;
+	    border: 0;
+	    box-shadow: none;
+	}
+
+	.dropdown-item{
+		padding: .25rem 1.5rem .25rem 0;
+	}
+
+	.navbar-nav .open .dropdown-menu{
+		margin-left: 10px;
+	}
+
+	.btnXSmenu{
+		float: left;
+	    position: absolute;
+	    top: 0px;
+	    left: 20px;
+	}
+
+	.openXSmenu{
+		z-index: 10;
+		top: 40px;
+	    left: 20px;
+	    position: absolute;
+	    background-color: #f1ece6;
+    	border-radius: 5px;
+    	box-shadow:  1px 1px 7px #c3c1bf;
+    	width: 32%;
 	}
 
 	.logo{
@@ -853,6 +917,19 @@ input[name="emailContact"]{
 @media(min-width: 770px){
 	.navbar{
 		background-color: #f1ece6;
+	}
+
+	.triangle-top {
+	    display: inline-block;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 0 10px 15px 10px;
+	    border-color: transparent transparent #fff transparent;
+
+	    position: absolute;
+	    top: -15px;
+	    left: 45%;
 	}
 }
 
