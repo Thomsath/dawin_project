@@ -88,3 +88,5 @@ ewz_recaptcha:
     locale_from_request: true
     enabled: true
     ajax: false
+
+miisieq_robots_txt: ~

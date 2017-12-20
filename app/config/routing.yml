@@ -8,3 +8,7 @@ app:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+miisieq_robots_txt:
+    resource: "@MiisieqRobotsTxtBundle/Controller/"
+    type:     annotation
