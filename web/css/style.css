@@ -699,19 +699,35 @@ input[name="emailContact"]{
 
 #formContact input[type="text"]:focus, textarea[name="descpContact"]:focus{
 	border-color: #fbb12f;
-	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px rgba(251, 178, 58, 0.6);;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px rgba(251, 178, 58, 0.6);
 }
-/*------Media Query ------*/
-@media(min-width: 980px){
-/*
-	.paddingaccueildroitesuggest{
-	margin-top: 15%;
-	}
-*/
+
+/*********************
+	   404 PAGE
+**********************/
+#body404{
+	background-color: #f1ece6;
 }
-/*------Media Query ------*/
+
+.content404{
+	font-size: 95px;
+}
+
+.borderR-orange{
+	border-right: 2px solid #fbb12f;
+}
+
+/*********************
+	  MEDIA QUERY
+**********************/
 
 /* XS */
+@media(max-width:  580px){
+	.borderR-orange{
+		border-bottom: 2px solid #fbb12f;
+		border-right: 0;
+	}
+}
 @media(max-width: 770px){
 
 	.navbar{
@@ -814,9 +830,6 @@ input[name="emailContact"]{
 		width: 100%;
 	}
 
-}
-
-@media(max-width: 770px){
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
