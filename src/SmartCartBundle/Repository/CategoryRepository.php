@@ -10,4 +10,9 @@ namespace SmartCartBundle\Repository;
  */
 class CategoryRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAllParentsCategory() {
+        return $this->createQueryBuilder('c')
+        ->andWhere('c.category IS null')
+        ->getQuery()->getResult();
+    }
 }

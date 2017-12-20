@@ -15,6 +15,15 @@ class CategoryFixtures extends Fixture
             $category->setName('Category '.$i);
             $category->setIcon('home');
             $manager->persist($category);
+
+            $r = mt_rand(1,5);
+            for ($u = 0; $u < $r; $u++) {
+                $cat = new Category();
+                $cat->setName('Category '.$i.''.$u);
+                $cat->setCategory($category);
+
+                $manager->persist($cat);
+            }
         }
 
         $manager->flush();

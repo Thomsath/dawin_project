@@ -50,13 +50,21 @@
                             {% for category in categories %}
                             <li class="nav-item">
                                 <div class="dropdown">
+                                    {% if category.categories|length > 0 %}
                                     <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {% else %}
+                                    <a class="nav-link" href="{{ path('smart_cart_category_product', {'categoryId': category.id}) }}" role="button">
+                                    {% endif %}
                                         <i class="fa fa-{{ category.icon }} navicons hidden-xs" aria-hidden="true"></i>
                                         {{ category.name }}
                                     </a>
+                                    {% if category.categories|length > 0 %}
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                                        <a class="dropdown-item" href="{{ path('smart_cart_category_product', {'categoryId': 1}) }}">EXEMPLE</a>
+                                        {% for cat in category.categories %}
+                                        <a class="dropdown-item" href="{{ path('smart_cart_category_product', {'categoryId': cat.id}) }}">{{ cat.name }}</a>
+                                        {% endfor %}
                                     </div>
+                                    {% endif %}
                                 </div>
                             </li>
                             {% endfor %}

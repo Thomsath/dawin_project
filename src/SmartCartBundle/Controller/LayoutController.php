@@ -12,7 +12,7 @@ class LayoutController extends Controller
     public function headerAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
-        $categories = $em->getRepository(Category::class)->findAll();
+        $categories = $em->getRepository(Category::class)->findAllParentsCategory();
 
         $form = $this->createForm(SearchType::class);
 

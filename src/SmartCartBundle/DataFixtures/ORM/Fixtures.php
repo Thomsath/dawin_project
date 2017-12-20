@@ -57,7 +57,8 @@ class Fixtures extends Fixture
 
                 for ($u=1; $u < mt_rand(0,5); $u++) {
                     $review = new Review();
-                    $review->setText("Review ".$u);
+                    $review->setText("Review title ".$u);
+                    $review->setText("My review content ".$u);
                     $review->setRating(mt_rand(0,5));
                     $review->setCart($cart);
 

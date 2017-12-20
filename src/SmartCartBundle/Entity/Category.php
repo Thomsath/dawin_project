@@ -56,6 +56,16 @@ class Category
     private $carts;
 
     /**
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Category", inversedBy="categories")
+    */
+    private $category;
+
+    /**
+    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\Category", mappedBy="category", cascade={"persist", "remove"})
+    */
+    private $categories;
+
+    /**
     * Constructor
     */
     public function __construct()
@@ -71,6 +81,27 @@ class Category
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+    * Set parent category
+    *
+    * @return Category
+    */
+    public function setCategory($category)
+    {
+        $this->category = $category;
+        return $this;
+    }
+
+    /**
+    * Get parent category
+    *
+    * @return int
+    */
+    public function getCategory()
+    {
+        return $this->category;
     }
 
     /**
@@ -141,6 +172,27 @@ class Category
     public function getCarts()
     {
         return $this->carts;
+    }
+
+    /**
+    * Set categories
+    *
+    * @return Category
+    */
+    public function setCategories($categories)
+    {
+        $this->categories = $categories;
+        return $this;
+    }
+
+    /**
+    * Get categories
+    *
+    * @return array
+    */
+    public function getCategories()
+    {
+        return $this->categories;
     }
 
     public function __toString()

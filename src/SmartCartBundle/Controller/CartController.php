@@ -71,19 +71,6 @@ class CartController extends Controller
             );
         }
 
-        $service = $this->get('api_service');
-        foreach($category->getCarts() as $cart) {
-            $price = -1;
-            foreach($cart->getProducts() as $product) {
-                $p = $service->getProduct($product->getProductId());
-                if($p->BestOffer != null) {
-                    $price += $p->BestOffer->SalePrice;
-                }
-            }
-            $cart->setPrice($price);
-            $price = -1;
-        }
-
         return $this->render('SmartCartBundle:Default:category.html.twig', [
             'category' => $category
         ]);
