@@ -16,45 +16,57 @@
                     <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
                 </div>
 
+                {% if app.user %}
+                <a href="{{ path('fos_user_security_logout') }}">
+                    <div class="col-md-2 account centerblock displaylg" style="padding:0px;">
+                        <div class="user-zone centerblock">
+                            <i class="fa fa-sign-out icon-user icon"></i><span class="name-user">Se déconnecter</span>
+                        </div>
+                    </div>
+                </a>
+                {% else %}
                 <a href="{{ path('fos_user_security_login') }}">
-                    <div class="col-md-2 account centerblock displaylg">
+                    <div class="col-md-2 account centerblock displaylg" style="padding:0px;">
                         <div class="user-zone centerblock">
                             <i class="fa fa-user icon-user icon"></i><span class="name-user">S'identifier</span>
                         </div>
-                    </div></a>
-
-                    <a href="{{ path('fos_user_registration_register') }}"><div class="col-md-2 centerblock displaylg">
+                    </div>
+                </a>
+                {% endif %}
+                <a href="{{ path('fos_user_registration_register') }}">
+                    <div class="col-md-2 centerblock displaylg" style="padding:0px;">
                         <div class="bag-zone centerblock">
                             <i class="fa fa-user-plus icon-bag icon" aria-hidden="true"></i><span class="myBag">S'inscrire</span>
                         </div>
-                    </div></a>
-                </div>
+                    </div>
+                </a>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <div class="nopadding-side">
-            <nav class="navbar navbar-expand-md navbar-light">
-                <div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-                        <i class="fa fa-bars" name="btnMenu"></i>
-                    </button>
-                </div>
+    <div class="nopadding-side">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+                    <i class="fa fa-bars" name="btnMenu"></i>
+                </button>
+            </div>
 
-                <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
+            <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
 
 
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <div class="container">
 
-                        <ul class="navbar-nav text-md-center nav-justified w-100">
-                            {% for category in categories %}
-                            <li class="nav-item">
-                                <div class="dropdown">
-                                    {% if category.categories|length > 0 %}
-                                    <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <ul class="navbar-nav text-md-center nav-justified w-100">
+                        {% for category in categories %}
+                        <li class="nav-item">
+                            <div class="dropdown">
+                                {% if category.categories|length > 0 %}
+                                <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {% else %}
                                     <a class="nav-link" href="{{ path('smart_cart_category_product', {'categoryId': category.id}) }}" role="button">
-                                    {% endif %}
+                                        {% endif %}
                                         <i class="fa fa-{{ category.icon }} navicons hidden-xs" aria-hidden="true"></i>
                                         {{ category.name }}
                                     </a>

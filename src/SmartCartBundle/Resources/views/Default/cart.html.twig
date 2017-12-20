@@ -62,7 +62,9 @@
                 <br class="hidden-sm hidden-md hidden-lg">
             </div>
             <div class="center-addCart">
-                <input type="button" name="add" class="btn-addCart" value="Acheter maintenant">
+                <a href="{{ path('smart_cart_order', {'cartId': cart.id }) }}">
+                    <input type="button" name="add" class="btn-addCart" value="Acheter maintenant">
+                </a>
             </div>
             <div class="marginT10">
                 <span id="stock">En stock </span><span>- Livraison gratuite</span>
@@ -82,8 +84,8 @@
                 <img class="img-responsive" src="{{ product.MainImageUrl }}" >
             </div>
             <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
-            {% if product.Name|length > 27 %}
-            <p>{{ product.Name|slice(0, 27) }}...</p>
+            {% if product.Name|length > 25 %}
+            <p>{{ product.Name|slice(0, 25) }}...</p>
             {% else %}
             <p>{{ product.Name }}</p>
             {% endif %}
