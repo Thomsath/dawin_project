@@ -7,6 +7,7 @@ use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\UrlType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\AbstractType;
@@ -34,6 +35,12 @@ class CartType extends AbstractType
             'entry_options' => array('label' => false),
             'allow_add' => true,
         ))
+        ->add('level', ChoiceType::class, array(
+            'choices'  => array(
+                'Amateur' => 'amateur',
+                'Intermédiaire' => 'intermediaire',
+                'Professionnel' => 'professionnel',
+            )))
         ->add('category', EntityType::class, array(
             'class' => Category::class
         ))

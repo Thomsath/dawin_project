@@ -30,6 +30,14 @@ class Cart
     */
     private $reviews;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="level", type="string", columnDefinition="enum('amateur','intermediaire','professionnel')")
+     *
+     * @Assert\Choice(choices = {"amateur","intermediaire","professionnel"}, message = "Le niveau n'est pas valide.")
+     */
+    private $level;
 
     /**
     * @var int
@@ -336,5 +344,26 @@ class Cart
         $this->products->add($product);
         $product->setCart($this);
         return $this;
+    }
+
+    /**
+    * Set level
+    *
+    * @return Cart
+    */
+    public function setLevel($level)
+    {
+        $this->level = $level;
+        return $this;
+    }
+
+    /**
+    * Get level
+    *
+    * @return Cart
+    */
+    public function getLevel()
+    {
+        return $this->level;
     }
 }
