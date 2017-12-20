@@ -14,6 +14,7 @@ class CartController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $cart = $em->getRepository(Cart::class)->findOneById($cartId);
+        $categoryCarts = $em->getRepository(Cart::class)->findOthers(4);
 
         if(!$cart) {
             throw $this->createNotFoundException(
@@ -28,10 +29,11 @@ class CartController extends Controller
             $productIdList[] = $p->getProductId();
         }
         $products = $service->getProducts($productIdList);
-
+        dump($products);
         return $this->render('SmartCartBundle:Default:cart.html.twig', [
             'cart' => $cart,
-            'products' => $products
+            'products' => $products,
+            'categoryCarts' => $categoryCarts
         ]);
     }
 

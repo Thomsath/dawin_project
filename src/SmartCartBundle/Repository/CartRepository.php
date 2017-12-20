@@ -20,6 +20,15 @@ class CartRepository extends \Doctrine\ORM\EntityRepository
         ->getQuery()->getResult();
     }
 
+    public function findOthers($limit) {
+        return $this->createQueryBuilder('c')
+        ->select('c.name, c.description, c.image, c.price, AVG(r.rating)-1 as rating, COUNT(r.rating) as rating_count')
+        ->leftJoin('c.reviews', 'r')
+        ->groupBy('c.id')
+        ->setMaxResults($limit)
+        ->getQuery()->getResult();
+    }
+
     public function findAllRandom($limit) {
         return $this->createQueryBuilder('c')
         ->select('c.id, c.name, c.description, c.image, c.price, AVG(r.rating)-1 as rating, COUNT(r.rating) as rating_count')

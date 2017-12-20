@@ -1,0 +1,72 @@
+
+{% extends "::VueMere.html.twig" %}
+
+{% block stylesheets %}
+{{ parent() }}
+{% endblock %}
+
+{% block header %}
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 blocConnect">
+            <form action="{{ path("fos_user_security_check") }}" method="post">
+                {% if csrf_token %}
+                <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+                {% endif %}
+                <div class="divOrange">
+                    <div class="whiteLine"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 id="titleConnect"> SE CONNECTER </h1>
+                        <p>Connecte toi à ton compte afin de profiter à 100% des fonctionnalités proposées par le site.</p>
+                    </div>
+                </div>
+                <div id="infos">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="borderB">
+                                <h5>PSEUDONYME</h5>
+                                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                <input type="text" name="_username" placeholder="Votre pseudonyme">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="borderB">
+                                <h5>MOT DE PASSE</h5>
+                                <i class="fa fa-key" aria-hidden="true"></i>
+                                <input type="text" name="_password" placeholder="Votre mot de passe">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 textCenter">
+                        <input type="submit" name="connect" class="btn-green" value="Me connecter">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 notRegistred">
+            <span>Pas encore inscrit ? </span><a href="inscription.php"><span class="underlinded"> Inscrit-toi</span></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+{{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}

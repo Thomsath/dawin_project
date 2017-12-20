@@ -1,7 +1,7 @@
 {% extends "::VueMere.html.twig" %}
 
 {% block stylesheets %}
- {{ parent() }}					   
+ {{ parent() }}
 {% endblock %}
 
 {% block header %}
@@ -21,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col-md-6">
-            <h1 class="name-kit">Kit peinture sol grands espaces amateur</h1>
+            <h1 class="name-kit">{{ cart.name }}</h1>
         </div>
         <div class="col-md-6 stars-title">
             <div class="row">
@@ -51,12 +51,9 @@
             <img src="images/peintsol.jpg" class="kit-img" >
         </div>
         <div class="col-md-6">
-            <p class="kit-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat.</p>
+            <p class="kit-desc">{{ cart.description }}</p>
 
-            <p class="price">15,00€</p>
+            <p class="price">{{ cart.price }}€</p>
                 <div class="quantity">
                     <input type="button" name="less" class="btn-quantity" value="-" >
                     <input type="text" id="quantity" class="nb-quantity" value="1">
@@ -78,34 +75,15 @@
     </div>
     <!-- boucle php pour recup le contenu du kit, requet BD-->
     <div class="row">
+        {% for product in products.Products %}
         <div class="col-sm-3 col-md-2">
             <div class="kit-item hidden-xs">
-                <img class="img-responsive" src="images/potpeint.jpg" >
+                <img class="img-responsive" src="{{ product.MainImageUrl }}" >
             </div>
             <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
-            <p>Un pot de peinture noire extérieur Luxens</p>
+            <p>{{ product.Name }}</p>
         </div>
-        <div class="col-sm-3 col-md-2">
-            <div class="kit-item hidden-xs">
-                <img class="img-responsive" src="images/potpeint.jpg" >
-            </div>
-            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
-            <p>Un pot de peinture noire extérieur Luxens</p>
-        </div>
-        <div class="col-sm-3 col-md-2">
-            <div class="kit-item hidden-xs">
-                <img class="img-responsive" src="images/potpeint.jpg" >
-            </div>
-            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
-            <p>Un pot de peinture noire extérieur Luxens</p>
-        </div>
-        <div class="col-sm-3 col-md-2">
-            <div class="kit-item hidden-xs">
-                <img class="img-responsive" src="images/potpeint.jpg" >
-            </div>
-            <i class="fa fa-dot-circle-o bullet-point hidden-sm hidden-md hidden-lg"></i>
-            <p>Un pot de peinture noire extérieur Luxens</p>
-        </div>
+        {% endfor %}
     </div>
     <div class="row">
         <div class="col-sm-3 col-md-12">
@@ -114,27 +92,15 @@
     </div>
     <!-- boucle php pour recup, requet BD-->
     <div class="row">
+        {% for cart in categoryCarts %}
         <div class="col-xs-6 col-md-2 other-kit">
             <div>
-                <img class="img-responsive" src="images/peintsol.jpg">
+                <img class="img-responsive" src="{{ cart.image }}">
             </div>
-            <p name="descKit">Kit tapisserie grands espaces</p>
-            <p class="price-orange">12€99</p>
+            <p name="descKit">{{ cart.name }}</p>
+            <p class="price-orange">{{ cart.price }}€</p>
         </div>
-        <div class="col-xs-6 col-md-2 other-kit">
-            <div>
-                <img class="img-responsive" src="images/peintsol.jpg">
-            </div>
-            <p name="descKit">Kit tapisserie grands espaces</p>
-            <p class="price-orange">12€99</p>
-        </div>
-        <div class="col-xs-6 col-md-2 other-kit">
-            <div>
-                <img class="img-responsive" src="images/peintsol.jpg">
-            </div>
-            <p name="descKit">Kit tapisserie grands espaces</p>
-            <p class="price-orange">12€99</p>
-        </div>
+        {% endfor %}
     </div>
 </div>
 <div class="container-fluid container-grey">
@@ -145,99 +111,18 @@
             </div>
         </div>
         <div class="row">
+            {% for product in products.Products %}
             <div class="col-md-6">
-                <h4>Rouleau très grand manche amovible</h4>
+                <h4>{{ product.Name }}</h4>
                 <div class="row">
-                    <div class="col-md-6">
-                        <p>Inducation du geste de tri</p>
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div>
-                            <p>Nos produit et emballages peuvent faire l'objet de tri.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hr-grey"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Support de destination</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <p>Mur et plafond</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hr-grey"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Usage du produit</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <p>Peinture</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hr-grey"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Composition</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <p>Rouleau mur et plafond avec manche extensible max 30cm</p>
+                            <p>{{ product.Description }}</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 marginT20xs">
-                <h4>Rouleau très grand manche amovible</h4>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Inducation du geste de tri</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <p>Nos produit et emballages peuvent faire l'objet de tri.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hr-grey"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Support de destination</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <p>Mur et plafond</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hr-grey"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Usage du produit</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <p>Peinture</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="hr-grey"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Composition</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div>
-                            <p>Rouleau mur et plafond avec manche extensible max 30cm</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <hr>
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -288,57 +173,50 @@
         <input type="button" name="add" class="btn-green" value="Envoyer mon avis">
     </form>
 
+    {% for review in cart.reviews %}
     <div class="row">
         <div class="col-md-2">
             <div class="stars stars-comment">
+                {% if review.rating <= 1 %}
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                {% elseif review.rating <= 2 %}
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                {% elseif review.rating <= 3 %}
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <i class="fa fa-star-o"></i>
+                {% elseif review.rating <= 4 %}
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star-o"></i>
-            </div> 
+                {% else %}
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                {% endif %}
+            </div>
         </div>
         <div class="col-md-10">
-            <h4 class="nomarginB">Super Produit</h4>
+            <h4 class="nomarginB">{{ review.text }}</h4>
             <p class="date">Avis déposé le 20/11/17</p>
-            <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
+            <p>{{ review.text }}</p>
         </div>
     </div>
     <div class="hr-avis"></div>
-    <div class="row">
-        <div class="col-md-2">
-            <div class="stars stars-comment">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-            </div> 
-        </div>
-        <div class="col-md-10">
-            <h4 class="nomarginB">Super Produit</h4>
-            <p class="date">Avis déposé le 20/11/17</p>
-            <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
-        </div>
-    </div>
-    <div class="hr-avis"></div>
-    <div class="row">
-        <div class="col-md-2">
-            <div class="stars stars-comment">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-o"></i>
-            </div> 
-        </div>
-        <div class="col-md-10">
-            <h4 class="nomarginB">Super Produit</h4>
-            <p class="date">Avis déposé le 20/11/17</p>
-            <p>Nous avons refait notre cuisine grâce à ce kit de très bonne qualité et facile d'utilisation.</p>
-        </div>
-    </div>    
-    <div class="hr-avis"></div>
+{% endfor %}
 </div>
 
 {% endblock %}
