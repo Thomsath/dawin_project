@@ -20,25 +20,25 @@
 </head>
 <body>
 
-<header>
+  <header>
      <div class="container nopadding-side">
-         <div class="row justinline">
-            <div class="col-md-3 col-sm-6 centernavlogoandsearch centerblock justinline logo">
+         <div class="row ">
+          <!--Zone du bug -->
+            <div class="col-xs-9 col-md-3 col-sm-6 logo">
                  <img src="images/SmartCartlogo.png" alt="Logo de SmartCart">
              </div>
- 
-             <div class="col-sm-6 displayxs">
-               <div class="justinline">
+
+             <div class="col-xs-2 col-sm-2 displayxs textCenterSM">
                  <i class="fa fa-user icon-user icon"></i>
-                 <i class="fa fa-shopping-bag icon-bag icon"></i>
-               </div>
+                 <i class="fa fa-shopping-bag icon-bag icon hidden-xs"></i>
              </div>
- 
-             <div class="col-md-5 centernavlogoandsearch justinline">
+
+             <div class="col-md-5">
                  <input type="text" class="search">
                  <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
              </div>
- 
+             <!---->
+
              <div class="col-md-2 account centerblock displaylg">
                <div class="user-zone centerblock">
                  <i class="fa fa-user icon-user icon"></i><span class="name-user">Nom</span>
@@ -51,134 +51,131 @@
              </div>
          </div>
      </div>
- </header>
+      <div class="nopadding-side">
+          <nav class="navbar navbar-expand-md navbar-light">
+              <div>
+                 <button class="navbar-toggler btnXSmenu" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+                <i class="fa fa-bars" name="btnMenu"></i>
+                </button>
+            </div>
+
+                <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
 
 
+              <div class="collapse navbar-collapse openXSmenu" id="navbarNavDropdown">
+                <div class="container">
 
-<div class="nopadding-side">
-    <nav class="navbar navbar-expand-md navbar-light">
-        <div>
-           <button class="navbar-toggler btnXSmenu" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-          <i class="fa fa-bars" name="btnMenu"></i>
-          </button>
+                  <ul class="navbar-nav text-md-center nav-justified w-100">
+
+                    <li class="nav-item">
+                      <div class="dropdown">
+                        <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-home navicons hidden-xs" aria-hidden="true"></i>Maison</a>
+                        <i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                        <a class="dropdown-item" href="#">EXEMPLE</a>
+                      </div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <div class="dropdown">
+                        <a class="nav-link" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench navicons hidden-xs" aria-hidden="true"></i>Jardin et Bricolage</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                        <a class="dropdown-item" href="#">EXEMPLE</a>
+                      </div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                      <div class="dropdown">
+                        <a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-laptop navicons hidden-xs" aria-hidden="true"></i>Informatique</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                        <a class="dropdown-item" href="#">EXEMPLE</a>
+                      </div>
+                      </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                          <a class="nav-link" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mobile navicons hidden-xs" aria-hidden="true"></i>TV & Son</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                            <a class="dropdown-item" href="#">EXEMPLE</a>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                          <a class="nav-link" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television navicons hidden-xs" aria-hidden="true"></i>Téléphonie</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
+                          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
+                            <a class="dropdown-item" href="#">EXEMPLE</a>
+                          </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                      <div class="dropdown">
+                        <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-futbol-o navicons hidden-xs" aria-hidden="true"></i>Sport</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                          <div class="triangle-top"></div>
+                          <div class="row">
+                            <div class="col-xs-9 col-md-8">
+                              <a class="dropdown-item" href="#">FOOTBALL</a>
+                            </div>
+                            <div class="col-xs-3 col-md-3">
+                              <i class="fa fa-chevron-right"></i>
+                            </div>
+                          </div> 
+                          <hr class="hr-dropdown">
+                          <div class="row">
+                            <div class="col-xs-9 col-md-8">
+                              <a class="dropdown-item" href="#">BASKETBALL</a>
+                            </div>
+                            <div class="col-xs-3 col-md-4">
+                              <i class="fa fa-chevron-right"></i>
+                            </div>
+                          </div> 
+                          <hr>
+                          <div class="row">
+                            <div class="col-xs-9 col-md-8">
+                              <a class="dropdown-item" href="#">HANDBALL</a>
+                            </div>
+                            <div class="col-xs-3 col-md-4">
+                              <i class="fa fa-chevron-right"></i>
+                            </div>
+                          </div>
+                          <hr> 
+                          <div class="row">
+                            <div class="col-xs-9 col-md-8">
+                              <a class="dropdown-item" href="#">RUGBY</a>
+                            </div>
+                            <div class="col-xs-3 col-md-4">
+                              <i class="fa fa-chevron-right"></i>
+                            </div>
+                          </div> 
+                          <hr>
+                          <div class="row">
+                            <div class="col-xs-9 col-md-8">
+                              <a class="dropdown-item" href="#">SKATEBOARD</a>
+                            </div>
+                            <div class="col-xs-3 col-md-4">
+                              <i class="fa fa-chevron-right"></i>
+                            </div>
+                          </div> 
+                          <hr>
+                          <div class="row">
+                            <div class="col-xs-9 col-md-8">
+                              <a class="dropdown-item" href="#">NATATION</a>
+                            </div>
+                            <div class="col-xs-3 col-md-4">
+                              <i class="fa fa-chevron-right"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </nav>
       </div>
-
-          <a class="nav-link justdisplayxs hidden-xs" href="#"><i class="fa fa-home navicons" aria-hidden="true"></i>Accueil</a>
-
-
-        <div class="collapse navbar-collapse openXSmenu" id="navbarNavDropdown">
-          <div class="container">
-
-            <ul class="navbar-nav text-md-center nav-justified w-100">
-
-              <li class="nav-item">
-                <div class="dropdown">
-                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  <i class="fa fa-home navicons hidden-xs" aria-hidden="true"></i>Maison</a>
-                  <i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                  <a class="dropdown-item" href="#">EXEMPLE</a>
-                </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="dropdown">
-                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-wrench navicons hidden-xs" aria-hidden="true"></i>Jardin et Bricolage</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                  <a class="dropdown-item" href="#">EXEMPLE</a>
-                </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                <div class="dropdown">
-                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-laptop navicons hidden-xs" aria-hidden="true"></i>Informatique</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                  <a class="dropdown-item" href="#">EXEMPLE</a>
-                </div>
-                </div>
-              </li>
-              <li class="nav-item">
-                  <div class="dropdown">
-                    <a class="nav-link" href="#" role="button" id="dropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-mobile navicons hidden-xs" aria-hidden="true"></i>TV & Son</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                      <a class="dropdown-item" href="#">EXEMPLE</a>
-                    </div>
-                  </div>
-              </li>
-              <li class="nav-item">
-                  <div class="dropdown">
-                    <a class="nav-link" href="#" role="button" id="dropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-television navicons hidden-xs" aria-hidden="true"></i>Téléphonie</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink2">
-                      <a class="dropdown-item" href="#">EXEMPLE</a>
-                    </div>
-                  </div>
-              </li>
-              <li class="nav-item">
-                <div class="dropdown">
-                  <a class="nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-futbol-o navicons hidden-xs" aria-hidden="true"></i>Sport</a><i class="fa fa-chevron-right hidden-sm hidden-md hidden-lg"></i>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <div class="triangle-top"></div>
-                    <div class="row">
-                      <div class="col-xs-9 col-md-8">
-                        <a class="dropdown-item" href="#">FOOTBALL</a>
-                      </div>
-                      <div class="col-xs-3 col-md-3">
-                        <i class="fa fa-chevron-right"></i>
-                      </div>
-                    </div> 
-                    <hr class="hr-dropdown">
-                    <div class="row">
-                      <div class="col-xs-9 col-md-8">
-                        <a class="dropdown-item" href="#">BASKETBALL</a>
-                      </div>
-                      <div class="col-xs-3 col-md-4">
-                        <i class="fa fa-chevron-right"></i>
-                      </div>
-                    </div> 
-                    <hr>
-                    <div class="row">
-                      <div class="col-xs-9 col-md-8">
-                        <a class="dropdown-item" href="#">HANDBALL</a>
-                      </div>
-                      <div class="col-xs-3 col-md-4">
-                        <i class="fa fa-chevron-right"></i>
-                      </div>
-                    </div>
-                    <hr> 
-                    <div class="row">
-                      <div class="col-xs-9 col-md-8">
-                        <a class="dropdown-item" href="#">RUGBY</a>
-                      </div>
-                      <div class="col-xs-3 col-md-4">
-                        <i class="fa fa-chevron-right"></i>
-                      </div>
-                    </div> 
-                    <hr>
-                    <div class="row">
-                      <div class="col-xs-9 col-md-8">
-                        <a class="dropdown-item" href="#">SKATEBOARD</a>
-                      </div>
-                      <div class="col-xs-3 col-md-4">
-                        <i class="fa fa-chevron-right"></i>
-                      </div>
-                    </div> 
-                    <hr>
-                    <div class="row">
-                      <div class="col-xs-9 col-md-8">
-                        <a class="dropdown-item" href="#">NATATION</a>
-                      </div>
-                      <div class="col-xs-3 col-md-4">
-                        <i class="fa fa-chevron-right"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-    </nav>
-</div>
+   </header>
 
 
   <!--Carousel-->
@@ -309,6 +306,7 @@
       <div class="col-md-12">
         <h3>LES BEST-SELLERS DU MOIS : NIVEAU INTERMEDIAIRE</h3>
       </div>
+    </div>
 
 
       <div class="row">
@@ -336,7 +334,7 @@
 
 
     </div>
-</div>
+  </div>
 
 <div class="container">
     <div class="row">

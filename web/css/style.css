@@ -542,7 +542,7 @@ select.inlineblock {
 }
 
 .centerblock{
-	padding-top: 11px;
+	padding-top: 9px;
 }
 
 .user-zone{
@@ -553,7 +553,7 @@ select.inlineblock {
 	font-size: 140%;
 }
 
-.centernavlogoandsearch{
+.marginT15{
 	margin-top: 15px;
 }
 
@@ -861,8 +861,8 @@ input[name="emailContact"]{
 	.btnXSmenu{
 		float: left;
 	    position: absolute;
-	    top: 0px;
-	    left: 20px;
+	    top: 17px;
+	    left: 15px;
 	}
 
 	.openXSmenu{
@@ -879,7 +879,12 @@ input[name="emailContact"]{
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
-		padding-left: 40px;
+		padding-left: 17%;
+		padding-top: 10px;
+	}
+
+	.search{
+		width: 77%;
 	}
 
 	.justinline{
@@ -951,11 +956,11 @@ input[name="emailContact"]{
 
 
 	.icon{
-		padding-right:0;
-		padding-bottom: 0;
-		padding-top: 15px;
-		margin-bottom:16px;
-		margin-right:7px;
+		padding: 25px 7px 0 0 ;
+	}
+
+	#myCarousel{
+		margin-top: 0;
 	}
 
 	select.inlineblock {
@@ -965,16 +970,6 @@ input[name="emailContact"]{
 
 	.btn-green {
 		width: 100%;
-	}
-
-	.logo{
-		min-width: 196px;
-		min-height: 46px;
-		margin-left: 10px;
-	}
-
-	.justinline{
-		display: inline;
 	}
 
 	.pagination>li>a, .pagination>li>span{
@@ -1035,6 +1030,10 @@ input[name="emailContact"]{
 	.displaylg{
 		display: none;
 	}
+
+	.textCenterSM{
+		text-align: center;
+	}
 }
 
 @media(min-width: 990px){
@@ -1045,9 +1044,13 @@ input[name="emailContact"]{
 
 }
 
-@media(max-width: 989px){
+@media(max-width: 990px){
 	.btn-addCart{
 		width: 100%;
 		margin-top: 10px;
+	}
+
+	.centerblock{
+		padding-top: 0;
 	}
 }
