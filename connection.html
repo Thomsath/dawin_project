@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>SmartCart - Se connecter</title>
-    <meta charset="utf-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="web/css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
+  <title>SmartCart - S'inscrire</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="web/css/style.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+
 </head>
 
       <div class="container nopadding-side">
@@ -134,20 +140,24 @@
             <div id="infos">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="borderB">
-                            <h5>PSEUDONYME</h5>
-                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                            <input type="text" name="pseudo" placeholder="Votre pseudonyme">
-                        </div>
+                        <div class="elementform elt-form-signin">
+                          <label for="pseudo">PSEUDONYME</label><br>
+                          <div class="input-group borderB">
+                            <span class="input-group-addon input-signin-logo"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control nomargin input-signin" name="pseudo" placeholder="Votre pseudonyme">
+                          </div>
+                      </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="borderB">
-                            <h5>MOT DE PASSE</h5>
-                            <i class="fa fa-key" aria-hidden="true"></i>
-                            <input type="text" name="mdp" placeholder="Votre mot de passe">
-                        </div>
+                     <div class="col-md-12">
+                        <div class="elementform elt-form-sign">
+                          <label for="mdp">MOT DE PASSE </label><br>
+                          <div class="input-group borderB">
+                            <span class="input-group-addon input-signin-logo"><i class="fa fa-key" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control nomargin input-signin" name="mdp" placeholder="Votre pseudonyme">
+                          </div>
+                      </div>
                     </div>
                 </div>
             </div>
