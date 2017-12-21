@@ -12,8 +12,10 @@
                 </div></a>
 
                 <div class="col-md-5 justinline">
-                    <input type="text" class="search">
-                    <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
+                    <form class="" action="{{ path('smart_cart_search_product') }}" method="post">
+                        <input type="text" class="search" name="search">
+                        <button type="submit" class="btn-search"><i class="fa fa-search iconsearch"></i></button>
+                    </form>
                 </div>
 
                 {% if app.user %}
