@@ -442,9 +442,11 @@ select.inlineblock {
 
 
 .footer-bs {
-  background-color: #363636;
+  	background-color: #363636;
 	color: rgba(255,255,255,1.00);
 	padding: 30px;
+
+	margin-top: 20px;
 }
 
 .footer-bs h3 {
