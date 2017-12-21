@@ -649,12 +649,18 @@ input.nomargin{
 }
 
 .navbar li .fa-chevron-right{
-    float: right;
+    float: center;
     margin-top: 7px;
 }
 
 .navbar li a{
 	display: inline-block;
+}
+
+.dropdown-menu hr{
+	margin: 2px 0 5px 0;
+	border-bottom: 1px solid #ccc;
+	border-top: 0;
 }
 
 /*********************
@@ -755,7 +761,6 @@ input[name="emailContact"]{
 }
 
 
-
 /*********************
 	  MEDIA QUERY
 **********************/
@@ -809,7 +814,12 @@ input[name="emailContact"]{
 		text-align: left !important;
 	}
 
-	.dropdown-menu hr, .navbar li{
+	.navbar li .fa-chevron-right{
+	    float: right;
+	    margin-top: 7px;
+	}
+
+	.navbar li{
 		margin: 2px 0 5px 0;
 		border-bottom: 1px solid #ccc;
 		border-top: 0;
