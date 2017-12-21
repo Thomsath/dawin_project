@@ -81,6 +81,10 @@ h3{
 	margin-bottom: 0;
 }
 
+.nomarginT{
+	margin-top: 0;
+}
+
 .textCenter{
 	text-align: center;
 }
@@ -140,10 +144,8 @@ h3{
 
 
 .bag-zone{
-	border-right: 1px solid #f1ece6;
 	text-align: center;
-	height: 100%;
-	color: #000;
+	height: 100%
 }
 
 .kit-img{
@@ -257,8 +259,9 @@ p[name="descKit"]{
 }
 
 .btnFB-share{
-	position: absolute !important;
+	position: absolute;
 	margin-left: 15px;
+	display: inline;
 }
 
 .stars{
@@ -314,44 +317,6 @@ form{
 	padding-right: 5%;
 }
 
-
-
-/****** Style Star Rating Widget *****/
-/*
-.rating {
-  border: none;
-  float: left;
-}
-
-.rating > input { display: none; }
-.rating > label:before {
-  margin: 5px;
-  font-size: 1.25em;
-  font-family: FontAwesome;
-  display: inline-block;
-  content: "\f005";
-}
-
-.rating > .half:before {
-  content: "\f089";
-  position: absolute;
-}
-
-.rating > label {
-  color: #ddd;
- float: right;
-}
-
-.rating > input:checked ~ label,
-.rating:not(:checked) > label:hover,
-.rating:not(:checked) > label:hover ~ label { color: #FFD700;  }
-
-.rating > input:checked + label:hover,
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-.rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
-*/
-
 .date {
 	font-size: 75%;
 	color: #bdb8b3;
@@ -364,7 +329,8 @@ form{
 	display: inline-block;
 }
 
-.justinline{
+h3.justinline{
+	display: inline-block;
 }
 
 .droite{
@@ -383,7 +349,7 @@ form{
 }
 
 .mrgnbas{
-	margin-bottom: 10px;
+	margin-bottom: 30px;
 }
 
 .prix{
@@ -401,8 +367,19 @@ i.strars {
 	border:0px;
 }
 
+
 .trierpar {
+	margin-top: 20px;
 	font-size: 150%;
+}
+
+select.inlineblock {
+	background-color: #fff;
+    border-radius: 3px;
+    transition: all 375ms ease-in-out;
+    padding: 4px;
+    color: #777;
+    border: 1px solid #d8dae5;
 }
 
 .btn-result{
@@ -415,7 +392,7 @@ i.strars {
 	border-color: #c7c4bd;
 }
 
-/****Test notation etoile******/
+/****notation etoile******/
 
 .etoile {
 	color: #bdb8b3;
@@ -447,7 +424,7 @@ i.strars {
 .footer-bs {
   background-color: #363636;
 	color: rgba(255,255,255,1.00);
-	padding: 10px;
+	padding: 30px;
 }
 
 .footer-bs h3 {
@@ -467,8 +444,7 @@ i.strars {
 }
 
 .footer-bs img.icon {
- width: 32px;
- height: 32px;
+ 	height: 35px;
 }
 
 .icon{
@@ -491,11 +467,12 @@ i.strars {
 .bottomfooter{
 	background-color: #fbb12f;
 	color: white;
-	padding: 10px;
+	line-height: 30px;
 }
 
 .aligncenter{
 	text-align: center;
+	margin: 0;
 }
 
 .greyhomecontent{
@@ -503,6 +480,7 @@ i.strars {
 }
 
 #myCarousel , .bandeau{
+	margin-top: 30px;
 	margin-bottom: 30px;
 }
 
@@ -540,7 +518,7 @@ i.strars {
 
 .blanc {
 	background-color: white;
-	border: 2px solid #d8dae5;
+	border: 1px solid #d8dae5;
 }
 
 .normallineheight
@@ -629,7 +607,9 @@ h1.tiltleincription
 {
 	font-weight: normal;
 }
-
+.row-signup {
+		display: inline;
+}
 .paddinginscription{
 	padding: 40px;
 	padding-right: 40px;
@@ -654,7 +634,9 @@ input.nomargin{
 
 .navbar{
 	background-color: #f1ece6;
-	margin-top:-20px;
+}
+.navbar-light .navbar-nav .nav-link {
+	color: black;
 }
 
 .fa-bars, .fa-times{
@@ -662,32 +644,207 @@ input.nomargin{
 	color: #fff;
 }
 
-.row{
-	display: inline;
+.dropdown-menu i, .navbar li .fa-chevron-right{
+	color: #fbb12f;
+}
+
+.navbar li .fa-chevron-right{
+    float: right;
+    margin-top: 7px;
+}
+
+.navbar li a{
+	display: inline-block;
+}
+
+/*********************
+	CONTACT US PAGE
+**********************/
+#contact_us .navbar{
+	margin-bottom: 0;
+}
+
+.bg_whoAreWe{
+	background-image: url('../../images/bg_mainpage.png');
+	background-size: cover;
+	padding: 20px 0 20px 0;
+}
+
+.col_profilPic{
+	max-width: 20%;
+	position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.contact_us_row{
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.bg_profilPic{
+	background-color: #f1ece6;
+}
+.picture_us{
+	width: 100%;
+}
+
+.descp_us{
+	margin-top: 15px;
+	font-weight: bold;
+}
+
+input[name="emailContact"]{
+	margin-top: 18px;
+	margin-bottom: 18px;
+}
+
+#formContact input[type="text"]{
+	height: 40px;
+}
+
+#formContact input[type="text"], textarea[name="descpContact"]{
+	font-size: 20px;
+}
+
+#formContact input[type="text"]:focus, textarea[name="descpContact"]:focus{
+	border-color: #fbb12f;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px rgba(251, 178, 58, 0.6);
+}
+
+/*********************
+	   404 PAGE
+**********************/
+#body404{
+	background-color: #f1ece6;
+}
+
+.content404{
+	font-size: 95px;
+	padding-right: 30px;
+}
+
+.borderR-orange{
+	border-right: 2px solid #fbb12f;
+	text-align: right;
+}
+
+.addmargintopsmtolg
+{
+	margin-top: 19%;
+}
+
+.oops{
+	text-align:left;
+}
+
+.bigbutton{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.backlink{
+	margin-top: 15px;
+}
+.backlink a{
+
+	text-decoration: none;
+	color: black;
 }
 
 
 
-
-
-/*------Media Query ------*/
-@media(min-width: 980px){
-/*
-	.paddingaccueildroitesuggest{
-	margin-top: 15%;
-	}
-*/
-}
-/*------Media Query ------*/
+/*********************
+	  MEDIA QUERY
+**********************/
 
 /* XS */
+@media(max-width:  580px){
+	.bigbutton{
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 100%;
+	}
+	.content404{
+		font-size: 95px;
+		text-align: center;
+		padding-right: 0px;
+	}
+	.borderR-orange{
+		border-bottom: 2px solid #fbb12f;
+		border-right: 0;
+		text-align: left;
+	}
+	.oops{
+		text-align:center;
+	}
+	.addmargintopsmtolg
+	{
+		margin-top: 0%;
+	}
+}
+
+@media(max-width: 600px){
+	.openXSmenu{
+		width: 47% !important;
+	}
+}
 @media(max-width: 770px){
 
 	.navbar{
 		margin-bottom: 0;
 		background-color: transparent;
-		float: left;
+		margin-top: -20px;
+		/*float: left;*/
 	    top: -105px;
+	}
+
+	.navbar-nav {
+	    margin: 7.5px 0 5px;
+	}
+
+	.navbar li{
+		text-align: left !important;
+	}
+
+	.dropdown-menu hr, .navbar li{
+		margin: 2px 0 5px 0;
+		border-bottom: 1px solid #ccc;
+		border-top: 0;
+	}
+
+	.dropdown-menu{
+		background-color: #f1ece6;
+	    border: 0;
+	    box-shadow: none;
+	}
+
+	.dropdown-item{
+		padding: .25rem 1.5rem .25rem 0;
+	}
+
+	.navbar-nav .open .dropdown-menu{
+		margin-left: 10px;
+	}
+
+	.btnXSmenu{
+		float: left;
+	    position: absolute;
+	    top: 0px;
+	    left: 20px;
+	}
+
+	.openXSmenu{
+		z-index: 10;
+		top: 40px;
+	    left: 20px;
+	    position: absolute;
+	    background-color: #f1ece6;
+    	border-radius: 5px;
+    	box-shadow:  1px 1px 7px #c3c1bf;
+    	width: 32%;
 	}
 
 	.logo{
@@ -712,9 +869,12 @@ input.nomargin{
 		margin-top: 10px;
 	}
 
-
+	.trierpar {
+		margin-top: 0px;
+	}
 	.droite {
 		float: none;
+		display: block;
 	}
 
 	.displayxs{
@@ -765,11 +925,19 @@ input.nomargin{
 		padding-right:0;
 		padding-bottom: 0;
 		padding-top: 15px;
+		margin-bottom:16px;
+		margin-right:7px;
 	}
 
-}
+	select.inlineblock {
+		width: 100%;
+		display: block;
+	}
 
-@media(max-width: 770px){
+	.btn-green {
+		width: 100%;
+	}
+
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
@@ -793,6 +961,19 @@ input.nomargin{
 @media(min-width: 770px){
 	.navbar{
 		background-color: #f1ece6;
+	}
+
+	.triangle-top {
+	    display: inline-block;
+	    width: 0;
+	    height: 0;
+	    border-style: solid;
+	    border-width: 0 10px 15px 10px;
+	    border-color: transparent transparent #fff transparent;
+
+	    position: absolute;
+	    top: -15px;
+	    left: 45%;
 	}
 }
 
@@ -819,6 +1000,9 @@ input.nomargin{
 
 	.btn-addCart{
 		font-size: 14px;
+	}
+	.displaylg{
+		display: none;
 	}
 }
 
