@@ -17,24 +17,24 @@
                 </div>
 
                 {% if app.user %}
-                <a href="{{ path('fos_user_security_logout') }}">
                     <div class="col-md-2 account centerblock displaylg" style="padding:0px;">
+                      <a href="{{ path('fos_user_security_logout') }}">
                         <div class="user-zone centerblock">
                             <i class="fa fa-sign-out icon-user icon"></i><span class="name-user">Se déconnecter</span>
                         </div>
                     </div>
                 </a>
                 {% else %}
-                <a href="{{ path('fos_user_security_login') }}">
                     <div class="col-md-2 account centerblock displaylg" style="padding:0px;">
+                      <a href="{{ path('fos_user_security_login') }}">
                         <div class="user-zone centerblock">
                             <i class="fa fa-user icon-user icon"></i><span class="name-user">S'identifier</span>
                         </div>
                     </div>
                 </a>
                 {% endif %}
-                <a href="{{ path('fos_user_registration_register') }}">
                     <div class="col-md-2 centerblock displaylg" style="padding:0px;">
+                      <a href="{{ path('fos_user_registration_register') }}">
                         <div class="bag-zone centerblock">
                             <i class="fa fa-user-plus icon-bag icon" aria-hidden="true"></i><span class="myBag">S'inscrire</span>
                         </div>

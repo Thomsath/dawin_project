@@ -77,6 +77,11 @@ h3{
 	margin-bottom: 20px;
 }
 
+a {
+ text-decoration: none;
+ color: black;
+}
+
 .nomarginB{
 	margin-bottom: 0;
 }
