@@ -608,8 +608,9 @@ h1.tiltleincription
 	font-weight: normal;
 }
 .row-signup {
-		display: inline;
+	display: inline;
 }
+
 .paddinginscription{
 	padding: 40px;
 	padding-right: 40px;
@@ -623,6 +624,8 @@ h1.tiltleincription
 input.nomargin{
 	margin: 0px;
 }
+
+/*------Navbar-------*/
 
 .navbar-toggler{
 	/*position: absolute;*/
@@ -661,6 +664,11 @@ input.nomargin{
 	margin: 2px 0 5px 0;
 	border-bottom: 1px solid #ccc;
 	border-top: 0;
+}
+
+/*-----------------*/
+.logoIUT{
+	width: 80%
 }
 
 /*********************
