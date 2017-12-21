@@ -9,6 +9,7 @@
 input[name="mdp"], input[name="pseudo"]{
 	border: none;
 	margin-left: 5px;
+	width: 90%;
 }
 
 input[name="mdp"]::placeholder, input[name="pseudo"]::placeholder{
@@ -19,10 +20,24 @@ input[name="mdp"]::placeholder, input[name="pseudo"]::placeholder{
 	margin-bottom: 5px;
 	font-weight: bold;
 }
-
+.elt-form-signin {
+	margin-bottom: 0 !important;
+}
 .borderB{
 	border-bottom: 1px solid #d7d9e4;
 	width: 100%
+}
+
+.input-signin {
+	-webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    padding-left : 0 !important;
+}
+
+.input-signin-logo {
+	background-color: white;
+	border: none;
 }
 
 #infos .row{
@@ -610,8 +625,11 @@ h1.tiltleincription
 	display: inline;
 }
 
+.right-row-signup {
+	padding-left: 0;
+}
 .paddinginscription{
-	padding: 40px;
+	padding-top: 0px;
 	padding-right: 40px;
 	padding-left: 40px;
 }
