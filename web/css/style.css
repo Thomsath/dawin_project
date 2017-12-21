@@ -473,6 +473,7 @@ select.inlineblock {
 .aligncenter{
 	text-align: center;
 	margin: 0;
+	color: black;
 }
 
 .greyhomecontent{
@@ -649,7 +650,7 @@ input.nomargin{
 }
 
 .navbar li .fa-chevron-right{
-    float: center;
+    float: right;
     margin-top: 7px;
 }
 
@@ -657,17 +658,17 @@ input.nomargin{
 	display: inline-block;
 }
 
-.dropdown-menu hr{
-	margin: 2px 0 5px 0;
-	border-bottom: 1px solid #ccc;
-	border-top: 0;
-}
-
 /*********************
 	CONTACT US PAGE
 **********************/
 #contact_us .navbar{
 	margin-bottom: 0;
+}
+.col-us-desc {
+	padding: 0;
+}
+.col-pic-desc {
+	padding: 0;
 }
 
 .bg_whoAreWe{
@@ -677,13 +678,12 @@ input.nomargin{
 }
 
 .col_profilPic{
-	max-width: 20%;
+	
 	position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    flex: 0 0 20%;
-    max-width: 20%;
+    /*flex: 0 0 20%;*/
 }
 
 .contact_us_row{
@@ -761,6 +761,7 @@ input[name="emailContact"]{
 }
 
 
+
 /*********************
 	  MEDIA QUERY
 **********************/
@@ -814,12 +815,7 @@ input[name="emailContact"]{
 		text-align: left !important;
 	}
 
-	.navbar li .fa-chevron-right{
-	    float: right;
-	    margin-top: 7px;
-	}
-
-	.navbar li{
+	.dropdown-menu hr, .navbar li{
 		margin: 2px 0 5px 0;
 		border-bottom: 1px solid #ccc;
 		border-top: 0;
@@ -972,7 +968,9 @@ input[name="emailContact"]{
 	.navbar{
 		background-color: #f1ece6;
 	}
-
+	.row-profil {
+		display: none;
+	}
 	.triangle-top {
 	    display: inline-block;
 	    width: 0;
