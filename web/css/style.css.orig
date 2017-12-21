@@ -651,7 +651,7 @@ input.nomargin{
 }
 
 .navbar li .fa-chevron-right{
-    float: center;
+    float: right;
     margin-top: 7px;
 }
 
@@ -659,6 +659,7 @@ input.nomargin{
 	display: inline-block;
 }
 
+<<<<<<< HEAD
 .dropdown-menu hr{
 	margin: 2px 0 5px 0;
 	border-bottom: 1px solid #ccc;
@@ -670,6 +671,15 @@ input.nomargin{
 	width: 80%
 }
 
+||||||| merged common ancestors
+.dropdown-menu hr{
+	margin: 2px 0 5px 0;
+	border-bottom: 1px solid #ccc;
+	border-top: 0;
+}
+
+=======
+>>>>>>> 940a2c5e4ef69a3809e9eb528779a5152cdaca20
 /*********************
 	CONTACT US PAGE
 **********************/
@@ -690,7 +700,7 @@ input.nomargin{
 }
 
 .col_profilPic{
-    position: relative;
+	position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
@@ -833,12 +843,7 @@ input[name="emailContact"]{
 		text-align: left !important;
 	}
 
-	.navbar li .fa-chevron-right{
-	    float: right;
-	    margin-top: 7px;
-	}
-
-	.navbar li{
+	.dropdown-menu hr, .navbar li{
 		margin: 2px 0 5px 0;
 		border-bottom: 1px solid #ccc;
 		border-top: 0;
@@ -964,7 +969,8 @@ input[name="emailContact"]{
 	}
 
 	.btn-green {
-		width: 100%;
+
+
 	}
 
 	.logo{
