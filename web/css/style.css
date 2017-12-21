@@ -2,6 +2,12 @@
 	CONNECTION PAGE
 **********************/
 
+* {
+	font-family: 'Source Sans Pro';
+}
+code {
+	color: black;
+}
 #titleConnect{
 	font-weight: normal;
 }
