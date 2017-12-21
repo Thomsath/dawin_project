@@ -14,14 +14,11 @@ class SearchController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
 
-        $form = $this->createForm(SearchType::class);
-
-        $form->handleRequest($request);
         $carts = array();
 
-        if($form->isSubmitted() && $form->isValid())
+        if($request->get('search'))
         {
-            $search = $form->get('search')->getData();
+            $search = $request->get('search');
             $carts = $em->getRepository(Cart::class)->findAllContains($search);
         }
 
