@@ -300,13 +300,12 @@ form{
 	margin-bottom: 10px;
 }
 
-.comment{
+.comment {
 	background-color: #f1ece6;
 	width: 50%;
 }
 
-.btn-green
-{
+.btn-green {
 	background-color: #89ae03;
 	border: 1px solid #89ae03;
 	border-radius: 4px;
@@ -543,8 +542,7 @@ select.inlineblock {
 }
 
 .centerblock{
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 11px;
 }
 
 .user-zone{
@@ -678,11 +676,11 @@ input.nomargin{
 }
 
 .col_profilPic{
-	
 	position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
+    padding-bottom: 20px;
     /*flex: 0 0 20%;*/
 }
 
@@ -690,7 +688,13 @@ input.nomargin{
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
-
+.contact_us_form {
+	background-color: #fbb12f;
+}
+.contact_us_padding_topbot {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 .bg_profilPic{
 	background-color: #f1ece6;
 }
@@ -941,7 +945,8 @@ input[name="emailContact"]{
 	}
 
 	.btn-green {
-		width: 100%;
+
+
 	}
 
 	.logo{
