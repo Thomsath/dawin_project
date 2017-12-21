@@ -25,4 +25,9 @@ class DefaultController extends Controller
             'randomCarts' => $randomCarts
         ]);
     }
+
+    public function confirmedAction()
+    {
+        return $this->redirect($this->generateUrl('smart_cart_homepage'));
+    }
 }
