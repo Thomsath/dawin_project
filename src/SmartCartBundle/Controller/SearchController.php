@@ -5,7 +5,6 @@ namespace SmartCartBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use SmartCartBundle\Entity\Cart;
 use SmartCartBundle\Entity\Category;
-use SmartCartBundle\Form\Type\SearchType;
 use Symfony\Component\HttpFoundation\Request;
 
 class SearchController extends Controller
