@@ -1,19 +1,85 @@
-{% trans_default_domain 'FOSUserBundle' %}
+{% extends "::VueMere.html.twig" %}
 
-{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
-    {{ form_widget(form) }}
+{% block stylesheets %}
+{{ parent() }}
+{% endblock %}
 
-    {% form_theme form 'EWZRecaptchaBundle:Form:ewz_recaptcha_widget.html.twig' %}
+{% block header %}
+{{ parent() }}
+{% endblock %}
 
-    {{ form_widget(form.recaptcha, { 'attr': {
-        'options' : {
-            'theme': 'light',
-            'type': 'image',
-            'size': 'normal'
-        },
-    } }) }}
+{% block body %}
 
-    <div>
-        <input type="submit" value="{{ 'registration.submit'|trans }}" />
+<!-- Contenu -->
+<div class="row">
+    <div class="col-lg-7 col-sm-0 displaylg">
+        <img class="img-responsive" src="{{ asset('images/pic_inscription.png') }}" alt="" />
     </div>
-{{ form_end(form) }}
+    <div class="col-lg-5 col-sm-12 paddinginscription">
+        <h1 class="tiltleincription">CREER SON COMPTE</h1>
+        <p>Crée ton compte afin de profiter à 100% des fonctionnalités proposés par le site.</p>
+        {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+        <div class="elementform">
+            <label for="pseudo">PSEUDONYME</label><br>
+            <div class="input-group">
+                <span  class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                {{ form_widget(attribute(form, 'username')) }}
+            </div>
+        </div>
+        <div class="elementform">
+            <label for="mdp">MOT DE PASSE</label><br>
+            <div class="input-group">
+                <span  class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                {{ form_widget(attribute(form, 'plainPassword').first) }}
+            </div>
+        </div>
+        <div class="textincription">
+            <p>Votre mot de pasee doit comporter au moins 1 majuscule, 1 chiffre, 1 caractère spécial et doit faire au moins 8 caractères.</p>
+        </div>
+        <div class="elementform">
+            <label for="confirmemdp">CONFIRMER VOTRE MOT DE PASSE</label><br>
+            <div class="input-group">
+                <span  class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                {{ form_widget(attribute(form, 'plainPassword').second) }}
+            </div>
+        </div>
+        <div class="elementform">
+            <label for="email">ADRESSE E MAIL</label><br>
+            <div class="input-group">
+                <span  class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                {{ form_widget(attribute(form, 'email')) }}
+            </div>
+        </div>
+
+        <div class="elementform">
+            {{ form_errors(form) }}
+        </div>
+
+        <div class="checkbox">
+            <label><input type="checkbox"  name="checkcgu" value="">J'accepte les Conditions Générales d'Utilisation</label>
+        </div>
+
+        {% form_theme form 'EWZRecaptchaBundle:Form:ewz_recaptcha_widget.html.twig' %}
+
+        {{ form_widget(form.recaptcha, { 'attr': {
+        'options' : {
+        'theme': 'light',
+        'type': 'image',
+        'size': 'normal'
+        },
+        } }) }}
+
+        <input type="submit" name="add" class="center-block elementform btn-green" value="M'inscrire">
+        {{ form_end(form) }}
+    </div>
+
+</div>
+{% endblock %}
+
+{% block footer %}
+{{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}
