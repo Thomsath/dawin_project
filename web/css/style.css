@@ -57,6 +57,8 @@ input[name="connect"]{
 .blocConnect{
 	border: 1px solid #f1ece6;
 	box-shadow: 3px 3px 8px #ececec;
+
+	margin-top: 10%;
 }
 
 .divOrange{
@@ -693,7 +695,10 @@ input.nomargin{
 
 /*-----------------*/
 .logoIUT{
-	width: 80%
+	width: 60%
+}
+.col-logo {
+	text-align: center;
 }
 
 /*********************
@@ -979,12 +984,6 @@ input[name="emailContact"]{
 	.comment{
 		width: 100%;
 	}
-
-
-	.icon{
-		padding: 25px 7px 0 0 ;
-	}
-
 	#myCarousel{
 		margin-top: 0;
 	}
