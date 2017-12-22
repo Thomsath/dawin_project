@@ -735,6 +735,10 @@ input.nomargin{
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
+.contact_us_image_why {
+	width: 100%;
+	padding: 25px;
+}
 .bg_profilPic{
 	background-color: #f1ece6;
 }
