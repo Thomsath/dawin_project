@@ -794,6 +794,7 @@ input[name="emailContact"]{
 .addmargintopsmtolg
 {
 	margin-top: 19%;
+	margin-left: 26%;-
 }
 
 .oops{
@@ -842,6 +843,7 @@ input[name="emailContact"]{
 	.addmargintopsmtolg
 	{
 		margin-top: 0%;
+		margin-left: 0%;
 	}
 }
 
