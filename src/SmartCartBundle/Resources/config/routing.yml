@@ -10,6 +10,10 @@ smart_cart_inscription:
     path:     /inscription
     defaults: { _controller: SmartCartBundle:Default:inscription }
 
+smart_cart_contact:
+    path:     /contact
+    defaults: { _controller: SmartCartBundle:Default:contact }
+
 smart_cart_admin_user_list:
     path:     /admin/users
     defaults: { _controller: SmartCartBundle:Admin\User:index }

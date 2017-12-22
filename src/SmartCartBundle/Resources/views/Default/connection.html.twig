@@ -1,7 +1,7 @@
 {% extends "::VueMere.html.twig" %}
 
 {% block stylesheets %}
- {{ parent() }}					   
+ {{ parent() }}
 {% endblock %}
 
 {% block header %}
@@ -12,7 +12,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 blocConnect">
+        <div class="col-xs-12 col-sm-12 col-md-12 offset-lg-2 col-lg-8 blocConnect">
             <div class="divOrange">
                 <div class="whiteLine"></div>
             </div>
@@ -25,20 +25,24 @@
             <div id="infos">
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="borderB">
-                            <h5>PSEUDONYME</h5>
-                            <i class="fa fa-user-circle" aria-hidden="true"></i>
-                            <input type="text" name="pseudo" placeholder="Votre pseudonyme">
-                        </div>
+                        <div class="elementform elt-form-signin">
+                          <label for="pseudo">PSEUDONYME</label><br>
+                          <div class="input-group borderB">
+                            <span class="input-group-addon input-signin-logo"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control nomargin input-signin" name="pseudo" placeholder="Votre pseudonyme">
+                          </div>
+                      </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div class="borderB">
-                            <h5>MOT DE PASSE</h5>
-                            <i class="fa fa-key" aria-hidden="true"></i>
-                            <input type="text" name="mdp" placeholder="Votre mot de passe">
-                        </div>
+                     <div class="col-md-12">
+                        <div class="elementform elt-form-sign">
+                          <label for="mdp">MOT DE PASSE </label><br>
+                          <div class="input-group borderB">
+                            <span class="input-group-addon input-signin-logo"><i class="fa fa-key" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control nomargin input-signin" name="mdp" placeholder="Votre pseudonyme">
+                          </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -51,7 +55,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 notRegistred">
-            <span>Pas encore inscrit ? </span><a href="inscription.php"><span class="underlinded"> Inscrit-toi</span></a>
+            <span>Pas encore inscrit ? </span><span class="underlinded"> Inscris-toi</span>
         </div>
     </div>
 </div>

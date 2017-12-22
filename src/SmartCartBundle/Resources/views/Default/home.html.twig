@@ -21,15 +21,18 @@
 
     <div class="carousel-inner">
         <div class="item active">
-            <img src="{{ asset('images/slider_BF_big.png') }}" alt="">
+            <img src="{{ asset('images/slider_BF_big.png') }}" alt="Slider desktop" class="hidden-xs">
+            <img src="{{ asset('images/slider_mobile.png') }}" alt="Slider mobile" class="hidden-sm hidden-md hidden-lg">
         </div>
 
         <div class="item">
-            <img src="{{ asset('images/slider_BF_big.png') }}" alt="">
+            <img src="{{ asset('images/slider_BF_big.png') }}" alt="Slider desktop" class="hidden-xs">
+            <img src="{{ asset('images/slider_mobile.png') }}" alt="Slider mobile" class="hidden-sm hidden-md hidden-lg">
         </div>
 
         <div class="item">
-            <img src="{{ asset('images/slider_BF_big.png') }}" alt="">
+            <img src="{{ asset('images/slider_BF_big.png') }}" alt="Slider desktop" class="hidden-xs">
+            <img src="{{ asset('images/slider_mobile.png') }}" alt="Slider mobile" class="hidden-sm hidden-md hidden-lg">
         </div>
     </div>
 
@@ -44,12 +47,17 @@
 </div>
 
 <div class="container">
+  <div class="row">
+      <div class="col-md-12">
     <h3>LES BEST-SELLERS DU MOIS : NIVEAU AMATEUR</h3>
+      </div>
+  </div>
 </div>
 
-<div class="greyhomecontent">
+<div class="container-fluid greyhomecontent">
 
     <div class="container">
+      <div class="row">
         {% for cart in popularRatingCartsInter %}
         <div class="col-md-3 col-sm-12 inlineblock marge">
             <div class="blanc">
@@ -99,10 +107,15 @@
     </div>
 </div>
 <div class="container">
+  <div class="row">
+    <div class="col-md-12">
     <h3>LES BEST-SELLERS DU MOIS : NIVEAU INTERMEDIAIRE</h3>
+    </div>
+  </div>
     {% for cart in popularRatingCartsAmateur %}
-    <div class="col-md-3 col-sm-12 inlineblock marge">
-        <div class="blanc">
+    <div class="row">
+       <div class="col-sm-12 col-md-3">
+         <div class="blanc">
             <a href="{{ path('smart_cart_product', {'cartId': cart.id}) }}"><img class="img-responsive" src="{{ cart.image}}"></a>
             <div class="paddingaccueilbasproduit">
                 <h3 class="type">{{ cart.name }}</h3>
@@ -148,10 +161,15 @@
     {% endfor %}
 </div>
 <div class="container">
+  <div class="row">
+      <div class="col-md-12">
     <h3>LES BEST-SELLERS DU MOIS : NIVEAU PROFESSIONNEL</h3>
+      </div>
+  </div>
 </div>
-<div class="greyhomecontent">
-    <div class="container">
+<div class="container-fluid greyhomecontent">
+  <div class="container">
+    <div class="row">
         {% for cart in popularRatingCartsPro %}
         <div class="col-md-3 col-sm-12 inlineblock marge">
             <div class="blanc">
@@ -205,7 +223,7 @@
 <img class="img-responsive bandeau" src="images/slider_BF_small.png" alt="" />
 <div class="container">
     <h3 class="aligncenter">SUGGESTION DU MOIS</h3>
-
+    <div class="row">
     {% for cart in randomCarts %}
     <div class="col-md-6 col-sm-12 inlineblock marge">
         <div class="blanc">
@@ -257,7 +275,7 @@
                         <p class="inlineblock">{{ cart.rating_count}}</p>
                         <p class="prixaccueil">{{ cart.price }}€</p>
                     </div>
-
+                  </div>
                 </div>
             </div>
         </div>

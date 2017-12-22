@@ -1,7 +1,13 @@
 /*********************
 	CONNECTION PAGE
 **********************/
-
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+* {
+	font-family: 'Source Sans Pro';
+}
+code {
+	color: black;
+}
 #titleConnect{
 	font-weight: normal;
 }
@@ -9,6 +15,7 @@
 input[name="mdp"], input[name="pseudo"]{
 	border: none;
 	margin-left: 5px;
+	width: 90%;
 }
 
 input[name="mdp"]::placeholder, input[name="pseudo"]::placeholder{
@@ -19,10 +26,24 @@ input[name="mdp"]::placeholder, input[name="pseudo"]::placeholder{
 	margin-bottom: 5px;
 	font-weight: bold;
 }
-
+.elt-form-signin {
+	margin-bottom: 0 !important;
+}
 .borderB{
 	border-bottom: 1px solid #d7d9e4;
 	width: 100%
+}
+
+.input-signin {
+	-webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    padding-left : 0 !important;
+}
+
+.input-signin-logo {
+	background-color: white;
+	border: none;
 }
 
 #infos .row{
@@ -36,6 +57,8 @@ input[name="connect"]{
 .blocConnect{
 	border: 1px solid #f1ece6;
 	box-shadow: 3px 3px 8px #ececec;
+
+	margin-top: 10%;
 }
 
 .divOrange{
@@ -77,9 +100,9 @@ h3{
 	margin-bottom: 20px;
 }
 
-a {
- text-decoration: none;
- color: black;
+a{
+    text-decoration: none;
+    color: black;
 }
 
 .nomarginB{
@@ -305,13 +328,12 @@ form{
 	margin-bottom: 10px;
 }
 
-.comment{
+.comment {
 	background-color: #f1ece6;
 	width: 50%;
 }
 
-.btn-green
-{
+.btn-green {
 	background-color: #89ae03;
 	border: 1px solid #89ae03;
 	border-radius: 4px;
@@ -427,9 +449,11 @@ select.inlineblock {
 
 
 .footer-bs {
-  background-color: #363636;
+  	background-color: #363636;
 	color: rgba(255,255,255,1.00);
 	padding: 30px;
+
+	margin-top: 20px;
 }
 
 .footer-bs h3 {
@@ -478,6 +502,7 @@ select.inlineblock {
 .aligncenter{
 	text-align: center;
 	margin: 0;
+	color: black;
 }
 
 .greyhomecontent{
@@ -547,8 +572,7 @@ select.inlineblock {
 }
 
 .centerblock{
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 9px;
 }
 
 .user-zone{
@@ -559,7 +583,7 @@ select.inlineblock {
 	font-size: 140%;
 }
 
-.centernavlogoandsearch{
+.marginT15{
 	margin-top: 15px;
 }
 
@@ -613,10 +637,14 @@ h1.tiltleincription
 	font-weight: normal;
 }
 .row-signup {
-		display: inline;
+	display: inline;
+}
+
+.right-row-signup {
+	padding-left: 0;
 }
 .paddinginscription{
-	padding: 40px;
+	padding-top: 0px;
 	padding-right: 40px;
 	padding-left: 40px;
 }
@@ -628,6 +656,8 @@ h1.tiltleincription
 input.nomargin{
 	margin: 0px;
 }
+
+/*------Navbar-------*/
 
 .navbar-toggler{
 	/*position: absolute;*/
@@ -654,12 +684,26 @@ input.nomargin{
 }
 
 .navbar li .fa-chevron-right{
-    float: right;
+    float: center;
     margin-top: 7px;
 }
 
 .navbar li a{
 	display: inline-block;
+}
+
+.dropdown-menu hr{
+	margin: 2px 0 5px 0;
+	border-bottom: 1px solid #ccc;
+	border-top: 0;
+}
+
+/*-----------------*/
+.logoIUT{
+	width: 60%
+}
+.col-logo {
+	text-align: center;
 }
 
 /*********************
@@ -668,28 +712,43 @@ input.nomargin{
 #contact_us .navbar{
 	margin-bottom: 0;
 }
+.col-us-desc {
+	padding: 0;
+}
+.col-pic-desc {
+	padding: 0;
+}
 
 .bg_whoAreWe{
-	background-image: url('../../images/bg_mainpage.png');
+	background-image: url('../../images/top_aboutus.png');
 	background-size: cover;
 	padding: 20px 0 20px 0;
 }
 
 .col_profilPic{
-	max-width: 20%;
-	position: relative;
+    position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
-    flex: 0 0 20%;
-    max-width: 20%;
+    padding-bottom: 20px;
+    /*flex: 0 0 20%;*/
 }
 
 .contact_us_row{
 	padding-top: 40px;
 	padding-bottom: 40px;
 }
-
+.contact_us_form {
+	background-color: #fbb12f;
+}
+.contact_us_padding_topbot {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.contact_us_image_why {
+	width: 100%;
+	padding: 25px;
+}
 .bg_profilPic{
 	background-color: #f1ece6;
 }
@@ -814,7 +873,12 @@ input[name="emailContact"]{
 		text-align: left !important;
 	}
 
-	.dropdown-menu hr, .navbar li{
+	.navbar li .fa-chevron-right{
+	    float: right;
+	    margin-top: 7px;
+	}
+
+	.navbar li{
 		margin: 2px 0 5px 0;
 		border-bottom: 1px solid #ccc;
 		border-top: 0;
@@ -837,8 +901,8 @@ input[name="emailContact"]{
 	.btnXSmenu{
 		float: left;
 	    position: absolute;
-	    top: 0px;
-	    left: 20px;
+	    top: 17px;
+	    left: 15px;
 	}
 
 	.openXSmenu{
@@ -855,7 +919,8 @@ input[name="emailContact"]{
 	.logo{
 		min-width: 196px;
 		min-height: 46px;
-		padding-left: 40px;
+		padding-left: 17%;
+		padding-top: 10px;
 	}
 
 	.justinline{
@@ -924,14 +989,8 @@ input[name="emailContact"]{
 	.comment{
 		width: 100%;
 	}
-
-
-	.icon{
-		padding-right:0;
-		padding-bottom: 0;
-		padding-top: 15px;
-		margin-bottom:16px;
-		margin-right:7px;
+	#myCarousel{
+		margin-top: 0;
 	}
 
 	select.inlineblock {
@@ -941,16 +1000,6 @@ input[name="emailContact"]{
 
 	.btn-green {
 		width: 100%;
-	}
-
-	.logo{
-		min-width: 196px;
-		min-height: 46px;
-		margin-left: 10px;
-	}
-
-	.justinline{
-		display: inline;
 	}
 
 	.pagination>li>a, .pagination>li>span{
@@ -967,7 +1016,9 @@ input[name="emailContact"]{
 	.navbar{
 		background-color: #f1ece6;
 	}
-
+	.row-profil {
+		display: none;
+	}
 	.triangle-top {
 	    display: inline-block;
 	    width: 0;
@@ -1009,6 +1060,10 @@ input[name="emailContact"]{
 	.displaylg{
 		display: none;
 	}
+
+	.textCenterSM{
+		text-align: center;
+	}
 }
 
 @media(min-width: 990px){
@@ -1017,11 +1072,19 @@ input[name="emailContact"]{
 		display: inline-block;
 	}
 
+	.logo {
+		padding-top: 10px;
+    	padding-bottom: 10px;
+	}
 }
 
-@media(max-width: 989px){
+@media(max-width: 990px){
 	.btn-addCart{
 		width: 100%;
 		margin-top: 10px;
+	}
+
+	.centerblock{
+		padding-top: 0;
 	}
 }
