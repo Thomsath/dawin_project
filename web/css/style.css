@@ -1067,6 +1067,10 @@ input[name="emailContact"]{
 		display: inline-block;
 	}
 
+	.logo {
+		padding-top: 10px;
+    	padding-bottom: 10px;
+	}
 }
 
 @media(max-width: 990px){
