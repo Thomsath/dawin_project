@@ -3,6 +3,7 @@
 namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * CartProduct
@@ -13,46 +14,69 @@ use Doctrine\ORM\Mapping as ORM;
 class CartProduct
 {
     /**
-    * @ORM\Id
-    * @ORM\Column(name="cart_id", type="integer")
-    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\Cart", mappedBy="cart_product")
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    protected $id;
+
+    /**
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart", inversedBy="products")
+    * @ORM\JoinColumn(name="cart_id", referencedColumnName="id", nullable=false)
     */
     private $cart;
 
     /**
-    * @ORM\Id
-    * @ORM\Column(name="product_id", type="integer")
-    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\Product", mappedBy="cart_product")
-    */
-    private $product;
+     * @var string
+     *
+     * @ORM\Column(name="productId", type="string", length=255)
+     *
+     * @Assert\Type(
+     *     type="string",
+     *     message="L'ID du produit n'est pas valide."
+     * )
+     */
+    private $productId;
 
     /**
      * @var int
      *
      * @ORM\Column(name="quantity", type="integer")
+     *
+     * @Assert\Type(
+     *     type="integer",
+     *     message="La quantité du produit n''est pas valide."
+     * )
      */
     private $quantity;
 
-    /**
-     * Get product id
-     *
-     * @return string
-     */
+    public function setProductId($productId)
+    {
+        $this->productId = $productId;
+        return $this;
+    }
+
     public function getProductId()
     {
         return $this->productId;
     }
 
-    /**
-     * Set product id
-     *
-     * @param string $productId
-     *
-     * @return Product
-     */
-    public function setProductId($productId)
+    public function getQuantity()
     {
-        $this->productId = $productId;
+        return $this->quantity;
+    }
+
+    public function setQuantity($quantity)
+    {
+        $this->quantity = $quantity;
+        return $this;
+    }
+
+    public function setCart($cart)
+    {
+        $this->cart = $cart;
         return $this;
     }
 }

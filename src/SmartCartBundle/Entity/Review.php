@@ -3,6 +3,7 @@
 namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Review
@@ -13,12 +14,12 @@ use Doctrine\ORM\Mapping as ORM;
 class Review
 {
     /**
-    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\User")
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\User", inversedBy="reviews")
     */
     private $user;
 
     /**
-    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart")
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Cart", inversedBy="reviews")
     */
     private $cart;
 
@@ -34,6 +35,13 @@ class Review
     /**
      * @var string
      *
+     * @ORM\Column(name="title", type="string", length=255)
+     */
+    private $title;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="text", type="string", length=255)
      */
     private $text;
@@ -42,6 +50,8 @@ class Review
      * @var string
      *
      * @ORM\Column(name="rating", type="string", columnDefinition="enum('0','1','2','3','4','5')")
+     *
+     * @Assert\Choice(choices = {"0","1","2","3","4","5"}, message = "La note n'est pas valide.")
      */
     private $rating;
 
@@ -100,5 +110,68 @@ class Review
     public function getRating()
     {
         return $this->rating;
+    }
+
+    /**
+    * Set cart
+    *
+    * @return Review
+    */
+    public function setCart(Cart $cart)
+    {
+        $this->cart = $cart;
+        return $this;
+    }
+
+    /**
+    * Get cart
+    *
+    * @return Cart
+    */
+    public function getCart()
+    {
+        return $this->cart;
+    }
+
+    /**
+    * Set user
+    *
+    * @return Review
+    */
+    public function setUser(User $user)
+    {
+        $this->user = $user;
+        return $this;
+    }
+
+    /**
+    * Get user
+    *
+    * @return User
+    */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+    * Set title
+    *
+    * @return Review
+    */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+        return $this;
+    }
+
+    /**
+    * Get user
+    *
+    * @return Review
+    */
+    public function getTitle()
+    {
+        return $this->title;
     }
 }

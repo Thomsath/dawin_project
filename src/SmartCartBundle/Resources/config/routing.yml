@@ -1,6 +1,18 @@
 smart_cart_homepage:
     path:     /
-    defaults: { _controller: SmartCartBundle:Default:index }
+    defaults: { _controller: SmartCartBundle:Default:home }
+
+smart_cart_connection:
+    path:     /connection
+    defaults: { _controller: SmartCartBundle:Default:connection }
+
+smart_cart_inscription:
+    path:     /inscription
+    defaults: { _controller: SmartCartBundle:Default:inscription }
+
+smart_cart_contact:
+    path:     /contact
+    defaults: { _controller: SmartCartBundle:Default:contact }
 
 smart_cart_admin_user_list:
     path:     /admin/users
@@ -12,7 +24,7 @@ smart_cart_admin_user_delete:
     requirements:
         userId: '\d+'
 
-smart_cart_user_create:
+smart_cart_admin_user_create:
     path:     /admin/user/create
     defaults: { _controller: SmartCartBundle:Admin\User:create }
 
@@ -21,3 +33,66 @@ smart_cart_admin_user_edit:
     defaults: { _controller: SmartCartBundle:Admin\User:edit }
     requirements:
         userId: '\d+'
+
+smart_cart_admin_cart_create:
+    path:     /admin/cart/create
+    defaults: { _controller: SmartCartBundle:Admin\Cart:create }
+
+smart_cart_admin_cart_delete:
+    path:     /admin/cart/{cartId}/delete
+    defaults: { _controller: SmartCartBundle:Admin\Cart:delete }
+    requirements:
+        userId: '\d+'
+
+smart_cart_admin_cart_list:
+    path:     /admin/carts
+    defaults: { _controller: SmartCartBundle:Admin\Cart:index }
+
+smart_cart_admin_cart_edit:
+    path:     /admin/cart/{cartId}
+    defaults: { _controller: SmartCartBundle:Admin\Cart:edit }
+    requirements:
+        cartId: '\d+'
+
+smart_cart_admin_category_list:
+    path:     /admin/categories
+    defaults: { _controller: SmartCartBundle:Admin\Category:index }
+
+smart_cart_admin_category_create:
+    path:     /admin/category/create
+    defaults: { _controller: SmartCartBundle:Admin\Category:create }
+
+smart_cart_admin_category_delete:
+    path:     /admin/category/{categoryId}/delete
+    defaults: { _controller: SmartCartBundle:Admin\Category:delete }
+    requirements:
+        categoryId: '\d+'
+
+smart_cart_admin_category_edit:
+    path:     /admin/category/{categoryId}
+    defaults: { _controller: SmartCartBundle:Admin\Category:edit }
+    requirements:
+        categoryId: '\d+'
+
+smart_cart_product:
+    path:     /cart/{cartId}
+    defaults: { _controller: SmartCartBundle:Cart:index }
+    requirements:
+        cartId: '\d+'
+
+smart_cart_category_product:
+    path:     /{categoryId}
+    defaults: { _controller: SmartCartBundle:Cart:category }
+    requirements:
+        categoryId: '\d+'
+
+smart_cart_search_product:
+    path:     /search
+    defaults: { _controller: SmartCartBundle:Search:index }
+    methods: POST
+
+smart_cart_order:
+    path:     /order/{cartId}
+    defaults: { _controller: SmartCartBundle:Cart:order }
+    requirements:
+        cartId: '\d+'

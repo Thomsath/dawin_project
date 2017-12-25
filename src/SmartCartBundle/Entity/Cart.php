@@ -3,22 +3,25 @@
 namespace SmartCartBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
 * Panier
 *
 * @ORM\Table(name="cart")
 * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\CartRepository")
+* @UniqueEntity("name")
 */
 class Cart
 {
     /**
-    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\CartProduct", mappedBy="cart")
+    * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\CartProduct", mappedBy="cart", cascade={"persist", "remove"})
     */
     private $products;
 
     /**
-    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Category")
+    * @ORM\ManyToOne(targetEntity="SmartCartBundle\Entity\Category", inversedBy="carts")
     */
     private $category;
 
@@ -27,6 +30,14 @@ class Cart
     */
     private $reviews;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="level", type="string", columnDefinition="enum('amateur','intermediaire','professionnel')")
+     *
+     * @Assert\Choice(choices = {"amateur","intermediaire","professionnel"}, message = "Le niveau n'est pas valide.")
+     */
+    private $level;
 
     /**
     * @var int
@@ -41,6 +52,13 @@ class Cart
     * @var string
     *
     * @ORM\Column(name="name", type="string", length=255)
+    *
+    * @Assert\Length(
+    *      min = 5,
+    *      max = 255,
+    *      minMessage = "Le nom du panier doit faire au moins {{ limit }} caractères",
+    *      maxMessage = "Le nom du panier ne doit pas excéder {{ limit }} caractères"
+    * )
     */
     private $name;
 
@@ -55,6 +73,11 @@ class Cart
     * @var int
     *
     * @ORM\Column(name="quantity", type="integer")
+    *
+    * @Assert\Type(
+    *     type="integer",
+    *     message="La quantité de panier(s) n'est pas valide."
+    * )
     */
     private $quantity;
 
@@ -62,6 +85,7 @@ class Cart
     * @var float
     *
     * @ORM\Column(name="price", type="float")
+    *
     */
     private $price;
 
@@ -69,13 +93,17 @@ class Cart
     * @var string
     *
     * @ORM\Column(name="image", type="string", length=255)
+    *
+    * @Assert\Url(
+    *    message = "L'URL de l'image du panier n'est pas valide.",
+    * )
     */
     private $image;
 
     /**
-    * @var int
+    * @var Cart
     *
-    * @ORM\Column(name="associated_cart", type="integer", nullable=true)
+    * @ORM\OneToOne(targetEntity="SmartCartBundle\Entity\Cart")
     */
     private $associated_cart;
 
@@ -221,7 +249,7 @@ class Cart
     /**
     * Set associated cart
     *
-    * @param integer $associated_cart
+    * @param Cart $associated_cart
     *
     * @return Cart
     */
@@ -234,7 +262,7 @@ class Cart
     /**
     * Get associated cart
     *
-    * @return int
+    * @return Cart
     */
     public function getAssociatedCart()
     {
@@ -296,15 +324,46 @@ class Cart
     }
 
     /**
-    * Add review
+    * Set products
     *
-    * @param \SmartCartBundle\Entity\Review $review
-    *
-    * @return Review
+    * @return Cart
     */
-    public function addProduct(Review $review)
+    public function setProducts($products)
     {
-        $this->reviews[] = $review;
+        $this->products = $products;
         return $this;
+    }
+
+    /**
+    * Add product
+    *
+    * @return Cart
+    */
+    public function addProduct(CartProduct $product)
+    {
+        $this->products->add($product);
+        $product->setCart($this);
+        return $this;
+    }
+
+    /**
+    * Set level
+    *
+    * @return Cart
+    */
+    public function setLevel($level)
+    {
+        $this->level = $level;
+        return $this;
+    }
+
+    /**
+    * Get level
+    *
+    * @return Cart
+    */
+    public function getLevel()
+    {
+        return $this->level;
     }
 }

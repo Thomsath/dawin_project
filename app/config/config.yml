@@ -76,3 +76,17 @@ fos_user:
     from_email:
         address: "%mailer_user%"
         sender_name: "%mailer_user%"
+    registration:
+        form:
+            type: SmartCartBundle\Form\Type\RegistrationFormType
+
+ewz_recaptcha:
+    public_key:  6LcGnzkUAAAAAOVJrGilvuhFiXTx-KFojmek7tlw
+    private_key: 6LcGnzkUAAAAAIqemp0QTyqTqk8GpaRiip8RVoXp
+    # Not needed as "%kernel.default_locale%" is the default value for the locale key
+    locale_key:  %kernel.default_locale%
+    locale_from_request: true
+    enabled: true
+    ajax: false
+
+miisieq_robots_txt: ~

@@ -54,6 +54,15 @@ SmartCart is website that will revolutionize your purchases on the Internet, by 
 
 ```php bin/console doctrine:schema:update --force```
 
+6. Loading fixtures
+
+```php bin/console doctrine:fixtures:load```
+
+
+Default admin user :
+Login: admin
+Password: admin
+
 
 ## FEATURES
 

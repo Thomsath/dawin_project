@@ -1,0 +1,71 @@
+{% extends "::VueMere.html.twig" %}
+
+{% block stylesheets %}
+ {{ parent() }}
+{% endblock %}
+
+{% block header %}
+ {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+<!-- Contenu -->
+  <div class="row row-signup">
+      <div class="col-lg-7 hidden-sm hidden-md right-row-signup displaylg">
+        <img class="img-responsive" src="images/pic_inscription.png" alt="" />
+      </div>
+      <div class="col-lg-5 col-sm-12 paddinginscription">
+        <h1 class="tiltleincription">CREER SON COMPTE</h1>
+        <p>Crée ton compte afin de profiter à 100% des fonctionnalités proposés par SmartCart !</p>
+        <form class="form-group inscriptionform">
+          <div class="elementform">
+            <label for="pseudo">PSEUDONYME</label><br>
+            <div class="input-group">
+              <span  class="input-group-addon"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+              <input type="text" class="form-control nomargin" name="pseudo" placeholder="Votre pseudonyme">
+            </div>
+          </div>
+          <div class="elementform">
+            <label for="mdp">MOT DE PASSE</label><br>
+            <div class="input-group">
+              <span  class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+              <input type="password" class="form-control nomargin" name="mdp" placeholder="Votre mot de passe">
+            </div>
+          </div>
+          <div class="textincription">
+          <p>Votre mot de pasee doit comporter au moins 1 majuscule, 1 chiffre, 1 caractère spécial et doit faire au moins 8 caractères.</p>
+          </div>
+          <div class="elementform">
+            <label for="confirmemdp">CONFIRMER VOTRE MOT DE PASSE</label><br>
+            <div class="input-group">
+              <span  class="input-group-addon"><i class="fa fa-key" aria-hidden="true"></i></span>
+              <input type="password" class="form-control nomargin" name="confirmemdp" placeholder="Confirmer votre mot de passe">
+            </div>
+          </div>
+          <div class="elementform">
+            <label for="email">ADRESSE E MAIL</label><br>
+            <div class="input-group">
+              <span  class="input-group-addon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+              <input type="text" class="form-control nomargin" name="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="checkbox">
+            <label><input type="checkbox"  name="checkcgu" value="">J'accepte les Conditions Générales d'Utilisation</label>
+          </div>
+
+          <input type="submit" name="add" class="center-block elementform btn-green" value="M'inscrire">
+        </form>
+
+      </div>
+
+  </div>
+{% endblock %}
+
+{% block footer %}
+ {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+ {{ parent() }}
+{% endblock %}

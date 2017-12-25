@@ -1,0 +1,71 @@
+{% extends "::VueMere.html.twig" %}
+
+{% block stylesheets %}
+ {{ parent() }}
+{% endblock %}
+
+{% block header %}
+ {{ parent() }}
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 offset-lg-2 col-lg-8 blocConnect">
+            <div class="divOrange">
+                <div class="whiteLine"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 id="titleConnect"> SE CONNECTER </h1>
+                    <p>Connecte toi à ton compte afin de profiter à 100% des fonctionnalités proposées par le site.</p>
+                </div>
+            </div>
+            <div id="infos">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="elementform elt-form-signin">
+                          <label for="pseudo">PSEUDONYME</label><br>
+                          <div class="input-group borderB">
+                            <span class="input-group-addon input-signin-logo"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+                            <input type="text" class="form-control nomargin input-signin" name="pseudo" placeholder="Votre pseudonyme">
+                          </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-md-12">
+                        <div class="elementform elt-form-sign">
+                          <label for="mdp">MOT DE PASSE </label><br>
+                          <div class="input-group borderB">
+                            <span class="input-group-addon input-signin-logo"><i class="fa fa-key" aria-hidden="true"></i></span>
+                            <input type="password" class="form-control nomargin input-signin" name="mdp" placeholder="Votre pseudonyme">
+                          </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 textCenter">
+                    <input type="submit" name="connect" class="btn-green" value="Me connecter">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6 notRegistred">
+            <span>Pas encore inscrit ? </span><span class="underlinded"> Inscris-toi</span>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+ {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+ {{ parent() }}
+{% endblock %}

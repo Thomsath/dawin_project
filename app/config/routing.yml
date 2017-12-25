@@ -8,3 +8,13 @@ app:
 
 fos_user:
     resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+miisieq_robots_txt:
+    resource: "@MiisieqRobotsTxtBundle/Controller/"
+    type:     annotation
+
+fos_user_registration_confirmed:
+    path: /register/confirmed
+    defaults: { _controller: SmartCartBundle:Default:confirmed }
+    requirements:
+        _method: GET

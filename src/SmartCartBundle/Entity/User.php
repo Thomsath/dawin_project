@@ -5,17 +5,46 @@ namespace SmartCartBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * User
  *
  * @ORM\Table(name="user")
  * @ORM\Entity(repositoryClass="SmartCartBundle\Repository\UserRepository")
- * @UniqueEntity("username")
- * @UniqueEntity("email")
+ * @UniqueEntity("username", message="Le nom d'utilisateur existe déjà.")
+ * @UniqueEntity("email", message="L'adresse email existe déjà.")
  */
 class User extends BaseUser
 {
+    /**
+     * @Assert\Length(
+     *      min = 3,
+     *      max = 255,
+     *      minMessage = "L'identifiant doit avoir plus de {{ limit }} caractères",
+     *      maxMessage = "L'identifiant ne doit pas excéder plus de {{ limit }} caractères"
+     * )
+     */
+    protected $username;
+
+    /**
+     * @Assert\Email(
+     *     message = "L'adresse email '{{ value }}' n'est pas valide.",
+     *     checkMX = true
+     * )
+     */
+    protected $email;
+
+    /**
+     * @Assert\Length(
+     *      min = 8,
+     *      max = 255,
+     *      minMessage = "Le mot de passe doit avoir plus de {{ limit }} caractères",
+     *      maxMessage = "Le mot de passe ne doit pas excéder plus de {{ limit }} caractères"
+     * )
+     */
+    protected $password;
+
     /**
     * @ORM\OneToMany(targetEntity="SmartCartBundle\Entity\Review", mappedBy="user")
     */
@@ -105,7 +134,8 @@ class User extends BaseUser
     */
     public function addReview(Review $review)
     {
-        $this->reviews[] = $review;
+        $this->reviews->add($review);
+        $review->setUser($this);
         return $this;
     }
 
